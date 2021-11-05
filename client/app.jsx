@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './pages/home';
-import Header from './header';
+import Header from './pages/header';
+import Icons from './pages/icons';
 import NotFound from './pages/not-found';
 import { parseRoute } from './lib';
 
@@ -34,6 +35,7 @@ export default class App extends React.Component {
       <>
         <Header />
         {this.renderPage()}
+        <Icons />
       </>
     );
   }

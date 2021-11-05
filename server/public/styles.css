@@ -1,0 +1,12 @@
+.icon-style {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: xx-large;
+  height: 40px;
+  border-top: solid 1px #fef7dc;
+}
+
+.fas {
+  margin: 5px 25px 0;
+}

@@ -1,31 +1,63 @@
+/* -------------------- ICON.JSX -------------------- */
+
 .icon-style {
   position: fixed;
   bottom: 0;
   width: 100%;
   font-size: xx-large;
-  height: 40px;
+  height: 45px;
   border-top: solid 1px #fef7dc;
+  background-color: #fff;
 }
 
 .fas {
-  margin: 5px 25px 0;
+  margin: 6px 20px;
 }
 
+/* -------------------- HOME.JSX -------------------- */
+
 .h2-home-jsx {
-  font-size: 1rem;
+  padding-left: 2px;
+  font-size: 1.1rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
 }
 
+.plans-home-jsx {
+  height: 35%;
+  overflow: scroll;
+}
+
+.avail-home-jsx2 {
+  height: 60%;
+  overflow: scroll;
+}
+
+.container-home-jsx {
+  margin-top: 55px;
+}
+
+.button-home-jsx {
+  position: fixed;
+  right: 7px;
+  bottom: 55px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  background: #5f7a61;
+  color: white;
+  cursor: pointer;
+}
+
+/* -------------------- HEADER.JSX -------------------- */
+
 .header-jsx-style {
+  text-align: center;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  position: fixed;
   font-size: 2.4rem;
-}
-
-.testing {
-  height: calc(100% / 2);
-  background-color: red;
-}
-
-.testing2 {
-  height: 715px;
 }

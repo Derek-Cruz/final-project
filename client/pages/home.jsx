@@ -2,27 +2,24 @@ import React from 'react';
 
 export default function Home(props) {
   return (
-    <>
-    <div className="container testing2">
-      <div className="row testing">
+    <div className="container container-home-jsx">
+      <div className="row plans-home-jsx">
         <div className="col p-0">
           <h2 className="h2-home-jsx">My Plans</h2>
-          <div className="">
-            test
-
+          <div className="overflow">
+            <p>this is where my active plans go</p>
           </div>
         </div>
       </div>
-      <div className="row testing">
+      <div className="row avail-home-jsx">
         <div className="col p-0">
           <h2 className="h2-home-jsx">Available</h2>
-          <div className="">
-            test2
-
+          <div>
+            <p>this is where my friends who are available go</p>
           </div>
         </div>
+        <button className="button-home-jsx">+</button>
       </div>
     </div>
-    </>
   );
 }

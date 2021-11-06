@@ -8,6 +8,7 @@
   height: 45px;
   border-top: solid 1px #fef7dc;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .fas {

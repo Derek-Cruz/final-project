@@ -17,21 +17,32 @@
 
 /* -------------------- HOME.JSX -------------------- */
 
-.h2-home-jsx {
+.h2-plans-jsx {
   padding-left: 2px;
   font-size: 1.1rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
 }
 
-.plans-home-jsx {
-  height: 35%;
-  overflow: scroll;
+.h2-avail-jsx {
+  padding-left: 2px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: solid 1px #fef7dc;
+  position: fixed;
+  top: 213px;
+  width: 375px;
+  background-color: white;
 }
 
-.avail-home-jsx2 {
-  height: 60%;
-  overflow: scroll;
+.plans-home-jsx {
+  height: 180px;
+  overflow: auto;
+}
+
+.avail-home-jsx {
+  height: 530px;
+  overflow: auto;
 }
 
 .container-home-jsx {
@@ -52,6 +63,10 @@
   cursor: pointer;
 }
 
+.testing {
+  margin-top: 8px;
+}
+
 /* -------------------- HEADER.JSX -------------------- */
 
 .header-jsx-style {
@@ -61,4 +76,11 @@
   left: 0;
   position: fixed;
   font-size: 2.4rem;
+}
+
+/* -------------------- POST_STATUS.JSX -------------------- */
+
+.post-status-test {
+  height: 710px;
+  margin-top: 57px;
 }

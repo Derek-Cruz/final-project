@@ -5,11 +5,11 @@ export default function NotFound(props) {
     <div>
       <div>
         <div>
-          <h3>
+          <h3 className="mt-5">
             Uh oh, we could not find the page you were looking for!
           </h3>
           <p>
-            <a href="#">testing</a>
+            <a href="#">Go back Home!</a>
           </p>
         </div>
       </div>

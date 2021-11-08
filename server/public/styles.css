@@ -84,3 +84,24 @@
   height: 710px;
   margin-top: 57px;
 }
+
+.button1 {
+  position: fixed;
+  bottom: 100px;
+}
+
+.button2 {
+  bottom: 50px;
+  position: fixed;
+}
+
+.button-style {
+  font-size: 1.5rem;
+  border-style: none;
+  width: 345px;
+  height: 45px;
+  color: #fef7dc;
+  background: #5f7a61;
+  border-radius: 20px;
+  cursor: pointer;
+}

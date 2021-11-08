@@ -4,7 +4,7 @@ export default class PostStatus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: '',
+      time: 0,
       description: ''
     };
     this.handleChange = this.handleChange.bind(this);
@@ -24,18 +24,25 @@ export default class PostStatus extends React.Component {
     event.preventDefault();
   }
 
+  reset() {
+    this.setState({
+      time: 0,
+      description: ''
+    });
+  }
+
   render() {
     return (
       <div className="container">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit} onReset={this.reset}>
             <div>
-              <label htmlFor="post-time">need icon</label>
+              <label htmlFor="post-time"><i className="fas fa-clock"></i></label>
               <input
                 name="time"
                 type="time"
                 id="post-time"
-                value={this.state.value}
+                value={this.state.time}
                 onChange={this.handleChange} />
             </div>
             <div>
@@ -44,14 +51,14 @@ export default class PostStatus extends React.Component {
                 name="description"
                 type="text"
                 id="post-description"
-                value={this.state.value}
+                value={this.state.description}
                 onChange={this.handleChange} />
             </div>
             <div className="button1">
               <button className="button-style">Post</button>
             </div>
             <div className="button2">
-              <button className="button-style">Cancel</button>
+              <a href="#" className="a-style">Cancel</a>
             </div>
           </form>
         </div>

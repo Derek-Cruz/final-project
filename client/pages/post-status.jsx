@@ -9,7 +9,7 @@ export default class PostStatus extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.setAvailable = this.setAvailable.bind(this);
+    this.setAvailable = this.setAvailable.bind(this);
     this.reset = this.reset.bind(this);
   }
 
@@ -32,33 +32,33 @@ export default class PostStatus extends React.Component {
     });
   }
 
-  // componentDidMount() {
-  //   fetch('/api/dereksFinalProject')
-  //     .then(data => data.json())
-  //     .then(setPlans => {
-  //       this.setState(
-  //         { plans: setPlans }
-  //       );
-  //     });
-  // }
+  componentDidMount() {
+    fetch('/api/available')
+      .then(data => data.json())
+      .then(availablity => {
+        this.setState({
+          status: availablity
+        });
+      });
+  }
 
-  // setAvailable(status) {
-  //   fetch('/api/dereksFinalProject', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(status)
-  //   })
-  //     .then(res => res.json())
-  //     .then(status => {
-  //       const newArr = this.state.requests.slice();
-  //       newArr.push(status);
-  //       this.setState({
-  //         plans: newArr
-  //       });
-  //     });
-  // }
+  setAvailable(status) {
+    fetch('/api/available', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(status)
+    })
+      .then(res => res.json())
+      .then(status => {
+        const newArr = this.state.plans.slice();
+        newArr.push(status);
+        this.setState({
+          status: newArr
+        });
+      });
+  }
 
   render() {
     return (

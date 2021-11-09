@@ -17,6 +17,27 @@ app.use(staticMiddleware);
 
 app.use(errorMiddleware);
 
+const jsonMiddleware = express.json();
+
+app.use(jsonMiddleware);
+
+// app.get('/api/users', (req, res) => {
+//   const sql = `
+//     SELECT *
+//       FROM "users"
+//   `;
+//   db.query(sql)
+//     .then(result => {
+//       res.json(result.rows);
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({
+//         error: 'an unexpected error occurred'
+//       });
+//     });
+// });
+
 app.post('/api/available', (req, res) => {
   const { time, description } = req.body;
   if (!time || !description) {

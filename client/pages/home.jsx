@@ -18,7 +18,7 @@ export default function Home(props) {
             <p>this is where my friends who are available go</p>
           </div>
         </div>
-        <button className="button-home-jsx">+</button>
+        <a href="#post-status" className="button-home-jsx"><i className="fas fa-plus fa-plus-styling"></i></a>
       </div>
     </div>
   );

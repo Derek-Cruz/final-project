@@ -9,6 +9,7 @@ export default class PostStatus extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    // this.setAvailable = this.setAvailable.bind(this);
     this.reset = this.reset.bind(this);
   }
 
@@ -31,6 +32,34 @@ export default class PostStatus extends React.Component {
     });
   }
 
+  // componentDidMount() {
+  //   fetch('/api/dereksFinalProject')
+  //     .then(data => data.json())
+  //     .then(setPlans => {
+  //       this.setState(
+  //         { plans: setPlans }
+  //       );
+  //     });
+  // }
+
+  // setAvailable(status) {
+  //   fetch('/api/dereksFinalProject', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(status)
+  //   })
+  //     .then(res => res.json())
+  //     .then(status => {
+  //       const newArr = this.state.requests.slice();
+  //       newArr.push(status);
+  //       this.setState({
+  //         plans: newArr
+  //       });
+  //     });
+  // }
+
   render() {
     return (
       <div className="container">
@@ -46,11 +75,12 @@ export default class PostStatus extends React.Component {
                 onChange={this.handleChange} />
             </div>
             <div>
-              <label htmlFor="post-description">need icon</label>
+              <label htmlFor="post-description"><i className="fas fa-comment-alt"></i></label>
               <input
                 name="description"
                 type="text"
                 id="post-description"
+                placeholder="Finally have free time!"
                 value={this.state.description}
                 onChange={this.handleChange} />
             </div>

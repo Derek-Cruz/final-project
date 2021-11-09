@@ -10,6 +10,7 @@ CREATE TABLE "users" (
     "passwordHash" TEXT NOT NULL,
     "location" TEXT NOT NULL,
     "aboutMe" TEXT NOT NULL,
+    "available" BOOLEAN NOT NULL default false,
     CONSTRAINT "users_pk" PRIMARY KEY ("userId")
 ) WITH (
   OIDS=FALSE

@@ -1,0 +1,158 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* -------------------- ICON.JSX -------------------- */
+
+.icon-style {
+  color: black;
+  font-size: xx-large;
+  height: 45px;
+  border-top: solid 1px #fef7dc;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.icon-fas {
+  margin: 6px 20px;
+}
+
+.icon-style:hover {
+  color: black;
+}
+
+.icon-position {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* -------------------- HOME.JSX -------------------- */
+
+.h2-plans-jsx {
+  padding-left: 2px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: solid 1px #fef7dc;
+}
+
+.h2-avail-jsx {
+  padding-left: 2px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: solid 1px #fef7dc;
+  position: fixed;
+  top: 213px;
+  width: 375px;
+  background-color: white;
+}
+
+.plans-home-jsx {
+  height: 180px;
+  overflow: auto;
+}
+
+.avail-home-jsx {
+  height: 530px;
+  overflow: auto;
+}
+
+.container-home-jsx {
+  margin-top: 55px;
+}
+
+.button-home-jsx {
+  display: block;
+  position: fixed;
+  right: 7px;
+  bottom: 55px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  background: #5f7a61;
+  color: white;
+  cursor: pointer;
+}
+
+.fa-plus-styling {
+  color: #fef7dc;
+  font-size: 1.2rem;
+  margin: 20px 0 0 10px;
+}
+
+.home-jsx-margin {
+  margin-top: 8px;
+}
+
+/* -------------------- HEADER.JSX -------------------- */
+
+.header-jsx-style {
+  text-align: center;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  position: fixed;
+  font-size: 2.4rem;
+}
+
+/* -------------------- POST_STATUS.JSX -------------------- */
+
+.post-status-test {
+  height: 710px;
+  margin-top: 57px;
+}
+
+.button1 {
+  position: fixed;
+  bottom: 100px;
+}
+
+.button2 {
+  bottom: 50px;
+  position: fixed;
+}
+
+.button-style {
+  font-size: 1.5rem;
+  border-style: none;
+  width: 345px;
+  height: 45px;
+  color: #fef7dc;
+  background: #5f7a61;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.a-style {
+  font-size: 1.5rem;
+  padding: 2px 0;
+  text-align: center;
+  border-radius: 20px;
+  width: 345px;
+  display: block;
+  height: 45px;
+  text-decoration: none;
+  color: #fef7dc;
+  background: #5f7a61;
+  cursor: pointer;
+}
+
+.a-style:hover {
+  color: #fef7dc;
+}
+
+.label-padding {
+  padding-bottom: 15px;
+}
+
+.fa-clock {
+  padding-right: 5px;
+  font-size: 1.2rem;
+}
+
+.fa-comment-alt {
+  padding-right: 5px;
+  font-size: 1.2rem;
+}

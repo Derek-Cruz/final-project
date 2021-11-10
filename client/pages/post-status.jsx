@@ -33,11 +33,14 @@ export default class PostStatus extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/available')
+    fetch('/api/available', {
+      method: 'POST'
+    })
       .then(data => data.json())
       .then(availablity => {
         this.setState({
-          status: availablity
+          time: availablity.time,
+          description: availablity.description
         });
       });
   }
@@ -52,10 +55,11 @@ export default class PostStatus extends React.Component {
     })
       .then(res => res.json())
       .then(status => {
-        const newArr = this.state.plans.slice();
+        const newArr = this.state.availabilities.slice();
         newArr.push(status);
         this.setState({
-          status: newArr
+          time: newArr.time,
+          description: newArr.description
         });
       });
   }

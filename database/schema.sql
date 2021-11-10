@@ -10,7 +10,6 @@ CREATE TABLE "users" (
     "passwordHash" TEXT NOT NULL,
     "location" TEXT NOT NULL,
     "aboutMe" TEXT NOT NULL,
-    "available" BOOLEAN NOT NULL default false,
     CONSTRAINT "users_pk" PRIMARY KEY ("userId")
 ) WITH (
   OIDS=FALSE
@@ -37,7 +36,17 @@ CREATE TABLE "requests" (
 ) WITH (
   OIDS=FALSE
 );
+CREATE TABLE "availabilities" (
+    "availabilityId" serial NOT NULL,
+    "description" TEXT,
+    "time" time NOT NULL,
+    "userId" integer NOT NULL,
+    CONSTRAINT "availabilities_pk" PRIMARY KEY ("availabilityId")
+) WITH (
+  OIDS=FALSE
+);
 ALTER TABLE "plans" ADD CONSTRAINT "plans_fk0" FOREIGN KEY ("userId") REFERENCES "users"("userId");
 ALTER TABLE "requests" ADD CONSTRAINT "requests_fk0" FOREIGN KEY ("planId") REFERENCES "plans"("planId");
 ALTER TABLE "requests" ADD CONSTRAINT "requests_fk1" FOREIGN KEY ("fromUserId") REFERENCES "users"("userId");
 ALTER TABLE "requests" ADD CONSTRAINT "requests_fk2" FOREIGN KEY ("toUserId") REFERENCES "users"("userId");
+ALTER TABLE "availabilities" ADD CONSTRAINT "availabilities_fk0" FOREIGN KEY ("userId") REFERENCES "users"("userId");

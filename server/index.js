@@ -40,6 +40,7 @@ app.use(jsonMiddleware);
 
 app.post('/api/available', (req, res) => {
   const { time, description } = req.body;
+  const userId = 1;
   if (!time || !description) {
     res.status(400).json({
       error: 'time (number) and description (string) are required fields'
@@ -47,11 +48,11 @@ app.post('/api/available', (req, res) => {
     return;
   }
   const sql = `
-    INSERT INTO plans("time", "description")
-    VALUES ($1, $2)
+    INSERT INTO availabilities("time", "description", "userId")
+    VALUES ($1, $2, $3)
     RETURNING *
   `;
-  const params = [time, description];
+  const params = [time, description, userId];
   db.query(sql, params)
     .then(result => {
       const [status] = result.rows;

@@ -4,13 +4,13 @@ export default class PostStatus extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      time: 0,
+      time: '',
       description: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.setAvailable = this.setAvailable.bind(this);
-    this.reset = this.reset.bind(this);
+    // this.reset = this.reset.bind(this);
   }
 
   handleChange(event) {
@@ -22,28 +22,16 @@ export default class PostStatus extends React.Component {
 
   handleSubmit(event) {
     // console.log('state:', this.state);
+    this.setAvailable(this.state);
     event.preventDefault();
   }
 
-  reset() {
-    this.setState({
-      time: 0,
-      description: ''
-    });
-  }
-
-  componentDidMount() {
-    fetch('/api/available', {
-      method: 'POST'
-    })
-      .then(data => data.json())
-      .then(availablity => {
-        this.setState({
-          time: availablity.time,
-          description: availablity.description
-        });
-      });
-  }
+  // reset() {
+  //   this.setState({
+  //     time: '',
+  //     description: ''
+  //   });
+  // }
 
   setAvailable(status) {
     fetch('/api/available', {
@@ -53,13 +41,11 @@ export default class PostStatus extends React.Component {
       },
       body: JSON.stringify(status)
     })
-      .then(res => res.json())
+      .then(data => data.json())
       .then(status => {
-        const newArr = this.state.availabilities.slice();
-        newArr.push(status);
         this.setState({
-          time: newArr.time,
-          description: newArr.description
+          time: status.time,
+          description: status.description
         });
       });
   }
@@ -68,7 +54,7 @@ export default class PostStatus extends React.Component {
     return (
       <div className="container">
         <div className="post-status-test">
-          <form onSubmit={this.handleSubmit} onReset={this.reset}>
+          <form onSubmit={this.handleSubmit}>
             <div>
               <label htmlFor="post-time"><i className="fas fa-clock"></i></label>
               <input

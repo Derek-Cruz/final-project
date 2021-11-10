@@ -2,12 +2,16 @@
   display: none;
 }
 
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+}
+
 /* -------------------- ICON.JSX -------------------- */
 
 .icon-style {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  color: black;
   font-size: xx-large;
   height: 45px;
   border-top: solid 1px #fef7dc;
@@ -17,6 +21,12 @@
 
 .icon-fas {
   margin: 6px 20px;
+}
+
+.icon-position {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 /* -------------------- HOME.JSX -------------------- */

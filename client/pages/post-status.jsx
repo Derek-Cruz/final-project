@@ -32,13 +32,9 @@ export default class PostStatus extends React.Component {
       },
       body: JSON.stringify(status)
     })
-      .then(data => data.json());
-    location.hash = '#'
+      .then(data => data.json())
       .then(status => {
-        this.setState({
-          time: status.time,
-          description: status.description
-        });
+        location.hash = '#';
       });
   }
 

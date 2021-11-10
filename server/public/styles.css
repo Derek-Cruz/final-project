@@ -2,12 +2,6 @@
   display: none;
 }
 
-a:visited,
-a:hover,
-a:active {
-  color: inherit;
-}
-
 /* -------------------- ICON.JSX -------------------- */
 
 .icon-style {
@@ -21,6 +15,10 @@ a:active {
 
 .icon-fas {
   margin: 6px 20px;
+}
+
+.icon-style:hover {
+  color: black;
 }
 
 .icon-position {
@@ -79,11 +77,12 @@ a:active {
 }
 
 .fa-plus-styling {
+  color: #fef7dc;
   font-size: 1.2rem;
   margin: 20px 0 0 10px;
 }
 
-.testing {
+.home-jsx-margin {
   margin-top: 8px;
 }
 
@@ -138,4 +137,22 @@ a:active {
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;
+}
+
+.a-style:hover {
+  color: #fef7dc;
+}
+
+.label-padding {
+  padding-bottom: 15px;
+}
+
+.fa-clock {
+  padding-right: 5px;
+  font-size: 1.2rem;
+}
+
+.fa-comment-alt {
+  padding-right: 5px;
+  font-size: 1.2rem;
 }

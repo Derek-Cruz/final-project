@@ -44,7 +44,7 @@ export default class PostStatus extends React.Component {
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="post-time" className="label-padding"><i className="fas fa-clock"></i></label>
+              <label htmlFor="post-time" className="label-padding"><i className="fas fa-clock post-fa-clock"></i></label>
               <input
                 name="time"
                 type="time"
@@ -53,7 +53,7 @@ export default class PostStatus extends React.Component {
                 onChange={this.handleChange} />
             </div>
             <div>
-              <label htmlFor="post-description" className="label-padding"><i className="fas fa-comment-alt"></i></label>
+              <label htmlFor="post-description" className="label-padding"><i className="fas fa-comment-alt post-fa-comment-alt"></i></label>
               <input
                 name="description"
                 type="text"

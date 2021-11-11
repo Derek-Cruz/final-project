@@ -10,6 +10,7 @@ CREATE TABLE "users" (
     "passwordHash" TEXT NOT NULL,
     "location" TEXT NOT NULL,
     "aboutMe" TEXT NOT NULL,
+    "photoUrl" TEXT NOT NULL,
     CONSTRAINT "users_pk" PRIMARY KEY ("userId")
 ) WITH (
   OIDS=FALSE
@@ -40,7 +41,7 @@ CREATE TABLE "availabilities" (
     "availabilityId" serial NOT NULL,
     "description" TEXT,
     "time" time NOT NULL,
-    "userId" integer NOT NULL,
+    "userId" integer NOT NULL unique,
     CONSTRAINT "availabilities_pk" PRIMARY KEY ("availabilityId")
 ) WITH (
   OIDS=FALSE

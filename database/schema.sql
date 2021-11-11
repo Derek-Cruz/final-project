@@ -41,7 +41,7 @@ CREATE TABLE "availabilities" (
     "availabilityId" serial NOT NULL,
     "description" TEXT,
     "time" time NOT NULL,
-    "userId" integer NOT NULL,
+    "userId" integer NOT NULL unique,
     CONSTRAINT "availabilities_pk" PRIMARY KEY ("availabilityId")
 ) WITH (
   OIDS=FALSE

@@ -24,6 +24,7 @@ app.use(jsonMiddleware);
 app.get('/api/available', (req, res) => {
   const sql = `
       SELECT
+             "photoUrl",
              "fullName",
              "time",
              "description",

@@ -37,7 +37,7 @@ export default class Home extends React.Component {
                 {
                   this.state.availableUser.map(status => (
                     <div key={status.availabilityId} className="col-12">
-                      <Testing testing={status} />
+                      <ListStatus status={status} />
                     </div>
                   ))
                 }
@@ -51,18 +51,18 @@ export default class Home extends React.Component {
   }
 }
 
-function Testing(props) {
-  const { fullName, time, description } = props.testing;
+function ListStatus(props) {
+  const { photoUrl, fullName, time, description } = props.status;
   return (
       <div className="row">
-        <div className="col-12 div-testing">
+        <div className="col-12 div-liststatus">
           <div className="col-3 home-img-placement">
-            <img src="../images/person-placeholder.jpg" alt=".." className="home-img"/>
+            <img src={ photoUrl } alt=".." className="home-img"/>
           </div>
           <div className="col-9">
-            <p className="p-testing">{ fullName }</p>
-            <p className="p-testing">{ time }</p>
-            <p className="p-testing">{ description }</p>
+            <p className="p-liststatus">{ fullName }</p>
+            <p className="p-liststatus"><i className="fas fa-clock home-fa-clock"></i>{ time }</p>
+            <p className="p-liststatus"><i className="fas fa-comment-alt home-fa-comment-alt"></i>{ description }</p>
           </div>
         </div>
         <div className="a-position">

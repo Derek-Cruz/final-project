@@ -72,6 +72,34 @@ app.post('/api/available', (req, res) => {
     });
 });
 
+app.post('/api/sendRequest', (req, res) => {
+  const { title, time, location, description } = req.body;
+  const userId = 1;
+  if (!title || !time || !location || !description) {
+    res.status(400).json({
+      error: 'time, title, location, and description are required fields'
+    });
+    return;
+  }
+  const sql = `
+    INSERT INTO plans("title", "time", "location", "description", "userId")
+    VALUES ($1, $2, $3, $4, $5)
+    RETURNING *
+  `;
+  const params = [title, time, location, description, userId];
+  db.query(sql, params)
+    .then(result => {
+      const [status] = result.rows;
+      res.status(201).json(status);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`express server listening on port ${process.env.PORT}`);

@@ -1,15 +1,17 @@
 import React from 'react';
 
-export default class PostStatus extends React.Component {
+export default class SendRequest extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: '',
       time: '',
+      location: '',
       description: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.setAvailable = this.setAvailable.bind(this);
+    this.requestSent = this.requestSent.bind(this);
   }
 
   handleChange(event) {
@@ -20,12 +22,12 @@ export default class PostStatus extends React.Component {
   }
 
   handleSubmit(event) {
-    this.setAvailable(this.state);
+    this.requestSent(this.state);
     event.preventDefault();
   }
 
-  setAvailable(status) {
-    fetch('/api/available', {
+  requestSent(status) {
+    fetch('/api/sendRequest', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -44,28 +46,48 @@ export default class PostStatus extends React.Component {
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
             <div>
-              <label htmlFor="post-time" className="label-padding"><i className="fas fa-clock post-fa-clock"></i></label>
+              <label htmlFor="send-title">Title:</label>
               <input
-                className="post-input-style"
+                className="send-input-style"
+                name="title"
+                type="text"
+                id="send-title"
+                value={this.state.title}
+                onChange={this.handleChange} />
+            </div>
+            <div>
+              <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
+              <input
+                className="send-input-style"
+                name="location"
+                type="text"
+                id="send-location"
+                value={this.state.location}
+                onChange={this.handleChange} />
+            </div>
+            <div>
+              <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
+              <input
+                className="send-input-style"
                 name="time"
                 type="time"
-                id="post-time"
+                id="send-time"
                 value={this.state.time}
                 onChange={this.handleChange} />
             </div>
             <div>
-              <label htmlFor="post-description" className="label-padding"><i className="fas fa-comment-alt post-fa-comment-alt"></i></label>
+              <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
               <input
-                className="post-input-style"
+                className="send-input-style"
                 name="description"
                 type="text"
-                id="post-description"
-                placeholder="Finally have free time!"
+                id="send-description"
+                placeholder="What do you want to do?"
                 value={this.state.description}
                 onChange={this.handleChange} />
             </div>
             <div className="button1">
-              <button className="button-style">Post</button>
+              <button className="button-style">Submit</button>
             </div>
             <div className="button2">
               <a href="#" className="a-style">Cancel</a>

@@ -66,7 +66,7 @@ function ListStatus(props) {
           </div>
         </div>
         <div className="a-position">
-          <a href="" className="request-a-home">Request</a>
+          <a href="#send-req" className="request-a-home">Request</a>
         </div>
       </div>
   );

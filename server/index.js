@@ -26,7 +26,8 @@ app.get('/api/available', (req, res) => {
       SELECT
              "fullName",
              "time",
-             "description"
+             "description",
+             "availabilityId"
         FROM "availabilities"
         JOIN "users" USING ("userId")
   `;

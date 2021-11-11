@@ -36,7 +36,7 @@ export default class Home extends React.Component {
               <div className="row">
                 {
                   this.state.availableUser.map(status => (
-                    <div key={status.availabilityId} className="col-12 col-md-6 col-lg-4">
+                    <div key={status.availabilityId} className="col-12">
                       <Testing testing={status} />
                     </div>
                   ))
@@ -54,12 +54,19 @@ export default class Home extends React.Component {
 function Testing(props) {
   const { fullName, time, description } = props.testing;
   return (
-      <div className="card-body">
-        <p>{ fullName }</p>
-        <p>{ time }</p>
-        <p>{ description }</p>
-        <div>
-          <a href="">Request</a>
+      <div className="row">
+        <div className="col-12 div-testing">
+          <div className="col-3 home-img-placement">
+            <img src="../images/person-placeholder.jpg" alt=".." className="home-img"/>
+          </div>
+          <div className="col-9">
+            <p className="p-testing">{ fullName }</p>
+            <p className="p-testing">{ time }</p>
+            <p className="p-testing">{ description }</p>
+          </div>
+        </div>
+        <div className="a-position">
+          <a href="" className="request-a-home">Request</a>
         </div>
       </div>
   );

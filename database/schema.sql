@@ -10,6 +10,7 @@ CREATE TABLE "users" (
     "passwordHash" TEXT NOT NULL,
     "location" TEXT NOT NULL,
     "aboutMe" TEXT NOT NULL,
+    "photoUrl" TEXT NOT NULL,
     CONSTRAINT "users_pk" PRIMARY KEY ("userId")
 ) WITH (
   OIDS=FALSE

@@ -18,7 +18,6 @@ CREATE TABLE "users" (
 CREATE TABLE "plans" (
     "planId" serial NOT NULL,
     "title" TEXT NOT NULL,
-    "fullName" TEXT NOT NULL,
     "time" TIME NOT NULL,
     "location" TEXT NOT NULL,
     "description" TEXT NOT NULL,

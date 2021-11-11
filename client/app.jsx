@@ -4,6 +4,7 @@ import Header from './pages/header';
 import Icons from './pages/icons';
 import NotFound from './pages/not-found';
 import PostStatus from './pages/post-status';
+import SendRequest from './pages/send-req';
 import { parseRoute } from './lib';
 
 export default class App extends React.Component {
@@ -30,6 +31,9 @@ export default class App extends React.Component {
     }
     if (route.path === 'post-status') {
       return <PostStatus />;
+    }
+    if (route.path === 'send-req') {
+      return <SendRequest />;
     }
     return <NotFound />;
   }

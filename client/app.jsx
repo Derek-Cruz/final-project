@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from './pages/login';
 import Home from './pages/home';
 import Header from './pages/header';
 import Icons from './pages/icons';
@@ -43,6 +44,10 @@ export default class App extends React.Component {
   }
 
   render() {
+    const { route } = this.state;
+    if (route.path === 'login') {
+      return <Login />;
+    }
     return (
       <>
         <Header />

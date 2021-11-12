@@ -56,13 +56,13 @@ function ListStatus(props) {
   return (
       <div className="row">
         <div className="col-12 div-liststatus">
-          <div className="col-3 home-img-placement">
-            <img src={ photoUrl } alt=".." className="home-img"/>
+          <div className="col-3 small-img-placement">
+            <img src={photoUrl} alt=".." className="small-img"/>
           </div>
           <div className="col-9">
             <p className="p-liststatus">{ fullName }</p>
-            <p className="p-liststatus"><i className="fas fa-clock home-fa-clock"></i>{ time }</p>
-            <p className="p-liststatus"><i className="fas fa-comment-alt home-fa-comment-alt"></i>{ description }</p>
+            <p className="p-liststatus"><i className="fas fa-clock small-icon"></i>{ time }</p>
+            <p className="p-liststatus"><i className="fas fa-comment-alt small-icon"></i>{ description }</p>
           </div>
         </div>
         <div className="a-position">

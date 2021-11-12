@@ -2,6 +2,21 @@
   display: none;
 }
 
+.small-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.small-icon {
+  padding-right: 5px;
+}
+
+.small-img-placement {
+  display: flex;
+  justify-content: center;
+}
+
 /* -------------------- ICON.JSX -------------------- */
 
 .icon-style {
@@ -25,6 +40,7 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #fff;
 }
 
 /* -------------------- HOME.JSX -------------------- */
@@ -122,17 +138,6 @@
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;
-}
-
-.home-img-placement {
-  display: flex;
-  justify-content: center;
-}
-
-.home-img {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
 }
 
 /* -------------------- HEADER.JSX -------------------- */
@@ -246,4 +251,34 @@
   padding-right: 11px;
   font-size: 1.2rem;
   padding-left: 3px;
+}
+
+/* -------------------- NOTIFICATION.JSX -------------------- */
+
+.noti-row-style {
+  overflow: auto;
+}
+
+.noti-h2-style {
+  padding-left: 2px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  border-bottom: solid 1px #fef7dc;
+  position: fixed;
+  top: 50px;
+  width: 375px;
+  background-color: white;
+}
+
+.noti-jsx-margin {
+  margin-top: 18px;
+}
+
+.testtesteest {
+  display: flex;
+}
+
+.p-noti-jsx {
+  font-size: 0.8rem;
+  margin-bottom: 7px;
 }

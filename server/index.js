@@ -21,6 +21,25 @@ const jsonMiddleware = express.json();
 
 app.use(jsonMiddleware);
 
+app.get('/api/login', (req, res) => {
+  const sql = `
+      SELECT
+             "userId",
+             "fullName"
+        FROM "users";
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/available', (req, res) => {
   const sql = `
       SELECT

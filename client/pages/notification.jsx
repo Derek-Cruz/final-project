@@ -23,7 +23,7 @@ export default class Notification extends React.Component {
       <div className="container container-home-jsx">
         <div className="row noti-row-style">
           <div className="col p-0">
-            <h2 className="noti-h2-style">Notification</h2>
+            <h2 className="noti-h2-style">NOTIFICATION</h2>
             <div className="noti-jsx-margin">
             <div className="row">
               {
@@ -55,6 +55,12 @@ function ListNotification(props) {
           <p className="p-noti-jsx">{ title }</p>
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
           <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{ description }</p>
+        </div>
+      </div>
+      <div className="buttons">
+        <div className="a-placement">
+          <a href="" className="a-app-deny">Approve</a>
+          <a href="" className="a-app-deny">Deny</a>
         </div>
       </div>
     </div>

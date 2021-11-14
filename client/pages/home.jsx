@@ -23,7 +23,7 @@ export default class Home extends React.Component {
       <div className="container container-home-jsx">
         <div className="row plans-home-jsx">
           <div className="col p-0">
-            <h2 className="h2-plans-jsx">My Plans</h2>
+            <h2 className="h2-plans-jsx">MY PLANS</h2>
             <div className="home-jsx-margin ">
               <p>this is where my active plans go</p>
             </div>
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
         </div>
         <div className="row avail-home-jsx">
           <div className="col p-0">
-            <h2 className="h2-avail-jsx">Available</h2>
+            <h2 className="h2-avail-jsx">AVAILABLE</h2>
             <div className="home-jsx-margin ">
               <div className="row">
                 {

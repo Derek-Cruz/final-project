@@ -5,7 +5,7 @@ export default function Header(props) {
     <header>
       <div className="row">
         <div className="header-jsx-style">
-            hello
+            LINK
         </div>
       </div>
     </header>

@@ -64,6 +64,7 @@ app.get('/api/available', (req, res) => {
 });
 
 app.get('/api/notifications', (req, res) => {
+  const userId = 1;
   const sql = `
       SELECT
              "photoUrl",
@@ -73,12 +74,22 @@ app.get('/api/notifications', (req, res) => {
              "plans"."location",
              "description",
              "planId"
-        FROM "plans"
-        JOIN "users" USING ("userId")
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" ON "users"."userId"="requests"."toUserId"
+       WHERE "users"."userId" = $1;
   `;
-  db.query(sql)
+  const params = [userId];
+  db.query(sql, params)
     .then(result => {
-      res.json(result.rows);
+      const testing = result.rows[0];
+      if (!testing) {
+        res.status(404).json({
+          error: 'No request'
+        });
+      } else {
+        res.json(testing);
+      }
     })
     .catch(err => {
       console.error(err);
@@ -116,6 +127,34 @@ app.post('/api/available', (req, res) => {
     });
 });
 
+// app.post('/api/sendRequest', (req, res) => {
+//   const { title, time, location, description } = req.body;
+//   const userId = 1;
+//   if (!title || !time || !location || !description) {
+//     res.status(400).json({
+//       error: 'time, title, location, and description are required fields'
+//     });
+//     return;
+//   }
+//   const sql = `
+//     INSERT INTO plans("title", "time", "location", "description", "userId")
+//     VALUES ($1, $2, $3, $4, $5)
+//     RETURNING *
+//   `;
+//   const params = [title, time, location, description, userId];
+//   db.query(sql, params)
+//     .then(result => {
+//       const [status] = result.rows;
+//       res.status(201).json(status);
+//     })
+//     .catch(err => {
+//       console.error(err);
+//       res.status(500).json({
+//         error: 'an unexpected error occurred'
+//       });
+//     });
+// });
+
 app.post('/api/sendRequest', (req, res) => {
   const { title, time, location, description } = req.body;
   const userId = 1;
@@ -133,8 +172,24 @@ app.post('/api/sendRequest', (req, res) => {
   const params = [title, time, location, description, userId];
   db.query(sql, params)
     .then(result => {
-      const [status] = result.rows;
-      res.status(201).json(status);
+      const { requestId, status, toUserId, planId } = req.body;
+      if (!requestId || !status || !toUserId || !planId) {
+        res.status(400).json({
+          error: 'time, title, location, and description are required fields'
+        });
+        return;
+      }
+      const requestSql = `
+      INSERT INTO request("requestId", "status", "toUserId", "planId")
+      VALUES ($1, $2, $3, $4)
+      RETURNING *
+    `;
+      const requestParams = [requestId, status, toUserId, planId];
+      db.query(requestSql, requestParams)
+        .then(newRequest => {
+          const [dataToSendToClient] = newRequest.rows;
+          res.status(201).json(dataToSendToClient);
+        });
     })
     .catch(err => {
       console.error(err);

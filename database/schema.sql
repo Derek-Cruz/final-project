@@ -29,6 +29,7 @@ CREATE TABLE "plans" (
 CREATE TABLE "requests" (
     "requestId" serial NOT NULL,
     "note" TEXT,
+    "status" TEXT NOT NULL default 'pending',
     "planId" integer NOT NULL,
     "fromUserId" integer NOT NULL,
     "toUserId" integer NOT NULL,

@@ -293,7 +293,7 @@ h2 {
 }
 
 .buttons {
-  margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 .a-app-deny {
@@ -308,6 +308,7 @@ h2 {
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;
+  border-style: none;
 }
 
 .a-placement {

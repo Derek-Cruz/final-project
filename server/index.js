@@ -64,9 +64,10 @@ app.get('/api/available', (req, res) => {
 });
 
 app.get('/api/notifications', (req, res) => {
-  const userId = 1;
+  const userId = 2;
   const sql = `
       SELECT
+             "status",
              "photoUrl",
              "fullName",
              "title",
@@ -82,14 +83,8 @@ app.get('/api/notifications', (req, res) => {
   const params = [userId];
   db.query(sql, params)
     .then(result => {
-      const testing = result.rows[0];
-      if (!testing) {
-        res.status(404).json({
-          error: 'No request'
-        });
-      } else {
-        res.json(testing);
-      }
+      const requests = result.rows;
+      res.json(requests);
     })
     .catch(err => {
       console.error(err);

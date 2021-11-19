@@ -19,6 +19,7 @@ export default class Notification extends React.Component {
   }
 
   render() {
+    // console.log('state:', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row noti-row-style">
@@ -59,7 +60,7 @@ function ListNotification(props) {
       </div>
       <div className="buttons">
         <div className="a-placement">
-          <a href="" className="a-app-deny">Approve</a>
+          <button className="a-app-deny">Approve</button>
           <a href="" className="a-app-deny">Deny</a>
         </div>
       </div>

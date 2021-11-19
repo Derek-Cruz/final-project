@@ -127,34 +127,6 @@ app.post('/api/available', (req, res) => {
     });
 });
 
-// app.post('/api/sendRequest', (req, res) => {
-//   const { title, time, location, description } = req.body;
-//   const userId = 1;
-//   if (!title || !time || !location || !description) {
-//     res.status(400).json({
-//       error: 'time, title, location, and description are required fields'
-//     });
-//     return;
-//   }
-//   const sql = `
-//     INSERT INTO plans("title", "time", "location", "description", "userId")
-//     VALUES ($1, $2, $3, $4, $5)
-//     RETURNING *
-//   `;
-//   const params = [title, time, location, description, userId];
-//   db.query(sql, params)
-//     .then(result => {
-//       const [status] = result.rows;
-//       res.status(201).json(status);
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.status(500).json({
-//         error: 'an unexpected error occurred'
-//       });
-//     });
-// });
-
 app.post('/api/sendRequest', (req, res) => {
   const { title, time, location, description } = req.body;
   const userId = 1;
@@ -172,19 +144,21 @@ app.post('/api/sendRequest', (req, res) => {
   const params = [title, time, location, description, userId];
   db.query(sql, params)
     .then(result => {
-      const { requestId, status, toUserId, planId } = req.body;
-      if (!requestId || !status || !toUserId || !planId) {
+      const fromUserId = userId;
+      const planId = result.rows[0].planId;
+      const { toUserId } = req.body;
+      if (!toUserId || !planId || !fromUserId) {
         res.status(400).json({
-          error: 'time, title, location, and description are required fields'
+          error: 'toUserId and planId are required'
         });
         return;
       }
       const requestSql = `
-      INSERT INTO request("requestId", "status", "toUserId", "planId")
-      VALUES ($1, $2, $3, $4)
+      INSERT INTO requests("toUserId", "planId", "fromUserId")
+      VALUES ($1, $2, $3)
       RETURNING *
     `;
-      const requestParams = [requestId, status, toUserId, planId];
+      const requestParams = [toUserId, planId, fromUserId];
       db.query(requestSql, requestParams)
         .then(newRequest => {
           const [dataToSendToClient] = newRequest.rows;

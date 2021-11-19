@@ -48,7 +48,7 @@ function ListNotification(props) {
     <div className="row">
       <div className="col-12 testtesteest">
         <div className="col-3 small-img-placement">
-          <img src={photoUrl} alt=".." className="small-img" />
+          <img src={photoUrl} alt="profile picture" className="small-img" />
         </div>
         <div className="col-9">
           <p className="p-noti-jsx">{ fullName }</p>

@@ -27,6 +27,7 @@ export default class SendRequest extends React.Component {
   }
 
   requestSent(status) {
+    status.toUserId = 2;
     fetch('/api/sendRequest', {
       method: 'POST',
       headers: {

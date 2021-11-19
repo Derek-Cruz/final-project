@@ -18,6 +18,23 @@ export default class Notification extends React.Component {
       });
   }
 
+  updateMyStatus(appOrDeny) {
+    const update = {
+      status: 'Approved'
+    };
+    fetch('/api/reqStatus', {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(update)
+    })
+      .then(res => res.json())
+      .then(updateStatus => {
+        location.hash = '#';
+      });
+  }
+
   render() {
     // console.log('state:', this.state);
     return (
@@ -30,7 +47,7 @@ export default class Notification extends React.Component {
               {
                 this.state.request.map(notification => (
                   <div key={notification.planId} className="col-12">
-                    <ListNotification notification={notification} />
+                    <ListNotification notification={notification} onClick={this.updateMyStatus} />
                   </div>
                 ))
               }
@@ -60,7 +77,7 @@ function ListNotification(props) {
       </div>
       <div className="buttons">
         <div className="a-placement">
-          <button className="a-app-deny">Approve</button>
+          <button onClick={props.onClick} className="a-app-deny">Approve</button>
           <a href="" className="a-app-deny">Deny</a>
         </div>
       </div>

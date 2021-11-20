@@ -187,6 +187,41 @@ app.post('/api/sendRequest', (req, res) => {
     });
 });
 
+app.patch('/api/reqStatus/:requestId', (req, res) => {
+  const { status } = req.body;
+  const requestId = parseInt(req.params.requestId, 10);
+  if (!Number.isInteger(requestId) || requestId < 1) {
+    res.status(400).json({
+      error: 'requestId must be a positive integer'
+    });
+    return;
+  }
+  if (!status) {
+    res.status(400).json({
+      error: 'status is a required field'
+    });
+    return;
+  }
+  const sql = `
+    update "requests"
+       set "status" = $1
+     where "requestId" = $2
+     returning *
+  `;
+  const params = [status, requestId];
+  db.query(sql, params)
+    .then(result => {
+      const [status] = result.rows;
+      res.status(201).json(status);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console
   console.log(`express server listening on port ${process.env.PORT}`);

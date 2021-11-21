@@ -22,7 +22,7 @@ export default class Notification extends React.Component {
     const update = {
       status: 'Approved'
     };
-    fetch(`/api/reqStatus/${appOrDeny}`, {
+    fetch('/api/reqStatus/:requestId', {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'

@@ -18,11 +18,11 @@ export default class Notification extends React.Component {
       });
   }
 
-  updateMyStatus(appOrDeny) {
+  updateMyStatus(requestId) {
     const update = {
       status: 'Approved'
     };
-    fetch('/api/reqStatus/:requestId', {
+    fetch(`/api/reqStatus/${requestId}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ export default class Notification extends React.Component {
 }
 
 function ListNotification(props) {
-  const { photoUrl, fullName, time, description, location, title } = props.notification;
+  const { photoUrl, fullName, time, description, location, title, requestId } = props.notification;
   return (
     <div className="row">
       <div className="col-12 testtesteest">
@@ -77,7 +77,7 @@ function ListNotification(props) {
       </div>
       <div className="buttons">
         <div className="a-placement">
-          <button onClick={props.onClick} className="a-app-deny">Approve</button>
+          <button onClick={() => props.onClick(requestId)} className="a-app-deny">Approve</button>
           <a href="" className="a-app-deny">Deny</a>
         </div>
       </div>

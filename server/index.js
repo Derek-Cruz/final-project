@@ -93,7 +93,8 @@ app.get('/api/notifications', (req, res) => {
              "time",
              "plans"."location",
              "description",
-             "planId"
+             "planId",
+             "requestId"
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" ON "users"."userId"="requests"."toUserId"

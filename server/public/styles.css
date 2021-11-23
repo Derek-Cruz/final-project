@@ -55,7 +55,15 @@ h2 {
 
 /* -------------------- HOME.JSX -------------------- */
 
+.my-plans-position {
+  margin-top: 20px;
+  display: flex;
+}
+
 .h2-plans-jsx {
+  position: fixed;
+  width: 375px;
+  background-color: white;
   padding-left: 2px;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
@@ -66,7 +74,7 @@ h2 {
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
-  top: 213px;
+  top: 215px;
   width: 375px;
   background-color: white;
 }

@@ -20,7 +20,7 @@ export default class Notification extends React.Component {
 
   updateMyStatus(requestId) {
     const update = {
-      status: 'Approved'
+      status: 'approved'
     };
     fetch(`/api/reqStatus/${requestId}`, {
       method: 'PATCH',

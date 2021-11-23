@@ -4,7 +4,8 @@ export default class Home extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      availableUser: []
+      availableUser: [],
+      status: []
     };
   }
 
@@ -18,6 +19,16 @@ export default class Home extends React.Component {
       });
   }
 
+  displayApproved(status) {
+    fetch('/api/reqStatus')
+      .then(res => res.json())
+      .then(newPlan => {
+        return (status.status === 'approved')
+          ? this.setState({ status: newPlan })
+          : 'no plan';
+      });
+  }
+
   render() {
     return (
       <div className="container container-home-jsx">
@@ -25,7 +36,13 @@ export default class Home extends React.Component {
           <div className="col p-0">
             <h2 className="h2-plans-jsx">MY PLANS</h2>
             <div className="home-jsx-margin ">
-              <p>this is where my active plans go</p>
+              {
+                this.state.status.map(testing => (
+                  <div key={testing.requestId} className="col-12">
+                    <TestingPlans status={testing} />
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
@@ -69,5 +86,14 @@ function ListStatus(props) {
           <a href="#send-req" className="request-a-home">Request</a>
         </div>
       </div>
+  );
+}
+
+function TestingPlans(props) {
+  const { status } = props.status;
+  return (
+    <div>
+      <div> {status }</div>
+    </div>
   );
 }

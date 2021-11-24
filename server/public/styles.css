@@ -55,6 +55,10 @@ h2 {
 
 /* -------------------- HOME.JSX -------------------- */
 
+.margin-test {
+  margin-top: 30px;
+}
+
 .my-plans-position {
   margin-top: 20px;
   display: flex;
@@ -74,7 +78,7 @@ h2 {
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
-  top: 215px;
+  top: 235px;
   width: 375px;
   background-color: white;
 }

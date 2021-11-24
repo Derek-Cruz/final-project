@@ -28,7 +28,6 @@ export default class Home extends React.Component {
   }
 
   render() {
-    // console.log('state:', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row plans-home-jsx">
@@ -49,7 +48,7 @@ export default class Home extends React.Component {
           <div className="col p-0">
             <h2 className="h2-avail-jsx">AVAILABLE</h2>
             <div className="home-jsx-margin ">
-              <div className="row">
+              <div className="row margin-test">
                 {
                   this.state.availableUser.map(status => (
                     <div key={status.availabilityId} className="col-12">

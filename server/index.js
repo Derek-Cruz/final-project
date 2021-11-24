@@ -74,6 +74,7 @@ app.get('/api/approvedPlans', (req, res) => {
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" USING ("userId")
+       WHERE "status" = 'approved'
   `;
   db.query(sql)
     .then(result => {
@@ -126,7 +127,8 @@ app.get('/api/notifications', (req, res) => {
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" ON "users"."userId"="requests"."toUserId"
-       WHERE "users"."userId" = $1;
+       WHERE "users"."userId" = $1
+         AND "status" = 'pending';
   `;
   const params = [userId];
   db.query(sql, params)

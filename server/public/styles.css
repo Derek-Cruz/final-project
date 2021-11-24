@@ -2,6 +2,31 @@
   display: none;
 }
 
+h2 {
+  font-family: "Encode Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+.small-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.small-icon {
+  padding-right: 5px;
+}
+
+.small-img-placement {
+  display: flex;
+  justify-content: center;
+}
+
 /* -------------------- ICON.JSX -------------------- */
 
 .icon-style {
@@ -25,24 +50,35 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-color: #fff;
 }
 
 /* -------------------- HOME.JSX -------------------- */
 
+.margin-test {
+  margin-top: 30px;
+}
+
+.my-plans-position {
+  margin-top: 20px;
+  display: flex;
+}
+
 .h2-plans-jsx {
+  position: fixed;
+  width: 375px;
+  background-color: white;
   padding-left: 2px;
-  font-size: 1.1rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
 }
 
 .h2-avail-jsx {
   padding-left: 2px;
-  font-size: 1.1rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
-  top: 213px;
+  top: 235px;
   width: 375px;
   background-color: white;
 }
@@ -59,6 +95,7 @@
 
 .container-home-jsx {
   margin-top: 55px;
+  padding: 0;
 }
 
 .button-home-jsx {
@@ -79,7 +116,7 @@
 .fa-plus-styling {
   color: #fef7dc;
   font-size: 1.2rem;
-  margin: 20px 0 0 10px;
+  margin: 20px 0 0 21px;
 }
 
 .home-jsx-margin {
@@ -117,27 +154,18 @@
   border-radius: 20px;
   width: 65px;
   display: block;
-  height: 24px;
+  height: 23px;
   text-decoration: none;
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;
 }
 
-.home-img-placement {
-  display: flex;
-  justify-content: center;
-}
-
-.home-img {
-  width: 80%;
-  height: 80%;
-  border-radius: 50%;
-}
-
 /* -------------------- HEADER.JSX -------------------- */
 
 .header-jsx-style {
+  font-family: "Encode Sans", sans-serif;
+  font-weight: 800;
   text-align: center;
   background-color: #fff;
   top: 0;
@@ -246,4 +274,58 @@
   padding-right: 11px;
   font-size: 1.2rem;
   padding-left: 3px;
+}
+
+/* -------------------- NOTIFICATION.JSX -------------------- */
+
+.noti-row-style {
+  overflow: auto;
+}
+
+.noti-h2-style {
+  padding-left: 2px;
+  border-bottom: solid 1px #fef7dc;
+  position: fixed;
+  top: 50px;
+  width: 375px;
+  background-color: white;
+}
+
+.noti-jsx-margin {
+  margin-top: 18px;
+}
+
+.testtesteest {
+  display: flex;
+}
+
+.p-noti-jsx {
+  font-size: 0.8rem;
+  margin-bottom: 7px;
+}
+
+.buttons {
+  margin-bottom: 5px;
+}
+
+.a-app-deny {
+  font-size: 0.9rem;
+  padding: 2px 0;
+  text-align: center;
+  border-radius: 20px;
+  width: 90px;
+  display: block;
+  height: 26px;
+  text-decoration: none;
+  color: #fef7dc;
+  background: #5f7a61;
+  cursor: pointer;
+  border-style: none;
+}
+
+.a-placement {
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
 }

@@ -1,10 +1,12 @@
 import React from 'react';
+import Login from './pages/login';
 import Home from './pages/home';
 import Header from './pages/header';
 import Icons from './pages/icons';
 import NotFound from './pages/not-found';
 import PostStatus from './pages/post-status';
 import SendRequest from './pages/send-req';
+import Notification from './pages/notification';
 import { parseRoute } from './lib';
 
 export default class App extends React.Component {
@@ -35,10 +37,17 @@ export default class App extends React.Component {
     if (route.path === 'send-req') {
       return <SendRequest />;
     }
+    if (route.path === 'notification') {
+      return <Notification />;
+    }
     return <NotFound />;
   }
 
   render() {
+    const { route } = this.state;
+    if (route.path === 'login') {
+      return <Login />;
+    }
     return (
       <>
         <Header />

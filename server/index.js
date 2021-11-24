@@ -21,6 +21,73 @@ const jsonMiddleware = express.json();
 
 app.use(jsonMiddleware);
 
+app.get('/api/login', (req, res) => {
+  const sql = `
+      SELECT
+             "userId",
+             "fullName"
+        FROM "users";
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.get('/api/reqStatus', (req, res) => {
+  const sql = `
+      SELECT
+             "requestId",
+             "status"
+        FROM "requests";
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.get('/api/approvedPlans', (req, res) => {
+  const sql = `
+      SELECT
+             "requestId",
+             "status",
+             "title",
+             "time",
+             "plans"."location",
+             "description",
+             "planId",
+             "photoUrl",
+             "fullName"
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" USING ("userId")
+       WHERE "status" = 'approved'
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/available', (req, res) => {
   const sql = `
       SELECT
@@ -35,6 +102,39 @@ app.get('/api/available', (req, res) => {
   db.query(sql)
     .then(result => {
       res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.get('/api/notifications', (req, res) => {
+  const userId = 2;
+  const sql = `
+      SELECT
+             "status",
+             "photoUrl",
+             "fullName",
+             "title",
+             "time",
+             "plans"."location",
+             "description",
+             "planId",
+             "requestId"
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" ON "users"."userId"="requests"."toUserId"
+       WHERE "users"."userId" = $1
+         AND "status" = 'pending';
+  `;
+  const params = [userId];
+  db.query(sql, params)
+    .then(result => {
+      const requests = result.rows;
+      res.json(requests);
     })
     .catch(err => {
       console.error(err);
@@ -87,6 +187,59 @@ app.post('/api/sendRequest', (req, res) => {
     RETURNING *
   `;
   const params = [title, time, location, description, userId];
+  db.query(sql, params)
+    .then(result => {
+      const fromUserId = userId;
+      const planId = result.rows[0].planId;
+      const { toUserId } = req.body;
+      if (!toUserId || !planId || !fromUserId) {
+        res.status(400).json({
+          error: 'toUserId and planId are required'
+        });
+        return;
+      }
+      const requestSql = `
+      INSERT INTO requests("toUserId", "planId", "fromUserId")
+      VALUES ($1, $2, $3)
+      RETURNING *
+    `;
+      const requestParams = [toUserId, planId, fromUserId];
+      db.query(requestSql, requestParams)
+        .then(newRequest => {
+          const [dataToSendToClient] = newRequest.rows;
+          res.status(201).json(dataToSendToClient);
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.patch('/api/reqStatus/:requestId', (req, res) => {
+  const { status } = req.body;
+  const requestId = parseInt(req.params.requestId, 10);
+  if (!Number.isInteger(requestId) || requestId < 1) {
+    res.status(400).json({
+      error: 'requestId must be a positive integer'
+    });
+    return;
+  }
+  if (!status) {
+    res.status(400).json({
+      error: 'status is a required field'
+    });
+    return;
+  }
+  const sql = `
+    update "requests"
+       set "status" = $1
+     where "requestId" = $2
+     returning *
+  `;
+  const params = [status, requestId];
   db.query(sql, params)
     .then(result => {
       const [status] = result.rows;

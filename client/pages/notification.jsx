@@ -6,6 +6,7 @@ export default class Notification extends React.Component {
     this.state = {
       request: []
     };
+    this.testOnClick = this.testOnClick.bind(this);
   }
 
   componentDidMount() {
@@ -18,7 +19,7 @@ export default class Notification extends React.Component {
       });
   }
 
-  updateMyStatus(requestId) {
+  approveMyStatus(requestId) {
     const update = {
       status: 'approved'
     };
@@ -35,6 +36,45 @@ export default class Notification extends React.Component {
       });
   }
 
+  denyMyStatus(requestId) {
+    const update = {
+      status: 'deny'
+    };
+    fetch(`/api/reqStatus/${requestId}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(update)
+    })
+      .then(res => res.json())
+      .then(updateStatus => {
+        location.hash = '#';
+      });
+  }
+
+  // deleteRequest(requestId) {
+  //   const update = {
+  //     status: 'deny'
+  //   };
+  //   fetch(`/api/deleteReq/${requestId}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(update)
+  //   })
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       location.hash = '#';
+  //     });
+  // }
+
+  testOnClick(requestId) {
+    this.approveMyStatus(requestId);
+    this.denyMyStatus(requestId);
+  }
+
   render() {
     // console.log('state:', this.state);
     return (
@@ -47,7 +87,7 @@ export default class Notification extends React.Component {
               {
                 this.state.request.map(notification => (
                   <div key={notification.planId} className="col-12">
-                    <ListNotification notification={notification} onClick={this.updateMyStatus} />
+                    <ListNotification notification={notification} onClick={this.testOnClick} />
                   </div>
                 ))
               }
@@ -78,7 +118,7 @@ function ListNotification(props) {
       <div className="buttons">
         <div className="a-placement">
           <button onClick={() => props.onClick(requestId)} className="a-app-deny">Approve</button>
-          <a href="" className="a-app-deny">Deny</a>
+          <button onClick={() => props.onClick(requestId)} className="a-app-deny">Deny</button>
         </div>
       </div>
     </div>

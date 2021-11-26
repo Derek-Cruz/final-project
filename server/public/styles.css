@@ -78,6 +78,16 @@ h2 {
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
+  top: 435px;
+  width: 375px;
+  background-color: white;
+}
+
+.h2-pending-jsx {
+  padding-left: 2px;
+  font-weight: 400;
+  border-bottom: solid 1px #fef7dc;
+  position: fixed;
   top: 235px;
   width: 375px;
   background-color: white;
@@ -89,7 +99,12 @@ h2 {
 }
 
 .avail-home-jsx {
-  height: 530px;
+  height: 330px;
+  overflow: auto;
+}
+
+.pending-home-jsx {
+  height: 200px;
   overflow: auto;
 }
 

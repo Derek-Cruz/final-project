@@ -44,6 +44,16 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
+        <div className="row pending-home-jsx">
+          <div className="col p-0">
+            <h2 className="h2-pending-jsx">PENDING</h2>
+            <div className="home-jsx-margin ">
+              <p>
+                 testing
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="row avail-home-jsx">
           <div className="col p-0">
             <h2 className="h2-avail-jsx">AVAILABLE</h2>

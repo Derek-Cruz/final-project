@@ -88,6 +88,36 @@ app.get('/api/approvedPlans', (req, res) => {
     });
 });
 
+app.get('/api/deniedPlans', (req, res) => {
+  const sql = `
+      SELECT
+             "requestId",
+             "status",
+             "title",
+             "time",
+             "plans"."location",
+             "description",
+             "planId",
+             "photoUrl",
+             "fullName"
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" USING ("userId")
+       WHERE "status" = 'deny'
+          OR "status" = 'pending';
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/available', (req, res) => {
   const sql = `
       SELECT

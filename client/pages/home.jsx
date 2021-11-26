@@ -5,7 +5,8 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       availableUser: [],
-      status: []
+      status: [],
+      denied: []
     };
   }
 
@@ -25,9 +26,18 @@ export default class Home extends React.Component {
           status: newPlan
         });
       });
+
+    fetch('/api/deniedPlans')
+      .then(res => res.json())
+      .then(denyPlan => {
+        this.setState({
+          denied: denyPlan
+        });
+      });
   }
 
   render() {
+    // console.log('state:', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row plans-home-jsx">
@@ -37,7 +47,7 @@ export default class Home extends React.Component {
               {
                 this.state.status.map(status => (
                   <div key={status.requestId} className="col-12">
-                    <TestingPlans status={status} />
+                    <ApprovedPlan status={status} />
                   </div>
                 ))
               }
@@ -48,9 +58,13 @@ export default class Home extends React.Component {
           <div className="col p-0">
             <h2 className="h2-pending-jsx">PENDING</h2>
             <div className="home-jsx-margin ">
-              <p>
-                 testing
-              </p>
+              {
+                this.state.denied.map(status => (
+                  <div key={status.requestId} className="col-12">
+                    <DeniedPlan status={status} />
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>
@@ -97,7 +111,26 @@ function ListStatus(props) {
   );
 }
 
-function TestingPlans(props) {
+function ApprovedPlan(props) {
+  const { photoUrl, fullName, time, description, location, title } = props.status;
+  return (
+    <div className="row">
+      <div className="col-12 my-plans-position">
+        <div className="col-3 small-img-placement">
+          <img src={photoUrl} alt="profile picture" className="small-img" />
+        </div>
+        <div className="col-9">
+          <p className="p-noti-jsx">{fullName}</p>
+          <p className="p-noti-jsx">{title}</p>
+          <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
+          <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{description}</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DeniedPlan(props) {
   const { photoUrl, fullName, time, description, location, title } = props.status;
   return (
     <div className="row">

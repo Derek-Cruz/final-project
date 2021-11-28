@@ -74,7 +74,7 @@ app.get('/api/approvedPlans', (req, res) => {
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" USING ("userId")
-       WHERE "status" = 'approved'
+       WHERE "status" = 'Approved'
   `;
   db.query(sql)
     .then(result => {
@@ -96,14 +96,13 @@ app.get('/api/deniedPlans', (req, res) => {
              "title",
              "time",
              "plans"."location",
-             "description",
              "planId",
              "photoUrl",
              "fullName"
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" USING ("userId")
-       WHERE "status" = 'deny'
+       WHERE "status" = 'Denied'
           OR "status" = 'pending';
   `;
   db.query(sql)

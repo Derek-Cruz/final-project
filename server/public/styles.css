@@ -19,12 +19,17 @@ h2 {
 }
 
 .small-icon {
+  color: black;
   padding-right: 5px;
 }
 
 .small-img-placement {
   display: flex;
   justify-content: center;
+}
+
+.red {
+  color: red;
 }
 
 /* -------------------- ICON.JSX -------------------- */
@@ -151,7 +156,7 @@ h2 {
   color: black;
 }
 
-.a-position {
+.homepage-button-position {
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
@@ -171,6 +176,20 @@ h2 {
   display: block;
   height: 23px;
   text-decoration: none;
+  color: #fef7dc;
+  background: #5f7a61;
+  cursor: pointer;
+}
+
+.denied-button-home {
+  font-size: 0.8rem;
+  padding: 2px 0;
+  text-align: center;
+  border-radius: 20px;
+  width: 65px;
+  display: block;
+  height: 23px;
+  border-style: none;
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;

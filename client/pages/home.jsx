@@ -104,7 +104,7 @@ function ListStatus(props) {
             <p className="p-liststatus"><i className="fas fa-comment-alt small-icon"></i>{ description }</p>
           </div>
         </div>
-        <div className="a-position">
+        <div className="homepage-button-position">
           <a href="#send-req" className="request-a-home">Request</a>
         </div>
       </div>
@@ -131,7 +131,7 @@ function ApprovedPlan(props) {
 }
 
 function DeniedPlan(props) {
-  const { photoUrl, fullName, time, description, location, title } = props.status;
+  const { photoUrl, fullName, time, status, location, title } = props.status;
   return (
     <div className="row">
       <div className="col-12 my-plans-position">
@@ -142,8 +142,11 @@ function DeniedPlan(props) {
           <p className="p-noti-jsx">{fullName}</p>
           <p className="p-noti-jsx">{title}</p>
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
-          <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{description}</p>
+          <p className="p-noti-jsx red"><i className="fas fa-envelope-open small-icon"></i>{status}</p>
         </div>
+      </div>
+      <div className="homepage-button-position">
+        <button className="denied-button-home">Delete</button>
       </div>
     </div>
   );

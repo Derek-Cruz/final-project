@@ -21,7 +21,7 @@ export default class Notification extends React.Component {
 
   approveMyStatus(requestId) {
     const update = {
-      status: 'approved'
+      status: 'Approved'
     };
     fetch(`/api/reqStatus/${requestId}`, {
       method: 'PATCH',
@@ -38,7 +38,7 @@ export default class Notification extends React.Component {
 
   denyMyStatus(requestId) {
     const update = {
-      status: 'deny'
+      status: 'Denied'
     };
     fetch(`/api/reqStatus/${requestId}`, {
       method: 'PATCH',

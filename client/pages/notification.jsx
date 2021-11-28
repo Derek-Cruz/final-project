@@ -53,23 +53,6 @@ export default class Notification extends React.Component {
       });
   }
 
-  // deleteRequest(requestId) {
-  //   const update = {
-  //     status: 'deny'
-  //   };
-  //   fetch(`/api/deleteReq/${requestId}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(update)
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => {
-  //       location.hash = '#';
-  //     });
-  // }
-
   testOnClick(requestId) {
     this.approveMyStatus(requestId);
     this.denyMyStatus(requestId);

@@ -282,23 +282,23 @@ app.patch('/api/reqStatus/:requestId', (req, res) => {
     });
 });
 
-// app.delete('/api/deleteReq/:requestId', (req, res) => {
-//   const sql = `
-//       DELETE FROM "requests"
-//             WHERE "requestId" = 'deny'
-//         RETURNING *;
-//   `;
-//   db.query(sql)
-//     .then(result => {
-//       res.json(result.rows);
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.status(500).json({
-//         error: 'an unexpected error occurred'
-//       });
-//     });
-// });
+app.delete('/api/deleteReq/:requestId', (req, res) => {
+  const sql = `
+      DELETE FROM "requests"
+            WHERE "requestId" = 'Denied'
+        RETURNING *;
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
 
 app.listen(process.env.PORT, () => {
   // eslint-disable-next-line no-console

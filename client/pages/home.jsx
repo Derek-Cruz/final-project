@@ -36,6 +36,17 @@ export default class Home extends React.Component {
       });
   }
 
+  deleteRequest(requestId) {
+    fetch(`/api/deleteReq/${requestId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+      .then(res => res.json());
+  }
+
   render() {
     // console.log('state:', this.state);
     return (
@@ -61,7 +72,7 @@ export default class Home extends React.Component {
               {
                 this.state.denied.map(status => (
                   <div key={status.requestId} className="col-12">
-                    <DeniedPlan status={status} />
+                    <DeniedPlan status={status} onClick={this.deleteRequest} />
                   </div>
                 ))
               }
@@ -146,7 +157,7 @@ function DeniedPlan(props) {
         </div>
       </div>
       <div className="homepage-button-position">
-        <button className="denied-button-home">Delete</button>
+        <button onClick={() => props.onClick(status)} className="denied-button-home">Delete</button>
       </div>
     </div>
   );

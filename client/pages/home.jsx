@@ -5,8 +5,8 @@ export default class Home extends React.Component {
     super(props);
     this.state = {
       availableUser: [],
-      status: [],
-      denied: []
+      approved: [],
+      status: []
     };
     this.deleteRequest = this.deleteRequest.bind(this);
   }
@@ -24,20 +24,22 @@ export default class Home extends React.Component {
       .then(res => res.json())
       .then(newPlan => {
         this.setState({
-          status: newPlan
+          approved: newPlan
         });
       });
 
-    fetch('/api/deniedPlans')
+    fetch('/api/pendingPlans')
       .then(res => res.json())
-      .then(denyPlan => {
+      .then(penPlan => {
         this.setState({
-          denied: denyPlan
+          status: penPlan
         });
       });
   }
 
   deleteRequest(requestId) {
+    const testingdelete = this.state.status;
+
     fetch(`/api/deleteReq/${requestId}`, {
       method: 'DELETE',
       headers: {
@@ -45,7 +47,12 @@ export default class Home extends React.Component {
       },
       body: JSON.stringify()
     })
-      .then(res => res.json());
+      .then(res => res.json())
+      .then(testing => {
+        this.setState({
+          status: testingdelete.filter(test => status.requestId !== requestId)
+        });
+      });
   }
 
   render() {
@@ -57,7 +64,7 @@ export default class Home extends React.Component {
             <h2 className="h2-plans-jsx">MY PLANS</h2>
             <div className="home-jsx-margin ">
               {
-                this.state.status.map(status => (
+                this.state.approved.map(status => (
                   <div key={status.requestId} className="col-12">
                     <ApprovedPlan status={status} />
                   </div>
@@ -71,7 +78,7 @@ export default class Home extends React.Component {
             <h2 className="h2-pending-jsx">PENDING</h2>
             <div className="home-jsx-margin ">
               {
-                this.state.denied.map(status => (
+                this.state.status.map(status => (
                   <div key={status.requestId} className="col-12">
                     <DeniedPlan status={status} onClick={this.deleteRequest} />
                   </div>

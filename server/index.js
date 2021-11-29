@@ -88,7 +88,7 @@ app.get('/api/approvedPlans', (req, res) => {
     });
 });
 
-app.get('/api/deniedPlans', (req, res) => {
+app.get('/api/pendingPlans', (req, res) => {
   const sql = `
       SELECT
              "requestId",
@@ -283,12 +283,14 @@ app.patch('/api/reqStatus/:requestId', (req, res) => {
 });
 
 app.delete('/api/deleteReq/:requestId', (req, res) => {
+  const requestId = req.params.requestId;
   const sql = `
       DELETE FROM "requests"
-            WHERE "requestId" = 'requests.requestId'
+            WHERE "requestId" = $1
         RETURNING *;
   `;
-  db.query(sql)
+  const params = [requestId];
+  db.query(sql, params)
     .then(result => {
       res.json(result.rows);
     })

@@ -8,6 +8,7 @@ export default class Home extends React.Component {
       status: [],
       denied: []
     };
+    this.deleteRequest = this.deleteRequest.bind(this);
   }
 
   componentDidMount() {
@@ -142,7 +143,7 @@ function ApprovedPlan(props) {
 }
 
 function DeniedPlan(props) {
-  const { photoUrl, fullName, time, status, location, title } = props.status;
+  const { photoUrl, fullName, time, status, location, title, requestId } = props.status;
   return (
     <div className="row">
       <div className="col-12 my-plans-position">
@@ -157,7 +158,7 @@ function DeniedPlan(props) {
         </div>
       </div>
       <div className="homepage-button-position">
-        <button onClick={() => props.onClick(status)} className="denied-button-home">Delete</button>
+        <button onClick={() => props.onClick(requestId)} className="denied-button-home">Delete</button>
       </div>
     </div>
   );

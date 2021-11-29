@@ -285,7 +285,7 @@ app.patch('/api/reqStatus/:requestId', (req, res) => {
 app.delete('/api/deleteReq/:requestId', (req, res) => {
   const sql = `
       DELETE FROM "requests"
-            WHERE "requestId" = 'Denied'
+            WHERE "requestId" = 'requests.requestId'
         RETURNING *;
   `;
   db.query(sql)

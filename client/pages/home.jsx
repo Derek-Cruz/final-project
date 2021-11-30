@@ -38,7 +38,7 @@ export default class Home extends React.Component {
   }
 
   deleteRequest(requestId) {
-    const testingdelete = this.state.status;
+    const currentStatus = this.state.status;
 
     fetch(`/api/deleteReq/${requestId}`, {
       method: 'DELETE',
@@ -50,7 +50,7 @@ export default class Home extends React.Component {
       .then(res => res.json())
       .then(testing => {
         this.setState({
-          status: testingdelete.filter(test => status.requestId !== requestId)
+          status: currentStatus.filter(data => data.requestId !== requestId)
         });
       });
   }

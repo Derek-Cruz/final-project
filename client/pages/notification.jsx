@@ -6,7 +6,8 @@ export default class Notification extends React.Component {
     this.state = {
       request: []
     };
-    this.testOnClick = this.testOnClick.bind(this);
+    this.approveMyStatus = this.approveMyStatus.bind(this);
+    this.denyMyStatus = this.denyMyStatus.bind(this);
   }
 
   componentDidMount() {
@@ -53,11 +54,6 @@ export default class Notification extends React.Component {
       });
   }
 
-  testOnClick(requestId) {
-    this.approveMyStatus(requestId);
-    this.denyMyStatus(requestId);
-  }
-
   render() {
     // console.log('state:', this.state);
     return (
@@ -70,7 +66,8 @@ export default class Notification extends React.Component {
               {
                 this.state.request.map(notification => (
                   <div key={notification.planId} className="col-12">
-                    <ListNotification notification={notification} onClick={this.testOnClick} />
+                    <ListNotification notification={notification} approve={() => this.approveMyStatus(notification.requestId)}
+                    deny={() => this.denyMyStatus(notification.requestId)} />
                   </div>
                 ))
               }
@@ -84,7 +81,7 @@ export default class Notification extends React.Component {
 }
 
 function ListNotification(props) {
-  const { photoUrl, fullName, time, description, location, title, requestId } = props.notification;
+  const { photoUrl, fullName, time, description, location, title } = props.notification;
   return (
     <div className="row">
       <div className="col-12 testtesteest">
@@ -92,16 +89,16 @@ function ListNotification(props) {
           <img src={photoUrl} alt="profile picture" className="small-img" />
         </div>
         <div className="col-9">
-          <p className="p-noti-jsx">{ fullName }</p>
-          <p className="p-noti-jsx">{ title }</p>
+          <p className="p-noti-jsx">{fullName}</p>
+          <p className="p-noti-jsx">{title}</p>
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
-          <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{ description }</p>
+          <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{description}</p>
         </div>
       </div>
       <div className="buttons">
         <div className="a-placement">
-          <button onClick={() => props.onClick(requestId)} className="a-app-deny">Approve</button>
-          <button onClick={() => props.onClick(requestId)} className="a-app-deny">Deny</button>
+          <button onClick={props.approve} className="a-app-deny">Approve</button>
+          <button onClick={props.deny} className="a-app-deny">Deny</button>
         </div>
       </div>
     </div>

@@ -84,7 +84,7 @@ function ListNotification(props) {
   const { photoUrl, fullName, time, description, location, title } = props.notification;
   return (
     <div className="row">
-      <div className="col-12 testtesteest">
+      <div className="col-12 d-flex">
         <div className="col-3 small-img-placement">
           <img src={photoUrl} alt="profile picture" className="small-img" />
         </div>

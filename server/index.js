@@ -249,12 +249,12 @@ app.post('/api/sendRequest', (req, res) => {
 
 // __________________________________________________________________________________________________________________
 
-app.put('/api/approvedPlans/:requestId', (req, res) => {
+app.put('/api/approvedPlans/:planId', (req, res) => {
   const { fullName, title, time, location, description } = req.body;
-  const requestId = parseInt(req.params.requestId);
+  const planId = parseInt(req.params.planId);
 
-  if (!Number.isInteger(requestId) || requestId <= 0) {
-    res.status(400).json({ error: '"requestId" must be a positive integer' });
+  if (!Number.isInteger(planId) || planId <= 0) {
+    res.status(400).json({ error: '"planId" must be a positive integer' });
     return;
   }
   if (!fullName) {
@@ -275,7 +275,7 @@ app.put('/api/approvedPlans/:requestId', (req, res) => {
   }
 
   const sql = `
-    UPDATE "requests"
+    UPDATE "plans"
        SET "fullName" = $1
            "title" = $2
            "time" = $3
@@ -291,7 +291,7 @@ app.put('/api/approvedPlans/:requestId', (req, res) => {
     .then(data => {
       const [updatePlan] = data.rows;
       if (!updatePlan) {
-        res.status(404).json({ error: `Cannot find plan with "requestId" ${requestId}` });
+        res.status(404).json({ error: `Cannot find plan with "planId" ${planId}` });
       }
 
       res.json(updatePlan);

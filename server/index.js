@@ -74,7 +74,36 @@ app.get('/api/approvedPlans', (req, res) => {
         FROM "requests"
         JOIN "plans" USING ("planId")
         JOIN "users" USING ("userId")
-       WHERE "status" = 'approved'
+       WHERE "status" = 'Approved'
+  `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.get('/api/pendingPlans', (req, res) => {
+  const sql = `
+      SELECT
+             "requestId",
+             "status",
+             "title",
+             "time",
+             "plans"."location",
+             "planId",
+             "photoUrl",
+             "fullName"
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" USING ("userId")
+       WHERE "status" = 'Denied'
+          OR "status" = 'pending';
   `;
   db.query(sql)
     .then(result => {
@@ -221,7 +250,7 @@ app.post('/api/sendRequest', (req, res) => {
 app.patch('/api/reqStatus/:requestId', (req, res) => {
   const { status } = req.body;
   const requestId = parseInt(req.params.requestId, 10);
-  if (!Number.isInteger(requestId) || requestId < 1) {
+  if (!Number.isInteger(requestId)) {
     res.status(400).json({
       error: 'requestId must be a positive integer'
     });
@@ -244,6 +273,26 @@ app.patch('/api/reqStatus/:requestId', (req, res) => {
     .then(result => {
       const [status] = result.rows;
       res.status(201).json(status);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
+app.delete('/api/deleteReq/:requestId', (req, res) => {
+  const requestId = req.params.requestId;
+  const sql = `
+      DELETE FROM "requests"
+            WHERE "requestId" = $1
+        RETURNING *;
+  `;
+  const params = [requestId];
+  db.query(sql, params)
+    .then(result => {
+      res.json(result.rows);
     })
     .catch(err => {
       console.error(err);

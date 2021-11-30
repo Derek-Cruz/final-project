@@ -247,6 +247,64 @@ app.post('/api/sendRequest', (req, res) => {
     });
 });
 
+// __________________________________________________________________________________________________________________
+
+app.put('/api/approvedPlans/:requestId', (req, res) => {
+  const { fullName, title, time, location, description } = req.body;
+  const requestId = parseInt(req.params.requestId);
+
+  if (!Number.isInteger(requestId) || requestId <= 0) {
+    res.status(400).json({ error: '"requestId" must be a positive integer' });
+    return;
+  }
+  if (!fullName) {
+    res.status(400).json({ error: 'Must have a name' });
+    return;
+  } else if (!title) {
+    res.status(400).json({ error: 'Must have a title' });
+    return;
+  } else if (!time) {
+    res.status(400).json({ error: 'Must have a time' });
+    return;
+  } else if (!location) {
+    res.status(400).json({ error: 'Must have a location' });
+    return;
+  } else if (!description) {
+    res.status(400).json({ error: 'Must have a descripton' });
+    return;
+  }
+
+  const sql = `
+    UPDATE "requests"
+       SET "fullName" = $1
+           "title" = $2
+           "time" = $3
+           "location" = $4
+           "description" = $5
+     WHERE "planId" = $7
+ RETURNING *;
+  `;
+
+  const params = [fullName, title, time, location, description];
+
+  db.query(sql, params)
+    .then(data => {
+      const [updatePlan] = data.rows;
+      if (!updatePlan) {
+        res.status(404).json({ error: `Cannot find plan with "requestId" ${requestId}` });
+      }
+
+      res.json(updatePlan);
+    })
+    .catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Insert plan error:', err);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
+});
+
+// __________________________________________________________________________________________________________________
+
 app.patch('/api/reqStatus/:requestId', (req, res) => {
   const { status } = req.body;
   const requestId = parseInt(req.params.requestId, 10);

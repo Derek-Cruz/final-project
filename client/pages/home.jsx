@@ -131,7 +131,7 @@ function ListStatus(props) {
 }
 
 function ApprovedPlan(props) {
-  const { photoUrl, fullName, time, description, location, title } = props.status;
+  const { photoUrl, fullName, time, description, location, title, planId } = props.status;
   return (
     <div className="row">
       <div className="col-12 my-plans-position">
@@ -146,7 +146,7 @@ function ApprovedPlan(props) {
         </div>
       </div>
       <div className="homepage-button-position">
-        <a href="#update-plan" className="request-a-home">Update</a>
+        <a href={`#update-plan?planId=${planId}`} className="request-a-home">Update</a>
       </div>
     </div>
   );

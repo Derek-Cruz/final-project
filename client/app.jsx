@@ -39,7 +39,8 @@ export default class App extends React.Component {
       return <SendRequest />;
     }
     if (route.path === 'update-plan') {
-      return <UpdatePlan />;
+      const planId = route.params.get('planId');
+      return <UpdatePlan planId={planId} />;
     }
     if (route.path === 'notification') {
       return <Notification />;

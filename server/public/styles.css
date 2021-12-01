@@ -32,6 +32,27 @@ h2 {
   color: red;
 }
 
+/* -------------------- UPDATE-PLAN.JSX -------------------- */
+
+.update-plan-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.update-plan-position {
+  height: 710px;
+  margin-top: 58px;
+}
+
+.update-plan-fullname-position {
+  margin-top: 10px;
+}
+
+.update-plan-fullname {
+  font-size: 1.2rem;
+}
+
 /* -------------------- ICON.JSX -------------------- */
 
 .icon-style {

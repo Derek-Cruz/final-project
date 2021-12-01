@@ -4,10 +4,16 @@ export default class UpdatePlan extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      testing: null
+      title: '',
+      time: '',
+      location: '',
+      description: '',
+      photoUrl: '',
+      fullName: ''
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.updateValues = this.updateValues.bind(this);
   }
 
   handleChange(event) {
@@ -18,7 +24,7 @@ export default class UpdatePlan extends React.Component {
   }
 
   handleSubmit(event) {
-    this.requestSent(this.state);
+    this.updateValues(this.state);
     event.preventDefault();
   }
 
@@ -27,23 +33,40 @@ export default class UpdatePlan extends React.Component {
       .then(res => res.json())
       .then(testing => {
         this.setState({
-          testing
+          title: testing.title,
+          time: testing.time,
+          location: testing.location,
+          description: testing.description,
+          photoUrl: testing.photoUrl,
+          fullName: testing.fullName
         });
       });
   }
 
+  updateValues(planId) {
+    fetch(`/api/approvedPlans/${planId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+      .then(data => data.json())
+      .then(values => {
+        location.hash = '#';
+      });
+  }
+
   render() {
-    if (!this.state.testing) return null;
-    const { photoUrl, fullName, time, description, location, title } = this.state.testing;
     return (
       <div className="container">
         <div className="update-plan-position">
           <div>
             <div>
-              <img src={photoUrl} alt="Profile picture" className="update-plan-img" />
+              <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
             </div>
             <div className="update-plan-fullname-position">
-              <p className="update-plan-fullname">{ fullName }</p>
+              <p className="update-plan-fullname">{ this.state.fullName }</p>
             </div>
           </div>
           <form onSubmit={this.handleSubmit}>
@@ -54,7 +77,7 @@ export default class UpdatePlan extends React.Component {
                 name="title"
                 type="text"
                 id="send-title"
-                value={ title }
+                value={ this.state.title }
                 onChange={this.handleChange} />
             </div>
             <div>
@@ -64,7 +87,7 @@ export default class UpdatePlan extends React.Component {
                 name="location"
                 type="text"
                 id="send-location"
-                value={ location }
+                value={ this.state.location }
                 onChange={this.handleChange} />
             </div>
             <div>
@@ -74,7 +97,7 @@ export default class UpdatePlan extends React.Component {
                 name="time"
                 type="time"
                 id="send-time"
-                value={ time }
+                value={ this.state.time }
                 onChange={this.handleChange} />
             </div>
             <div>
@@ -85,7 +108,7 @@ export default class UpdatePlan extends React.Component {
                 type="text"
                 id="send-description"
                 placeholder="What do you want to do?"
-                value={ description }
+                value={ this.state.description }
                 onChange={this.handleChange} />
             </div>
             <div className="button1">

@@ -7,6 +7,7 @@ import NotFound from './pages/not-found';
 import PostStatus from './pages/post-status';
 import SendRequest from './pages/send-req';
 import Notification from './pages/notification';
+import UpdatePlan from './pages/update-plan';
 import { parseRoute } from './lib';
 
 export default class App extends React.Component {
@@ -36,6 +37,9 @@ export default class App extends React.Component {
     }
     if (route.path === 'send-req') {
       return <SendRequest />;
+    }
+    if (route.path === 'update-plan') {
+      return <UpdatePlan />;
     }
     if (route.path === 'notification') {
       return <Notification />;

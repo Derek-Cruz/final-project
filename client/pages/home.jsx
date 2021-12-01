@@ -145,6 +145,9 @@ function ApprovedPlan(props) {
           <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{description}</p>
         </div>
       </div>
+      <div className="homepage-button-position">
+        <a href="#update-plan" className="request-a-home">Update</a>
+      </div>
     </div>
   );
 }

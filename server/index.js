@@ -250,17 +250,14 @@ app.post('/api/sendRequest', (req, res) => {
 // __________________________________________________________________________________________________________________
 
 app.put('/api/approvedPlans/:planId', (req, res) => {
-  const { fullName, title, time, location, description } = req.body;
+  const { title, time, location, description } = req.body;
   const planId = parseInt(req.params.planId);
 
   if (!Number.isInteger(planId) || planId <= 0) {
     res.status(400).json({ error: '"planId" must be a positive integer' });
     return;
   }
-  if (!fullName) {
-    res.status(400).json({ error: 'Must have a name' });
-    return;
-  } else if (!title) {
+  if (!title) {
     res.status(400).json({ error: 'Must have a title' });
     return;
   } else if (!time) {
@@ -276,16 +273,15 @@ app.put('/api/approvedPlans/:planId', (req, res) => {
 
   const sql = `
     UPDATE "plans"
-       SET "fullName" = $1
-           "title" = $2
-           "time" = $3
-           "location" = $4
-           "description" = $5
-     WHERE "planId" = $7
+       SET "title" = $1,
+           "time" = $2,
+           "location" = $3,
+           "description" = $4
+     WHERE "planId" = $5
  RETURNING *;
   `;
 
-  const params = [fullName, title, time, location, description];
+  const params = [title, time, location, description, planId];
 
   db.query(sql, params)
     .then(data => {

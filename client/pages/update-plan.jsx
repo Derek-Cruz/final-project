@@ -44,12 +44,13 @@ export default class UpdatePlan extends React.Component {
   }
 
   updateValues(planId) {
+    const updatedPlan = this.state;
     fetch(`/api/approvedPlans/${planId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify()
+      body: JSON.stringify(updatedPlan)
     })
       .then(data => data.json())
       .then(values => {

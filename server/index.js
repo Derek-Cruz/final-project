@@ -88,8 +88,6 @@ app.get('/api/approvedPlans', (req, res) => {
     });
 });
 
-// __________________________________________________________________________________________________________________
-
 app.get('/api/updatePlans/:planId', (req, res) => {
   const planId = parseInt(req.params.planId, 10);
   if (!planId) {
@@ -124,8 +122,6 @@ app.get('/api/updatePlans/:planId', (req, res) => {
       });
     });
 });
-
-// __________________________________________________________________________________________________________________
 
 app.get('/api/pendingPlans', (req, res) => {
   const sql = `

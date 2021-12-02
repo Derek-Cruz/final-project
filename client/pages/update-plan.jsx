@@ -24,21 +24,21 @@ export default class UpdatePlan extends React.Component {
   }
 
   handleSubmit(event) {
-    this.updateValues(this.state);
+    this.updateValues(this.props.planId);
     event.preventDefault();
   }
 
   componentDidMount() {
     fetch(`/api/updatePlans/${this.props.planId}`)
       .then(res => res.json())
-      .then(testing => {
+      .then(data => {
         this.setState({
-          title: testing.title,
-          time: testing.time,
-          location: testing.location,
-          description: testing.description,
-          photoUrl: testing.photoUrl,
-          fullName: testing.fullName
+          title: data.title,
+          time: data.time,
+          location: data.location,
+          description: data.description,
+          photoUrl: data.photoUrl,
+          fullName: data.fullName
         });
       });
   }

@@ -88,6 +88,41 @@ app.get('/api/approvedPlans', (req, res) => {
     });
 });
 
+app.get('/api/updatePlans/:planId', (req, res) => {
+  const planId = parseInt(req.params.planId, 10);
+  if (!planId) {
+    res.status(400).json({
+      error: 'testing'
+    });
+    return;
+  }
+  const sql = `
+      SELECT
+             "title",
+             "time",
+             "plans"."location",
+             "description",
+             "photoUrl",
+             "fullName",
+             "planId"
+        FROM "requests"
+        JOIN "plans" USING ("planId")
+        JOIN "users" USING ("userId")
+       WHERE "planId" = $1
+  `;
+  const params = [planId];
+  db.query(sql, params)
+    .then(result => {
+      res.json(result.rows[0]);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/pendingPlans', (req, res) => {
   const sql = `
       SELECT
@@ -246,6 +281,60 @@ app.post('/api/sendRequest', (req, res) => {
       });
     });
 });
+
+// __________________________________________________________________________________________________________________
+
+app.put('/api/approvedPlans/:planId', (req, res) => {
+  const { title, time, location, description } = req.body;
+  const planId = parseInt(req.params.planId);
+
+  if (!Number.isInteger(planId) || planId <= 0) {
+    res.status(400).json({ error: '"planId" must be a positive integer' });
+    return;
+  }
+  if (!title) {
+    res.status(400).json({ error: 'Must have a title' });
+    return;
+  } else if (!time) {
+    res.status(400).json({ error: 'Must have a time' });
+    return;
+  } else if (!location) {
+    res.status(400).json({ error: 'Must have a location' });
+    return;
+  } else if (!description) {
+    res.status(400).json({ error: 'Must have a descripton' });
+    return;
+  }
+
+  const sql = `
+    UPDATE "plans"
+       SET "title" = $1,
+           "time" = $2,
+           "location" = $3,
+           "description" = $4
+     WHERE "planId" = $5
+ RETURNING *;
+  `;
+
+  const params = [title, time, location, description, planId];
+
+  db.query(sql, params)
+    .then(data => {
+      const [updatePlan] = data.rows;
+      if (!updatePlan) {
+        res.status(404).json({ error: `Cannot find plan with "planId" ${planId}` });
+      }
+
+      res.json(updatePlan);
+    })
+    .catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Insert plan error:', err);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
+});
+
+// __________________________________________________________________________________________________________________
 
 app.patch('/api/reqStatus/:requestId', (req, res) => {
   const { status } = req.body;

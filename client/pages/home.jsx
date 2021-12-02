@@ -131,7 +131,7 @@ function ListStatus(props) {
 }
 
 function ApprovedPlan(props) {
-  const { photoUrl, fullName, time, description, location, title } = props.status;
+  const { photoUrl, fullName, time, description, location, title, planId } = props.status;
   return (
     <div className="row">
       <div className="col-12 my-plans-position">
@@ -144,6 +144,9 @@ function ApprovedPlan(props) {
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
           <p className="p-noti-jsx"><i className="fas fa-comment-alt small-icon"></i>{description}</p>
         </div>
+      </div>
+      <div className="homepage-button-position">
+        <a href={`#update-plan?planId=${planId}`} className="request-a-home">Update</a>
       </div>
     </div>
   );

@@ -120,22 +120,22 @@ h2 {
 }
 
 .plans-home-jsx {
-  height: 180px;
+  height: 25%;
   overflow: auto;
 }
 
 .avail-home-jsx {
-  height: 330px;
+  height: 50%;
   overflow: auto;
 }
 
 .pending-home-jsx {
-  height: 200px;
+  height: 25%;
   overflow: auto;
 }
 
 .container-home-jsx {
-  margin-top: 55px;
+  margin-top: 60px;
   padding: 0;
 }
 
@@ -379,4 +379,16 @@ h2 {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+@media (min-width: 576px) {
+  .p-noti-jsx {
+    color: red;
+  }
+}
+
+@media (min-width: 992px) {
+  .p-noti-jsx {
+    color: plum;
+  }
 }

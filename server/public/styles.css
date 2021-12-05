@@ -381,6 +381,8 @@ h2 {
   justify-content: space-around;
 }
 
+/* -------------------- MEDIA Q -------------------- */
+
 @media (min-width: 576px) {
   .p-noti-jsx {
     color: red;
@@ -388,7 +390,23 @@ h2 {
 }
 
 @media (min-width: 992px) {
-  .p-noti-jsx {
-    color: plum;
+  .container {
+    width: 1000px;
+  }
+
+  .icon-position {
+    left: 375px;
+    top: 10px;
+    background-color: transparent;
+  }
+
+  .icon-style {
+    border-top: none;
+  }
+
+  .header-jsx-style {
+    left: 100px;
+    text-align: unset;
+    background-color: none;
   }
 }

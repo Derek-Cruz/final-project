@@ -383,65 +383,53 @@ h2 {
 
 /* -------------------- MEDIA Q -------------------- */
 
-@media (min-width: 576px) {
-  .p-noti-jsx {
-    color: red;
-  }
-}
-
 @media (min-width: 992px) {
   .container {
-    width: 1000px;
+    width: 600px;
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
+  .container-home-jsx {
+    margin-top: unset;
+    padding: 20px 0 0;
   }
 
   .icon-position {
     height: 40px;
-    left: 375px;
-    top: 10px;
+    left: 402px;
+    top: 8px;
+    background-color: transparent;
   }
 
   .icon-style {
     border-top: none;
   }
 
+  .icon-fas {
+    margin: 0 10px;
+  }
+
   .header-jsx-style {
     left: 100px;
     text-align: unset;
-    background-color: none;
+    background-color: transparent;
   }
 
   .noti-h2-style {
     top: 60px;
   }
 
-  .plans-home-jsx {
-    border-left: solid 1px #fef7dc;
-    border-right: solid 1px #fef7dc;
-    margin: 0 100px;
-  }
-
-  .avail-home-jsx {
-    border-left: solid 1px #fef7dc;
-    border-right: solid 1px #fef7dc;
-    margin: 0 100px;
-  }
-
-  .pending-home-jsx {
-    border-left: solid 1px #fef7dc;
-    border-right: solid 1px #fef7dc;
-    margin: 0 100px;
-  }
-
   .h2-plans-jsx {
-    width: 760px;
+    width: 598px;
   }
 
   .h2-pending-jsx {
-    width: 760px;
+    width: 598px;
   }
 
   .h2-avail-jsx {
-    width: 760px;
+    width: 598px;
   }
 
   .col-3 {
@@ -451,51 +439,50 @@ h2 {
 
 @media (min-width: 1200px) {
   .container {
-    width: 1000px;
+    width: 600px;
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
+  .container-home-jsx {
+    margin-top: unset;
+    padding: 20px 0 0;
   }
 
   .icon-position {
     height: 40px;
-    left: 375px;
-    top: 10px;
+    left: 402px;
+    top: 8px;
+    background-color: transparent;
   }
 
   .icon-style {
     border-top: none;
   }
 
+  .icon-fas {
+    margin: 0 10px;
+  }
+
   .header-jsx-style {
-    left: 100px;
-    text-align: unset;
-    background-color: none;
+    left: -353px;
+    background-color: transparent;
   }
 
   .noti-h2-style {
     top: 60px;
   }
 
-  .plans-home-jsx {
-    margin: 0 100px;
-  }
-
-  .avail-home-jsx {
-    margin: 0 100px;
-  }
-
-  .pending-home-jsx {
-    margin: 0 100px;
-  }
-
   .h2-plans-jsx {
-    width: 798px;
+    width: 598px;
   }
 
   .h2-pending-jsx {
-    width: 798px;
+    width: 598px;
   }
 
   .h2-avail-jsx {
-    width: 798px;
+    width: 598px;
   }
 
   .col-3 {

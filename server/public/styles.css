@@ -395,9 +395,9 @@ h2 {
   }
 
   .icon-position {
+    height: 40px;
     left: 375px;
     top: 10px;
-    background-color: transparent;
   }
 
   .icon-style {
@@ -408,5 +408,97 @@ h2 {
     left: 100px;
     text-align: unset;
     background-color: none;
+  }
+
+  .noti-h2-style {
+    top: 60px;
+  }
+
+  .plans-home-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+    margin: 0 100px;
+  }
+
+  .avail-home-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+    margin: 0 100px;
+  }
+
+  .pending-home-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+    margin: 0 100px;
+  }
+
+  .h2-plans-jsx {
+    width: 760px;
+  }
+
+  .h2-pending-jsx {
+    width: 760px;
+  }
+
+  .h2-avail-jsx {
+    width: 760px;
+  }
+
+  .col-3 {
+    width: 15%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+
+  .icon-position {
+    height: 40px;
+    left: 375px;
+    top: 10px;
+  }
+
+  .icon-style {
+    border-top: none;
+  }
+
+  .header-jsx-style {
+    left: 100px;
+    text-align: unset;
+    background-color: none;
+  }
+
+  .noti-h2-style {
+    top: 60px;
+  }
+
+  .plans-home-jsx {
+    margin: 0 100px;
+  }
+
+  .avail-home-jsx {
+    margin: 0 100px;
+  }
+
+  .pending-home-jsx {
+    margin: 0 100px;
+  }
+
+  .h2-plans-jsx {
+    width: 798px;
+  }
+
+  .h2-pending-jsx {
+    width: 798px;
+  }
+
+  .h2-avail-jsx {
+    width: 798px;
+  }
+
+  .col-3 {
+    width: 15%;
   }
 }

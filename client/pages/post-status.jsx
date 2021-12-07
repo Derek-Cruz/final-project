@@ -40,7 +40,7 @@ export default class PostStatus extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container container-status-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
             <div>

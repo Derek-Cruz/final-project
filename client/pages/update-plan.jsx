@@ -60,7 +60,7 @@ export default class UpdatePlan extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container container-update-jsx">
         <div className="update-plan-position">
           <div>
             <div>

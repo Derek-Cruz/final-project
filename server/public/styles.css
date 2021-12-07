@@ -41,7 +41,7 @@ h2 {
 }
 
 .update-plan-position {
-  height: 710px;
+  height: 90vh;
   margin-top: 58px;
 }
 
@@ -305,6 +305,11 @@ h2 {
   padding-left: 3px;
 }
 
+.button2-post {
+  bottom: 50px;
+  position: fixed;
+}
+
 /* -------------------- SEND-REQ.JSX -------------------- */
 
 .send-input-style {
@@ -333,6 +338,11 @@ h2 {
   padding-right: 11px;
   font-size: 1.2rem;
   padding-left: 3px;
+}
+
+.button2-send-req {
+  bottom: 50px;
+  position: fixed;
 }
 
 /* -------------------- NOTIFICATION.JSX -------------------- */
@@ -387,6 +397,22 @@ h2 {
 
 /* -------------------- MEDIA Q -------------------- */
 
+@media (min-width: 576px) {
+  .h2-plans-jsx {
+    width: 500px;
+  }
+
+  .h2-pending-jsx {
+    width: 500px;
+    top: 329px;
+  }
+
+  .h2-avail-jsx {
+    width: 500px;
+    top: 674px;
+  }
+}
+
 @media (min-width: 992px) {
   .container {
     height: 99vh;
@@ -401,6 +427,16 @@ h2 {
   }
 
   .container-status-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
+  .container-update-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
+  .container-req-jsx {
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
@@ -468,6 +504,32 @@ h2 {
     height: 100vh;
     margin: unset;
     padding: 60px;
+  }
+
+  .update-plan-position {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    margin-top: unset;
+  }
+
+  .button1 {
+    bottom: unset;
+  }
+
+  .button2 {
+    top: 435px;
+    bottom: unset;
+  }
+
+  .button2-send-req {
+    top: 285px;
+    bottom: unset;
+  }
+
+  .button2-post {
+    top: 200px;
+    bottom: unset;
   }
 }
 
@@ -489,6 +551,16 @@ h2 {
     border-right: solid 1px #fef7dc;
   }
 
+  .container-update-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
+  .container-req-jsx {
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
   .button-home-jsx {
     width: 100px;
     right: unset;
@@ -552,5 +624,31 @@ h2 {
     height: 100vh;
     margin: unset;
     padding: 60px;
+  }
+
+  .update-plan-position {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    margin-top: unset;
+  }
+
+  .button1 {
+    bottom: unset;
+  }
+
+  .button2 {
+    top: 435px;
+    bottom: unset;
+  }
+
+  .button2-send-req {
+    top: 285px;
+    bottom: unset;
+  }
+
+  .button2-post {
+    top: 200px;
+    bottom: unset;
   }
 }

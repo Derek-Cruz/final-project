@@ -399,10 +399,6 @@ h2 {
   .button-home-jsx {
     width: 100px;
     height: 35px;
-    top: 55px;
-    left: 870px;
-    bottom: 0;
-    right: 0;
   }
 
   .fa-plus-styling {
@@ -430,7 +426,12 @@ h2 {
   }
 
   .noti-h2-style {
-    top: 60px;
+    width: 598px;
+    top: 20px;
+  }
+
+  .noti-jsx-margin {
+    margin-top: 30px;
   }
 
   .h2-plans-jsx {
@@ -468,10 +469,6 @@ h2 {
   .button-home-jsx {
     width: 100px;
     height: 35px;
-    top: 55px;
-    left: 870px;
-    bottom: 0;
-    right: 0;
   }
 
   .fa-plus-styling {
@@ -499,7 +496,12 @@ h2 {
   }
 
   .noti-h2-style {
-    top: 60px;
+    width: 598px;
+    top: 20px;
+  }
+
+  .noti-jsx-margin {
+    margin-top: 30px;
   }
 
   .h2-plans-jsx {

@@ -56,7 +56,6 @@ export default class Home extends React.Component {
   }
 
   render() {
-    // console.log('state:', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row plans-home-jsx">

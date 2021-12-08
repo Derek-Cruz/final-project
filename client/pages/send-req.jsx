@@ -43,7 +43,7 @@ export default class SendRequest extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="container container-req-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
             <div>
@@ -90,7 +90,7 @@ export default class SendRequest extends React.Component {
             <div className="button1">
               <button className="button-style">Submit</button>
             </div>
-            <div className="button2">
+            <div className="button2-send-req">
               <a href="#" className="a-style">Cancel</a>
             </div>
           </form>

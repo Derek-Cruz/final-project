@@ -1,4 +1,5 @@
 import React from 'react';
+import Spinner from './spinner';
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -56,6 +57,7 @@ export default class Home extends React.Component {
   }
 
   render() {
+    // console.log('state:', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row plans-home-jsx">
@@ -63,11 +65,13 @@ export default class Home extends React.Component {
             <h2 className="h2-plans-jsx">MY PLANS</h2>
             <div className="home-jsx-margin ">
               {
-                this.state.approved.map(status => (
-                  <div key={status.requestId} className="col-12">
-                    <ApprovedPlan status={status} />
-                  </div>
-                ))
+                this.state.isLoading
+                  ? <Spinner />
+                  : this.state.approved.map(status => (
+                    <div key={status.requestId} className="col-12">
+                      <ApprovedPlan status={status} />
+                    </div>
+                  ))
               }
             </div>
           </div>
@@ -77,11 +81,13 @@ export default class Home extends React.Component {
             <h2 className="h2-pending-jsx">PENDING</h2>
             <div className="home-jsx-margin ">
               {
-                this.state.status.map(status => (
+                this.state.status.length > 0
+                  ? this.state.status.map(status => (
                   <div key={status.requestId} className="col-12">
                     <DeniedPlan status={status} onClick={this.deleteRequest} />
                   </div>
-                ))
+                  ))
+                  : (<div>There are no pending plans</div>)
               }
             </div>
           </div>
@@ -92,11 +98,13 @@ export default class Home extends React.Component {
             <div className="home-jsx-margin ">
               <div className="row margin-test">
                 {
-                  this.state.availableUser.map(status => (
-                    <div key={status.availabilityId} className="col-12">
-                      <ListStatus status={status} />
-                    </div>
-                  ))
+                  this.state.availableUser.length > 0
+                    ? this.state.availableUser.map(status => (
+                      <div key={status.availabilityId} className="col-12">
+                        <ListStatus status={status} />
+                      </div>
+                    ))
+                    : (<div>There are no available friends</div>)
                 }
               </div>
             </div>

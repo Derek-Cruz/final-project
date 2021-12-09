@@ -32,6 +32,48 @@ h2 {
   color: red;
 }
 
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #dfc;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #dfc transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* -------------------- UPDATE-PLAN.JSX -------------------- */
 
 .update-plan-img {
@@ -108,7 +150,7 @@ h2 {
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
-  top: 435px;
+  top: 429px;
   width: 375px;
   background-color: white;
 }
@@ -129,12 +171,12 @@ h2 {
 }
 
 .avail-home-jsx {
-  height: 50%;
+  height: 45%;
   overflow: auto;
 }
 
 .pending-home-jsx {
-  height: 26%;
+  height: 25%;
   overflow: auto;
 }
 
@@ -409,7 +451,7 @@ h2 {
 
   .h2-avail-jsx {
     width: 500px;
-    top: 674px;
+    top: 669px;
   }
 
   .button1 {
@@ -444,7 +486,7 @@ h2 {
 
   .h2-avail-jsx {
     width: 500px;
-    top: 674px;
+    top: 665px;
   }
 
   .button1 {
@@ -479,7 +521,7 @@ h2 {
 
   .h2-avail-jsx {
     width: 500px;
-    top: 674px;
+    top: 669px;
   }
 
   .button1 {
@@ -580,7 +622,7 @@ h2 {
 
   .h2-avail-jsx {
     width: 598px;
-    top: 680px;
+    top: 669px;
   }
 
   .col-3 {
@@ -700,7 +742,7 @@ h2 {
 
   .h2-avail-jsx {
     width: 598px;
-    top: 680px;
+    top: 669px;
   }
 
   .col-3 {

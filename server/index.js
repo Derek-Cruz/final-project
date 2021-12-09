@@ -282,8 +282,6 @@ app.post('/api/sendRequest', (req, res) => {
     });
 });
 
-// __________________________________________________________________________________________________________________
-
 app.put('/api/approvedPlans/:planId', (req, res) => {
   const { title, time, location, description } = req.body;
   const planId = parseInt(req.params.planId);
@@ -333,8 +331,6 @@ app.put('/api/approvedPlans/:planId', (req, res) => {
       res.status(500).json({ error: 'An unexpected error occurred.' });
     });
 });
-
-// __________________________________________________________________________________________________________________
 
 app.patch('/api/reqStatus/:requestId', (req, res) => {
   const { status } = req.body;

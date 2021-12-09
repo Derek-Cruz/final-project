@@ -32,7 +32,6 @@ export default class Login extends React.Component {
   }
 
   render() {
-    // console.log('state:', this.state);
     return (
       <div className="container">
         <div className="row">

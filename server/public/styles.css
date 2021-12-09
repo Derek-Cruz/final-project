@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: serif;
+  /* font-family: "Sora", serif; */
   margin: 0;
 }
 
@@ -239,12 +239,12 @@ h2 {
 }
 
 .p-liststatus {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 0.625rem;
 }
 
 .request-a-home {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
@@ -302,7 +302,7 @@ h2 {
 }
 
 .button-style {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border-style: none;
   width: 345px;
   height: 45px;
@@ -313,8 +313,8 @@ h2 {
 }
 
 .a-style {
-  font-size: 1.5rem;
-  padding: 0.125rem 0;
+  font-size: 1.4rem;
+  padding: 0.375rem 0;
   text-align: center;
   border-radius: 20px;
   width: 345px;
@@ -416,7 +416,7 @@ h2 {
 }
 
 .p-noti-jsx {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   margin-bottom: 0.438rem;
 }
 

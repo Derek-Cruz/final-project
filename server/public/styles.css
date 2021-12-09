@@ -2,6 +2,11 @@
   display: none;
 }
 
+body {
+  font-family: serif;
+  margin: 0;
+}
+
 h2 {
   font-family: "Encode Sans", sans-serif;
   font-size: 1rem;
@@ -32,6 +37,10 @@ h2 {
   color: red;
 }
 
+.margin-top {
+  margin-top: 1rem;
+}
+
 .lds-ring {
   display: inline-block;
   position: relative;
@@ -45,7 +54,7 @@ h2 {
   position: absolute;
   width: 64px;
   height: 64px;
-  margin: 8px;
+  margin: 0.5rem;
   border: 8px solid #dfc;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
@@ -74,7 +83,7 @@ h2 {
   }
 }
 
-/* -------------------- UPDATE-PLAN.JSX -------------------- */
+/*  UPDATE-PLAN.JSX  */
 
 .update-plan-img {
   width: 100px;
@@ -84,18 +93,18 @@ h2 {
 
 .update-plan-position {
   height: 90vh;
-  margin-top: 58px;
+  margin-top: 3.625rem;
 }
 
 .update-plan-fullname-position {
-  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .update-plan-fullname {
   font-size: 1.2rem;
 }
 
-/* -------------------- ICON.JSX -------------------- */
+/*  ICON.JSX  */
 
 .icon-style {
   color: black;
@@ -107,7 +116,7 @@ h2 {
 }
 
 .icon-fas {
-  margin: 6px 20px;
+  margin: 0.375rem 1.25rem;
 }
 
 .icon-style:hover {
@@ -121,18 +130,18 @@ h2 {
   background-color: #fff;
 }
 
-/* -------------------- HOME.JSX -------------------- */
+/*  HOME.JSX  */
 
 .testing-placement {
   display: flex;
 }
 
 .margin-test {
-  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .my-plans-position {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   display: flex;
 }
 
@@ -140,13 +149,13 @@ h2 {
   position: fixed;
   width: 375px;
   background-color: white;
-  padding-left: 2px;
+  padding-left: 0.125rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
 }
 
 .h2-avail-jsx {
-  padding-left: 2px;
+  padding-left: 0.125rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
@@ -156,7 +165,7 @@ h2 {
 }
 
 .h2-pending-jsx {
-  padding-left: 2px;
+  padding-left: 0.125rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
@@ -181,7 +190,7 @@ h2 {
 }
 
 .container-home-jsx {
-  margin-top: 60px;
+  margin-top: 3.75rem;
   padding: 0;
 }
 
@@ -203,19 +212,19 @@ h2 {
 .fa-plus-styling {
   color: #fef7dc;
   font-size: 1.2rem;
-  margin: 20px 0 0 21px;
+  margin: 1.25rem 0 0 1.313rem;
 }
 
 .home-jsx-margin {
-  margin-top: 8px;
+  margin-top: 0.5rem;
 }
 
 .home-fa-clock {
-  padding-right: 5px;
+  padding-right: 0.313rem;
 }
 
 .home-fa-comment-alt {
-  padding-right: 5px;
+  padding-right: 0.313rem;
 }
 
 .div-liststatus {
@@ -226,17 +235,17 @@ h2 {
 .homepage-button-position {
   display: flex;
   justify-content: flex-end;
-  padding-right: 20px;
+  padding-right: 1.25rem;
 }
 
 .p-liststatus {
   font-size: 0.8rem;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .request-a-home {
   font-size: 0.8rem;
-  padding: 2px 0;
+  padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
   width: 65px;
@@ -250,7 +259,7 @@ h2 {
 
 .denied-button-home {
   font-size: 0.8rem;
-  padding: 2px 0;
+  padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
   width: 65px;
@@ -262,7 +271,7 @@ h2 {
   cursor: pointer;
 }
 
-/* -------------------- HEADER.JSX -------------------- */
+/*  HEADER.JSX  */
 
 .header-jsx-style {
   font-family: "Encode Sans", sans-serif;
@@ -275,11 +284,11 @@ h2 {
   font-size: 2.4rem;
 }
 
-/* -------------------- POST-STATUS.JSX -------------------- */
+/*  POST-STATUS.JSX  */
 
 .post-status-test {
   height: 710px;
-  margin-top: 57px;
+  margin-top: 3.563rem;
 }
 
 .button1 {
@@ -305,7 +314,7 @@ h2 {
 
 .a-style {
   font-size: 1.5rem;
-  padding: 2px 0;
+  padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
   width: 345px;
@@ -322,12 +331,12 @@ h2 {
 }
 
 .label-padding {
-  padding-bottom: 15px;
+  padding-bottom: 0.938rem;
 }
 
 .post-input-style {
   height: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
   border: 0;
   outline: 0;
   background: transparent;
@@ -336,15 +345,15 @@ h2 {
 }
 
 .post-fa-clock {
-  padding-right: 11px;
+  padding-right: 0.688rem;
   font-size: 1.2rem;
-  padding-left: 3px;
+  padding-left: 0.188rem;
 }
 
 .post-fa-comment-alt {
-  padding-right: 11px;
+  padding-right: 0.688rem;
   font-size: 1.2rem;
-  padding-left: 3px;
+  padding-left: 0.188rem;
 }
 
 .button2-post {
@@ -352,11 +361,11 @@ h2 {
   position: fixed;
 }
 
-/* -------------------- SEND-REQ.JSX -------------------- */
+/*  SEND-REQ.JSX  */
 
 .send-input-style {
   height: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 0.938rem;
   border: 0;
   outline: 0;
   background: transparent;
@@ -365,21 +374,21 @@ h2 {
 }
 
 .send-fa-clock {
-  padding-right: 11px;
+  padding-right: 0.688rem;
   font-size: 1.2rem;
-  padding-left: 3px;
+  padding-left: 0.188rem;
 }
 
 .send-fa-comment-alt {
-  padding-right: 11px;
+  padding-right: 0.688rem;
   font-size: 1.2rem;
-  padding-left: 3px;
+  padding-left: 0.188rem;
 }
 
 .send-fa-location-arrow {
-  padding-right: 11px;
+  padding-right: 0.688rem;
   font-size: 1.2rem;
-  padding-left: 3px;
+  padding-left: 0.188rem;
 }
 
 .button2-send-req {
@@ -387,14 +396,14 @@ h2 {
   position: fixed;
 }
 
-/* -------------------- NOTIFICATION.JSX -------------------- */
+/*  NOTIFICATION.JSX  */
 
 .noti-row-style {
   overflow: auto;
 }
 
 .noti-h2-style {
-  padding-left: 2px;
+  padding-left: 0.125rem;
   border-bottom: solid 1px #fef7dc;
   position: fixed;
   top: 50px;
@@ -403,21 +412,21 @@ h2 {
 }
 
 .noti-jsx-margin {
-  margin-top: 18px;
+  margin-top: 1.125rem;
 }
 
 .p-noti-jsx {
   font-size: 0.8rem;
-  margin-bottom: 7px;
+  margin-bottom: 0.438rem;
 }
 
 .buttons {
-  margin-bottom: 5px;
+  margin-bottom: 0.313rem;
 }
 
 .a-app-deny {
   font-size: 0.9rem;
-  padding: 2px 0;
+  padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
   width: 90px;
@@ -437,7 +446,7 @@ h2 {
   justify-content: space-around;
 }
 
-/* -------------------- MEDIA Q -------------------- */
+/*  MEDIA Q  */
 
 @media (min-width: 500px) {
   .h2-plans-jsx {
@@ -552,7 +561,7 @@ h2 {
 
   .container-home-jsx {
     margin-top: unset;
-    padding: 20px 0 0;
+    padding: 1.25rem 0 0;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
@@ -579,7 +588,7 @@ h2 {
   }
 
   .fa-plus-styling {
-    margin: 8px 0 0 42px;
+    margin: 0.5rem 0 0 2.625rem;
   }
 
   .icon-position {
@@ -594,7 +603,7 @@ h2 {
   }
 
   .icon-fas {
-    margin: 0 10px;
+    margin: 0 0.625rem;
   }
 
   .header-jsx-style {
@@ -608,7 +617,7 @@ h2 {
   }
 
   .noti-jsx-margin {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   .h2-plans-jsx {
@@ -634,13 +643,13 @@ h2 {
     justify-content: center;
     height: 100vh;
     margin: unset;
-    padding: 60px;
+    padding: 3.75rem;
   }
 
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 3.75rem;
     margin-top: unset;
   }
 
@@ -672,7 +681,7 @@ h2 {
 
   .container-home-jsx {
     margin-top: unset;
-    padding: 20px 0 0;
+    padding: 1.25rem 0 0;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
@@ -728,7 +737,7 @@ h2 {
   }
 
   .noti-jsx-margin {
-    margin-top: 30px;
+    margin-top: 1.875rem;
   }
 
   .h2-plans-jsx {
@@ -754,13 +763,13 @@ h2 {
     justify-content: center;
     height: 100vh;
     margin: unset;
-    padding: 60px;
+    padding: 3.75rem;
   }
 
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 60px;
+    padding-top: 3.75rem;
     margin-top: unset;
   }
 

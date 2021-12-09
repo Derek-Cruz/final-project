@@ -66,7 +66,7 @@ export default class Home extends React.Component {
         <div className="row plans-home-jsx">
           <div className="col p-0">
             <h2 className="h2-plans-jsx">MY PLANS</h2>
-            <div className="home-jsx-margin ">
+            <div className="home-jsx-margin">
               {
                 this.state.isLoading
                   ? <Spinner />
@@ -76,7 +76,7 @@ export default class Home extends React.Component {
                         <ApprovedPlan status={status} />
                       </div>
                     ))
-                    : (<div>You have no plans!</div>)
+                    : (<div className="margin-top">You have no plans!</div>)
               }
             </div>
           </div>
@@ -94,7 +94,7 @@ export default class Home extends React.Component {
                         <DeniedPlan status={status} onClick={this.deleteRequest} />
                       </div>
                     ))
-                    : (<div>There are no pending plans.</div>)
+                    : (<div className="margin-top">There are no pending plans.</div>)
               }
             </div>
           </div>
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                           <ListStatus status={status} />
                         </div>
                       ))
-                      : (<div>There are no available friends.</div>)
+                      : (<div className="margin-top">There are no available friends.</div>)
                 }
               </div>
             </div>

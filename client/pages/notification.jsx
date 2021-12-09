@@ -1,9 +1,11 @@
 import React from 'react';
+import Spinner from './spinner';
 
 export default class Notification extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
       request: []
     };
     this.approveMyStatus = this.approveMyStatus.bind(this);
@@ -15,6 +17,7 @@ export default class Notification extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
+          isLoading: false,
           request: data
         });
       });
@@ -55,27 +58,30 @@ export default class Notification extends React.Component {
   }
 
   render() {
-    // console.log('state:', this.state);
     return (
-      <div className="container container-home-jsx">
-        <div className="row noti-row-style">
-          <div className="col p-0">
-            <h2 className="noti-h2-style">NOTIFICATION</h2>
-            <div className="noti-jsx-margin">
-            <div className="row">
-              {
-                this.state.request.map(notification => (
-                  <div key={notification.planId} className="col-12">
-                    <ListNotification notification={notification} approve={() => this.approveMyStatus(notification.requestId)}
-                    deny={() => this.denyMyStatus(notification.requestId)} />
-                  </div>
-                ))
-              }
-            </div>
+        <div className="container container-home-jsx">
+          <div className="row noti-row-style">
+            <div className="col p-0">
+              <h2 className="noti-h2-style">NOTIFICATION</h2>
+              <div className="noti-jsx-margin">
+              <div className="row">
+                {
+                  this.state.isLoading
+                    ? <Spinner />
+                    : this.state.request.length > 0
+                      ? this.state.request.map(notification => (
+                        <div key={notification.planId} className="col-12">
+                          <ListNotification notification={notification} approve={() => this.approveMyStatus(notification.requestId)}
+                          deny={() => this.denyMyStatus(notification.requestId)} />
+                        </div>
+                      ))
+                      : (<div>You have no notification.</div>)
+                }
+              </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     );
   }
 }

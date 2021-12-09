@@ -1,9 +1,11 @@
 import React from 'react';
+import Spinner from './spinner';
 
 export default class UpdatePlan extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      isLoading: true,
       title: '',
       time: '',
       location: '',
@@ -33,6 +35,7 @@ export default class UpdatePlan extends React.Component {
       .then(res => res.json())
       .then(data => {
         this.setState({
+          isLoading: false,
           title: data.title,
           time: data.time,
           location: data.location,
@@ -60,67 +63,69 @@ export default class UpdatePlan extends React.Component {
 
   render() {
     return (
-      <div className="container container-update-jsx">
-        <div className="update-plan-position">
-          <div>
+      this.state.isLoading
+        ? <Spinner />
+        : <div className="container container-update-jsx">
+          <div className="update-plan-position">
             <div>
-              <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
+              <div>
+                <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
+              </div>
+              <div className="update-plan-fullname-position">
+                <p className="update-plan-fullname">{ this.state.fullName }</p>
+              </div>
             </div>
-            <div className="update-plan-fullname-position">
-              <p className="update-plan-fullname">{ this.state.fullName }</p>
-            </div>
+            <form onSubmit={this.handleSubmit}>
+              <div>
+                <label htmlFor="send-title">Title:</label>
+                <input
+                  className="send-input-style"
+                  name="title"
+                  type="text"
+                  id="send-title"
+                  value={ this.state.title }
+                  onChange={this.handleChange} />
+              </div>
+              <div>
+                <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
+                <input
+                  className="send-input-style"
+                  name="location"
+                  type="text"
+                  id="send-location"
+                  value={ this.state.location }
+                  onChange={this.handleChange} />
+              </div>
+              <div>
+                <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
+                <input
+                  className="send-input-style"
+                  name="time"
+                  type="time"
+                  id="send-time"
+                  value={ this.state.time }
+                  onChange={this.handleChange} />
+              </div>
+              <div>
+                <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
+                <input
+                  className="send-input-style"
+                  name="description"
+                  type="text"
+                  id="send-description"
+                  placeholder="What do you want to do?"
+                  value={ this.state.description }
+                  onChange={this.handleChange} />
+              </div>
+              <div className="button1">
+                <button className="button-style">Update</button>
+              </div>
+              <div className="button2">
+                <a href="#" className="a-style">Cancel</a>
+              </div>
+            </form>
           </div>
-          <form onSubmit={this.handleSubmit}>
-            <div>
-              <label htmlFor="send-title">Title:</label>
-              <input
-                className="send-input-style"
-                name="title"
-                type="text"
-                id="send-title"
-                value={ this.state.title }
-                onChange={this.handleChange} />
-            </div>
-            <div>
-              <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
-              <input
-                className="send-input-style"
-                name="location"
-                type="text"
-                id="send-location"
-                value={ this.state.location }
-                onChange={this.handleChange} />
-            </div>
-            <div>
-              <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
-              <input
-                className="send-input-style"
-                name="time"
-                type="time"
-                id="send-time"
-                value={ this.state.time }
-                onChange={this.handleChange} />
-            </div>
-            <div>
-              <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
-              <input
-                className="send-input-style"
-                name="description"
-                type="text"
-                id="send-description"
-                placeholder="What do you want to do?"
-                value={ this.state.description }
-                onChange={this.handleChange} />
-            </div>
-            <div className="button1">
-              <button className="button-style">Update</button>
-            </div>
-            <div className="button2">
-              <a href="#" className="a-style">Cancel</a>
-            </div>
-          </form>
         </div>
-      </div>
     );
   }
 }

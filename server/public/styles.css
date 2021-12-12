@@ -3,7 +3,7 @@
 }
 
 body {
-  /* font-family: "Sora", serif; */
+  /* font-family: "Sora", sans-serif; */
   margin: 0;
 }
 
@@ -55,10 +55,10 @@ h2 {
   width: 64px;
   height: 64px;
   margin: 0.5rem;
-  border: 8px solid #dfc;
+  border: 8px solid #5f7a61;
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #dfc transparent transparent;
+  border-color: #5f7a61 transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {

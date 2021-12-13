@@ -87,10 +87,10 @@ export default class SendRequest extends React.Component {
                 value={this.state.description}
                 onChange={this.handleChange} />
             </div>
-            <div className="button1">
+            <div className="button-1">
               <button className="button-style">Submit</button>
             </div>
-            <div className="button2-send-req">
+            <div className="button-2-send-req">
               <a href="#" className="a-style">Cancel</a>
             </div>
           </form>

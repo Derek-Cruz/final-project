@@ -5,7 +5,7 @@ export default function NotFound(props) {
     <div>
       <div>
         <div>
-          <h3 className="mt-5">
+          <h3 className="margin-top">
             Uh oh, we could not find the page you were looking for!
           </h3>
           <p>

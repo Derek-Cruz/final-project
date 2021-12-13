@@ -132,7 +132,7 @@ h2 {
 
 /*  HOME.JSX  */
 
-.testing-placement {
+.post-status-placement {
   display: flex;
 }
 
@@ -291,12 +291,12 @@ h2 {
   margin-top: 3.563rem;
 }
 
-.button1 {
+.button-1 {
   position: fixed;
   bottom: 100px;
 }
 
-.button2 {
+.button-2 {
   bottom: 50px;
   position: fixed;
 }
@@ -356,7 +356,7 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.button2-post {
+.button-2-post {
   bottom: 50px;
   position: fixed;
 }
@@ -391,7 +391,7 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.button2-send-req {
+.button-2-send-req {
   bottom: 50px;
   position: fixed;
 }
@@ -463,16 +463,16 @@ h2 {
     top: 669px;
   }
 
-  .button1 {
+  .button-1 {
     bottom: unset;
   }
 
-  .button2 {
+  .button-2 {
     top: 280px;
     bottom: unset;
   }
 
-  .button2-post {
+  .button-2-post {
     top: 280px;
     bottom: unset;
   }
@@ -498,7 +498,7 @@ h2 {
     top: 665px;
   }
 
-  .button1 {
+  .button-1 {
     bottom: unset;
   }
 
@@ -533,7 +533,7 @@ h2 {
     top: 669px;
   }
 
-  .button1 {
+  .button-1 {
     bottom: unset;
   }
 
@@ -653,7 +653,7 @@ h2 {
     margin-top: unset;
   }
 
-  .button1 {
+  .button-1 {
     bottom: unset;
   }
 
@@ -773,7 +773,7 @@ h2 {
     margin-top: unset;
   }
 
-  .button1 {
+  .button-1 {
     bottom: unset;
   }
 

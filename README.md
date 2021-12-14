@@ -51,7 +51,7 @@ Try it out at https://dereks-link-app.herokuapp.com/
 
 1. Clone the repository.
 ```
-git clone git@github.com:user-name/final-project.git
+git clone git@github.com:user-name/lets-link.git
 cd final-project
 ```
 2. Install all dependencies with NPM.

@@ -6,7 +6,7 @@ export default function Icons(props) {
         <a className="icon-style" href="#"><i className="fas fa-home icon-fas"></i></a>
         <a className="icon-style" href=""><i className="fas fa-search icon-fas"></i></a>
         <a className="icon-style" href="#notification"><i className="fas fa-bell icon-fas"></i></a>
-        <a className="icon-style" href=""><i className="fas fa-user icon-fas"></i></a>
+        <a className="icon-style" href="#profile"><i className="fas fa-user icon-fas"></i></a>
       </div>
   );
 }

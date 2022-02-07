@@ -8,6 +8,7 @@ import PostStatus from './pages/post-status';
 import SendRequest from './pages/send-req';
 import Notification from './pages/notification';
 import UpdatePlan from './pages/update-plan';
+import Profile from './pages/profile';
 import { parseRoute } from './lib';
 
 export default class App extends React.Component {
@@ -44,6 +45,9 @@ export default class App extends React.Component {
     }
     if (route.path === 'notification') {
       return <Notification />;
+    }
+    if (route.path === 'profile') {
+      return <Profile />;
     }
     return <NotFound />;
   }

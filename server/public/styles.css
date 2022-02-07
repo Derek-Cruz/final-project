@@ -300,11 +300,13 @@ h2 {
 .button-1 {
   position: fixed;
   bottom: 100px;
+  margin-left: 0.563rem;
 }
 
 .button-2 {
   bottom: 50px;
   position: fixed;
+  margin-left: 0.563rem;
 }
 
 .button-style {
@@ -471,11 +473,13 @@ h2 {
 
   .button-1 {
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2 {
     top: 435px;
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2-post {
@@ -506,11 +510,13 @@ h2 {
 
   .button-1 {
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2 {
     top: 435px;
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2-post {
@@ -541,11 +547,13 @@ h2 {
 
   .button-1 {
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2 {
     top: 435px;
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2-post {
@@ -661,11 +669,13 @@ h2 {
 
   .button-1 {
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2 {
     top: 435px;
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2-send-req {
@@ -781,11 +791,13 @@ h2 {
 
   .button-1 {
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2 {
     top: 435px;
     bottom: unset;
+    margin-left: 0;
   }
 
   .button-2-send-req {

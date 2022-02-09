@@ -152,8 +152,6 @@ h2 {
   display: flex;
 }
 
-/* took position: fixed off h2-jsx */
-
 .h2-plans-jsx {
   width: 375px;
   background-color: white;
@@ -186,7 +184,7 @@ h2 {
 }
 
 .avail-home-jsx {
-  height: 45%;
+  height: 40%;
   overflow: auto;
 }
 
@@ -196,7 +194,7 @@ h2 {
 }
 
 .container-home-jsx {
-  margin-top: 3.75rem;
+  margin-top: 3.98rem;
   padding: 0;
 }
 
@@ -220,10 +218,6 @@ h2 {
   font-size: 1.2rem;
   margin: 1.25rem 0 0 1.313rem;
 }
-
-/* .home-jsx-margin {
-  margin-top: 0.5rem;
-} */
 
 .home-fa-clock {
   padding-right: 0.313rem;

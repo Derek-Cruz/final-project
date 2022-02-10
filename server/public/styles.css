@@ -144,7 +144,7 @@ h2 {
 }
 
 .margin-test {
-  margin-top: 1.875rem;
+  margin-top: 1.4rem;
 }
 
 .my-plans-position {
@@ -184,7 +184,7 @@ h2 {
 }
 
 .avail-home-jsx {
-  height: 40%;
+  height: 42%;
   overflow: auto;
 }
 
@@ -361,6 +361,7 @@ h2 {
 .button-2-post {
   bottom: 50px;
   position: fixed;
+  margin-left: 0.563rem;
 }
 
 /*  SEND-REQ.JSX  */
@@ -396,6 +397,7 @@ h2 {
 .button-2-send-req {
   bottom: 50px;
   position: fixed;
+  margin-left: 0.563rem;
 }
 
 /*  NOTIFICATION.JSX  */

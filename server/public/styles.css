@@ -144,7 +144,7 @@ h2 {
 }
 
 .margin-test {
-  margin-top: 1.875rem;
+  margin-top: 1.4rem;
 }
 
 .my-plans-position {
@@ -152,14 +152,13 @@ h2 {
   display: flex;
 }
 
-/* took position: fixed off h2-jsx */
-
 .h2-plans-jsx {
   width: 375px;
   background-color: white;
   padding-left: 0.125rem;
   font-weight: 400;
   border-bottom: solid 1px #fef7dc;
+  color: #5f7a61;
 }
 
 .h2-avail-jsx {
@@ -169,6 +168,7 @@ h2 {
   top: 429px;
   width: 375px;
   background-color: white;
+  color: #5f7a61;
 }
 
 .h2-pending-jsx {
@@ -178,6 +178,7 @@ h2 {
   top: 235px;
   width: 375px;
   background-color: white;
+  color: #5f7a61;
 }
 
 .plans-home-jsx {
@@ -186,7 +187,7 @@ h2 {
 }
 
 .avail-home-jsx {
-  height: 45%;
+  height: 42%;
   overflow: auto;
 }
 
@@ -196,7 +197,7 @@ h2 {
 }
 
 .container-home-jsx {
-  margin-top: 3.75rem;
+  margin-top: 3.98rem;
   padding: 0;
 }
 
@@ -220,10 +221,6 @@ h2 {
   font-size: 1.2rem;
   margin: 1.25rem 0 0 1.313rem;
 }
-
-/* .home-jsx-margin {
-  margin-top: 0.5rem;
-} */
 
 .home-fa-clock {
   padding-right: 0.313rem;
@@ -264,7 +261,7 @@ h2 {
 }
 
 .denied-button-home {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
@@ -367,6 +364,7 @@ h2 {
 .button-2-post {
   bottom: 50px;
   position: fixed;
+  margin-left: 0.563rem;
 }
 
 /*  SEND-REQ.JSX  */
@@ -402,6 +400,7 @@ h2 {
 .button-2-send-req {
   bottom: 50px;
   position: fixed;
+  margin-left: 0.563rem;
 }
 
 /*  NOTIFICATION.JSX  */
@@ -433,7 +432,7 @@ h2 {
 }
 
 .a-app-deny {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;

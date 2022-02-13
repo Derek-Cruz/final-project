@@ -38,7 +38,7 @@ export default class Profile extends React.Component {
                           <TestingProfile status={status} />
                         </div>
                       ))
-                      : (<div className="margin-top">There are no available friends.</div>)
+                      : (<div className="margin-top">ERR</div>)
                 }
               </div>
             </div>

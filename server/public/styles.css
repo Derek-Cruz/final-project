@@ -297,13 +297,13 @@ h2 {
 .button-1 {
   position: fixed;
   bottom: 100px;
-  margin-left: 0.563rem;
+  margin-left: 1.25rem;
 }
 
 .button-2 {
   bottom: 50px;
   position: fixed;
-  margin-left: 0.563rem;
+  margin-left: 1.25rem;
 }
 
 .button-style {
@@ -364,7 +364,7 @@ h2 {
 .button-2-post {
   bottom: 50px;
   position: fixed;
-  margin-left: 0.563rem;
+  margin-left: 1.25rem;
 }
 
 /*  SEND-REQ.JSX  */
@@ -400,7 +400,7 @@ h2 {
 .button-2-send-req {
   bottom: 50px;
   position: fixed;
-  margin-left: 0.563rem;
+  margin-left: 1.25rem;
 }
 
 /*  NOTIFICATION.JSX  */

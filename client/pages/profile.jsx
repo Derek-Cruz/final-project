@@ -10,7 +10,7 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/profile')
+    fetch('/api/profile/')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -26,7 +26,7 @@ export default class Profile extends React.Component {
       <div className="container container-home-jsx">
         <div className="row noti-row-style">
           <div className="col p-0">
-            <h2 className="noti-h2-style">testing profile</h2>
+            <h2 className="noti-h2-style">MY PROFILE</h2>
             <div className="noti-jsx-margin">
               <div className="row">
                 {

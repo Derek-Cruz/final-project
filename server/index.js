@@ -208,7 +208,10 @@ app.get('/api/notifications', (req, res) => {
     });
 });
 
+// working on this
+
 app.get('/api/profile', (req, res) => {
+  const userId = 1;
   const sql = `
       SELECT
              "photoUrl",
@@ -218,7 +221,8 @@ app.get('/api/profile', (req, res) => {
              "aboutMe"
         FROM "users"
   `;
-  db.query(sql)
+  const params = [userId];
+  db.query(sql, params)
     .then(result => {
       res.json(result.rows);
     })

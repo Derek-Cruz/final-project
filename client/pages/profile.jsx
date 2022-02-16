@@ -10,7 +10,7 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/profile/')
+    fetch('/api/profile')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -38,7 +38,7 @@ export default class Profile extends React.Component {
                           <TestingProfile status={status} />
                         </div>
                       ))
-                      : (<div className="margin-top">ERR</div>)
+                      : (<div className="margin-top">Not loading proper</div>)
                 }
               </div>
             </div>
@@ -53,8 +53,8 @@ function TestingProfile(props) {
   const { photoUrl, fullName, location, aboutMe } = props.status;
   return (
     <div className="row">
-      <div className="col-12 div-liststatus">
-        <div className="col-3 small-img-placement">
+      <div className="col-12">
+        <div className="small-img-placement">
           <img src={photoUrl} alt=".." className="small-img" />
         </div>
         <div className="col-9">

@@ -62,7 +62,7 @@ export default class Notification extends React.Component {
         <div className="container container-home-jsx">
           <div className="row noti-row-style">
             <div className="col p-0">
-              <h2 className="noti-h2-style">NOTIFICATION</h2>
+              <h2 className="noti-h2-style">NOTIFICATIONS</h2>
               <div className="noti-jsx-margin">
               <div className="row">
                 {

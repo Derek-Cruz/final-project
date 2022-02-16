@@ -208,7 +208,7 @@ app.get('/api/notifications', (req, res) => {
     });
 });
 
-// working on this
+// returns the correct user just need to display it proper 213-236
 
 app.get('/api/profile', (req, res) => {
   const userId = 1;
@@ -220,6 +220,7 @@ app.get('/api/profile', (req, res) => {
              "userId",
              "aboutMe"
         FROM "users"
+        WHERE "users"."userId" = $1
   `;
   const params = [userId];
   db.query(sql, params)

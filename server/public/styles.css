@@ -454,6 +454,17 @@ h2 {
   justify-content: space-around;
 }
 
+/*  MY PROFILE  */
+
+.my-profile-small-img {
+  width: 75%;
+}
+
+.my-profile-p-liststatus {
+  font-size: 0.7rem;
+  margin-bottom: 0.625rem;
+}
+
 /*  MEDIA Q  */
 
 @media (min-width: 500px) {

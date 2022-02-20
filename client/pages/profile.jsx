@@ -59,8 +59,11 @@ function TestingProfile(props) {
         </div>
         <div className="my-profile-testing">
           <p className="my-profile-p-fullname">{fullName}</p>
-          <p className="my-profile-p-liststatus">{location}</p>
-          <p className="my-profile-p-liststatus">{aboutMe}</p>
+          <p className="my-profile-p-info">{location}</p>
+          <p className="my-profile-p-info">{aboutMe}</p>
+        </div>
+        <div className="button-3">
+          <button className="my-profile-edit">edit</button>
         </div>
       </div>
     </div>

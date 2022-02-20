@@ -465,6 +465,18 @@ h2 {
   margin-bottom: 0.625rem;
 }
 
+.my-profile-p-fullname {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+}
+
+.my-profile-testing {
+  display: flex;
+  flex-direction: column;
+}
+
 /*  MEDIA Q  */
 
 @media (min-width: 500px) {
@@ -820,4 +832,5 @@ h2 {
     top: 200px;
     bottom: unset;
   }
+}
 }

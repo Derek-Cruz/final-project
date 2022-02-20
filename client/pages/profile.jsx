@@ -57,8 +57,8 @@ function TestingProfile(props) {
         <div className="small-img-placement">
           <img src={photoUrl} alt=".." className="my-profile-small-img" />
         </div>
-        <div className="col-9">
-          <p className="my-profile-p-liststatus">{fullName}</p>
+        <div className="my-profile-testing">
+          <p className="my-profile-p-fullname">{fullName}</p>
           <p className="my-profile-p-liststatus">{location}</p>
           <p className="my-profile-p-liststatus">{aboutMe}</p>
         </div>

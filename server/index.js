@@ -208,8 +208,6 @@ app.get('/api/notifications', (req, res) => {
     });
 });
 
-// returns the correct user just need to display it proper 213-236
-
 app.get('/api/profile', (req, res) => {
   const userId = 1;
   const sql = `

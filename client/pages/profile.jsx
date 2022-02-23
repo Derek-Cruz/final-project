@@ -9,6 +9,11 @@ export default class Profile extends React.Component {
     };
   }
 
+  handleSubmit(event) {
+    this.updateValues(this.props.userId);
+    event.preventDefault();
+  }
+
   componentDidMount() {
     fetch('/api/profile')
       .then(res => res.json())
@@ -17,6 +22,21 @@ export default class Profile extends React.Component {
           myProfile: data,
           isLoading: false
         });
+      });
+  }
+
+  updateValues(userId) {
+    const updatedProfile = this.state;
+    fetch(`/api/profile/${userId}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedProfile)
+    })
+      .then(data => data.json())
+      .then(values => {
+        location.hash = '#';
       });
   }
 
@@ -50,7 +70,7 @@ export default class Profile extends React.Component {
 }
 
 function TestingProfile(props) {
-  const { photoUrl, fullName, location, aboutMe } = props.status;
+  const { photoUrl, fullName, location, aboutMe, userId } = props.status;
   return (
     <div className="row">
       <div className="col-12">
@@ -63,7 +83,7 @@ function TestingProfile(props) {
           <p className="my-profile-p-info">{aboutMe}</p>
         </div>
         <div className="button-3">
-          <button className="my-profile-edit">edit</button>
+          <a href={`#profile?userId=${userId}`} className="my-profile-edit">edit</a>
         </div>
       </div>
     </div>

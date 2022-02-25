@@ -70,7 +70,7 @@ export default class Profile extends React.Component {
 }
 
 function TestingProfile(props) {
-  const { photoUrl, fullName, location, aboutMe, userId } = props.status;
+  const { photoUrl, fullName, location, aboutMe } = props.status;
   return (
     <div className="row">
       <div className="col-12">
@@ -83,7 +83,7 @@ function TestingProfile(props) {
           <p className="my-profile-p-info">{aboutMe}</p>
         </div>
         <div className="button-3">
-          <a href={`#profile?userId=${userId}`} className="my-profile-edit">edit</a>
+          <a href="#testing" className="my-profile-edit">edit</a>
         </div>
       </div>
     </div>

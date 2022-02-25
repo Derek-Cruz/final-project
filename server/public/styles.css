@@ -480,9 +480,10 @@ h2 {
   padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
-  border: none;
   width: 65px;
+  display: block;
   text-decoration: none;
+  border-style: none;
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;

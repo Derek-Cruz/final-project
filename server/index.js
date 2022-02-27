@@ -123,6 +123,35 @@ app.get('/api/updatePlans/:planId', (req, res) => {
     });
 });
 
+// working on this -------------------------------------------------------------
+
+app.get('/api/updateProfile/:userId', (req, res) => {
+  const userId = parseInt(req.params.userId, 10);
+  if (!userId) {
+    res.status(400).json({
+      error: 'testing'
+    });
+    return;
+  }
+  const sql = `
+      SELECT
+             "userId",
+             "location",
+             "fullName"
+        FROM "users"
+ `;
+  db.query(sql)
+    .then(result => {
+      res.json(result.rows);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/pendingPlans', (req, res) => {
   const sql = `
       SELECT

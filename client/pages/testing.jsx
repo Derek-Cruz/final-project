@@ -3,7 +3,10 @@ export default class Testing extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoading: true
+      isLoading: true,
+      name: '',
+      aboutMe: '',
+      location: ''
     };
   }
 

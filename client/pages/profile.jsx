@@ -9,11 +9,6 @@ export default class Profile extends React.Component {
     };
   }
 
-  handleSubmit(event) {
-    this.updateValues(this.props.userId);
-    event.preventDefault();
-  }
-
   componentDidMount() {
     fetch('/api/profile')
       .then(res => res.json())
@@ -22,21 +17,6 @@ export default class Profile extends React.Component {
           myProfile: data,
           isLoading: false
         });
-      });
-  }
-
-  updateValues(userId) {
-    const updatedProfile = this.state;
-    fetch(`/api/profile/${userId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(updatedProfile)
-    })
-      .then(data => data.json())
-      .then(values => {
-        location.hash = '#';
       });
   }
 

@@ -139,10 +139,12 @@ app.get('/api/updateProfile/:userId', (req, res) => {
              "location",
              "fullName"
         FROM "users"
+       WHERE "userId" = $1
  `;
-  db.query(sql)
+  const params = [userId];
+  db.query(sql, params)
     .then(result => {
-      res.json(result.rows);
+      res.json(result.rows[0]);
     })
     .catch(err => {
       console.error(err);

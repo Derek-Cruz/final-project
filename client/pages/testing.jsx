@@ -27,7 +27,7 @@ export default class Testing extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/profile')
+    fetch(`/api/profile/${this.props.userId}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -75,7 +75,7 @@ export default class Testing extends React.Component {
                 name="aboutMe"
                 type="text"
                 id="send-aboutMe"
-                value={this.state.aboutMe}
+                value={ this.state.aboutMe }
                 onChange={this.handleChange} />
             </div>
             <div>
@@ -87,6 +87,12 @@ export default class Testing extends React.Component {
                 id="send-location"
                 value={this.state.location}
                 onChange={this.handleChange} />
+            </div>
+            <div className="button-1">
+              <button className="button-style">Update</button>
+            </div>
+            <div className="button-2">
+              <a href="#" className="a-style">Cancel</a>
             </div>
           </form>
         </div>

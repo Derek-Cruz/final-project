@@ -51,7 +51,8 @@ export default class App extends React.Component {
       return <Profile />;
     }
     if (route.path === 'testing') {
-      return <Testing />;
+      const userId = route.params.get('userId');
+      return <Testing userId={userId} />;
     }
     return <NotFound />;
   }

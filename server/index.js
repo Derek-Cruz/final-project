@@ -123,8 +123,6 @@ app.get('/api/updatePlans/:planId', (req, res) => {
     });
 });
 
-// working on this -------------------------------------------------------------
-
 app.get('/api/updateProfile/:userId', (req, res) => {
   const userId = parseInt(req.params.userId, 10);
   if (!userId) {
@@ -137,7 +135,9 @@ app.get('/api/updateProfile/:userId', (req, res) => {
       SELECT
              "userId",
              "location",
-             "fullName"
+             "fullName",
+             "aboutMe",
+             "photoUrl"
         FROM "users"
        WHERE "userId" = $1
  `;
@@ -249,7 +249,7 @@ app.get('/api/profile', (req, res) => {
              "userId",
              "aboutMe"
         FROM "users"
-        WHERE "users"."userId" = $1
+        WHERE "userId" = $1
   `;
   const params = [userId];
   db.query(sql, params)

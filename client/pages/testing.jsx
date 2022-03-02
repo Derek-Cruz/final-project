@@ -27,7 +27,7 @@ export default class Testing extends React.Component {
   }
 
   componentDidMount() {
-    fetch(`/api/profile/${this.props.userId}`)
+    fetch(`/api/updateProfile/${this.props.userId}`)
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -56,18 +56,19 @@ export default class Testing extends React.Component {
   }
 
   render() {
+    console.log('state:', this.state);
     return (
       <div className="container container-update-jsx">
         <div className="update-plan-position">
           <div>
             <div>
-              <img src={this.state.photoUrl} alt="Profile picture" className="update-plan-img" />
+              <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
             </div>
             <div className="update-plan-fullname-position">
-              <p className="update-plan-fullname">{this.state.fullName}</p>
+              <p className="update-plan-fullname">{ this.state.fullName }</p>
             </div>
           </div>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={ this.handleSubmit }>
             <div>
               <label htmlFor="send-aboutMe">About Me:</label>
               <input
@@ -76,7 +77,7 @@ export default class Testing extends React.Component {
                 type="text"
                 id="send-aboutMe"
                 value={ this.state.aboutMe }
-                onChange={this.handleChange} />
+                onChange={ this.handleChange } />
             </div>
             <div>
               <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
@@ -85,8 +86,8 @@ export default class Testing extends React.Component {
                 name="location"
                 type="text"
                 id="send-location"
-                value={this.state.location}
-                onChange={this.handleChange} />
+                value={ this.state.location }
+                onChange={ this.handleChange } />
             </div>
             <div className="button-1">
               <button className="button-style">Update</button>

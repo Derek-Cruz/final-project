@@ -56,7 +56,6 @@ export default class Testing extends React.Component {
   }
 
   render() {
-    console.log('state:', this.state);
     return (
       <div className="container container-update-jsx">
         <div className="update-plan-position">
@@ -93,7 +92,7 @@ export default class Testing extends React.Component {
               <button className="button-style">Update</button>
             </div>
             <div className="button-2">
-              <a href="#" className="a-style">Cancel</a>
+              <a href="#profile" className="a-style">Cancel</a>
             </div>
           </form>
         </div>

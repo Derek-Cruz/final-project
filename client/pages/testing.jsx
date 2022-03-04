@@ -68,15 +68,15 @@ export default class Testing extends React.Component {
             </div>
           </div>
           <form onSubmit={ this.handleSubmit }>
-            <div>
-              <label htmlFor="send-aboutMe">About Me:</label>
-              <input
-                className="send-input-style"
+            <div className='d-flex'>
+              <label htmlFor="send-aboutMe"><i className="fas fa-user"></i></label>
+              <textarea
+                className="send-textarea-style"
                 name="aboutMe"
                 type="text"
                 id="send-aboutMe"
                 value={ this.state.aboutMe }
-                onChange={ this.handleChange } />
+                onChange={ this.handleChange }></textarea>
             </div>
             <div>
               <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
@@ -88,10 +88,10 @@ export default class Testing extends React.Component {
                 value={ this.state.location }
                 onChange={ this.handleChange } />
             </div>
-            <div className="button-1">
+            <div className="button-1-update">
               <button className="button-style">Update</button>
             </div>
-            <div className="button-2">
+            <div className="button-2-update">
               <a href="#profile" className="a-style">Cancel</a>
             </div>
           </form>

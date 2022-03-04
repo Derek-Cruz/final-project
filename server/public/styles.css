@@ -493,6 +493,28 @@ h2 {
   padding-left: 5px;
 }
 
+/*  MY PROFILE UPDATE  */
+
+.button-1-update {
+  position: fixed;
+  bottom: 100px;
+  margin-left: 1.25rem;
+}
+
+.button-2-update {
+  bottom: 50px;
+  position: fixed;
+  margin-left: 1.25rem;
+}
+
+.send-textarea-style {
+  margin-bottom: 0.938rem;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  width: 80%;
+}
+
 /*  MEDIA Q  */
 
 @media (min-width: 500px) {
@@ -847,6 +869,18 @@ h2 {
   .button-2-post {
     top: 200px;
     bottom: unset;
+  }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
   }
 }
 }

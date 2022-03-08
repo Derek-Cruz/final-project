@@ -388,8 +388,6 @@ app.put('/api/approvedPlans/:planId', (req, res) => {
     });
 });
 
-// working on this-----------------------------
-
 app.put('/api/profile/:userId', (req, res) => {
   const { aboutMe, location } = req.body;
   const userId = parseInt(req.params.userId);

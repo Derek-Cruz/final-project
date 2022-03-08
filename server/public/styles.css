@@ -552,6 +552,18 @@ h2 {
     top: 280px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -589,6 +601,18 @@ h2 {
     top: 280px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -625,6 +649,18 @@ h2 {
   .button-2-send-req {
     top: 280px;
     bottom: unset;
+  }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
   }
 }
 
@@ -747,6 +783,18 @@ h2 {
   .button-2-post {
     top: 200px;
     bottom: unset;
+  }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
   }
 }
 

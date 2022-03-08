@@ -388,6 +388,50 @@ app.put('/api/approvedPlans/:planId', (req, res) => {
     });
 });
 
+// working on this-----------------------------
+
+app.put('/api/profile/:userId', (req, res) => {
+  const { aboutMe, location } = req.body;
+  const userId = parseInt(req.params.userId);
+
+  if (!Number.isInteger(userId) || userId <= 0) {
+    res.status(400).json({ error: '"userId" must be a positive integer' });
+    return;
+  }
+  if (!aboutMe) {
+    res.status(400).json({ error: 'Must have a title' });
+    return;
+  } else if (!location) {
+    res.status(400).json({ error: 'Must have a location' });
+    return;
+  }
+
+  const sql = `
+    UPDATE "users"
+       SET "aboutMe" = $1,
+           "location" = $2
+     WHERE "userId" = $3
+ RETURNING *;
+  `;
+
+  const params = [aboutMe, location, userId];
+
+  db.query(sql, params)
+    .then(data => {
+      const [updateProfile] = data.rows;
+      if (!updateProfile) {
+        res.status(404).json({ error: `Cannot find plan with "userId" ${userId}` });
+      }
+
+      res.json(updateProfile);
+    })
+    .catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Insert plan error:', err);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
+});
+
 app.patch('/api/reqStatus/:requestId', (req, res) => {
   const { status } = req.body;
   const requestId = parseInt(req.params.requestId, 10);

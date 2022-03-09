@@ -507,12 +507,11 @@ h2 {
   margin-left: 1.25rem;
 }
 
-.send-textarea-style {
-  margin-bottom: 0.938rem;
-  border: 0;
-  outline: 0;
-  background: transparent;
-  width: 80%;
+.send-fa-user-icon {
+  padding-top: 0.313rem;
+  padding-right: 0.688rem;
+  font-size: 1.2rem;
+  padding-left: 0.188rem;
 }
 
 /*  MEDIA Q  */

@@ -69,14 +69,14 @@ export default class Testing extends React.Component {
           </div>
           <form onSubmit={ this.handleSubmit }>
             <div className='d-flex'>
-              <label htmlFor="send-aboutMe"><i className="fas fa-user"></i></label>
-              <textarea
-                className="send-textarea-style"
+              <label htmlFor="send-aboutMe"><i className="fas fa-user send-fa-user-icon"></i></label>
+              <input
+                className="send-input-style"
                 name="aboutMe"
                 type="text"
                 id="send-aboutMe"
                 value={ this.state.aboutMe }
-                onChange={ this.handleChange }></textarea>
+                onChange={ this.handleChange } />
             </div>
             <div>
               <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>

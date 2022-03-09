@@ -10,7 +10,7 @@ export default class Profile extends React.Component {
   }
 
   componentDidMount() {
-    fetch('/api/profile/')
+    fetch('/api/profile')
       .then(res => res.json())
       .then(data => {
         this.setState({
@@ -38,7 +38,7 @@ export default class Profile extends React.Component {
                           <TestingProfile status={status} />
                         </div>
                       ))
-                      : (<div className="margin-top">ERR</div>)
+                      : (<div className="margin-top">Not loading proper</div>)
                 }
               </div>
             </div>
@@ -50,17 +50,20 @@ export default class Profile extends React.Component {
 }
 
 function TestingProfile(props) {
-  const { photoUrl, fullName, location, aboutMe } = props.status;
+  const { photoUrl, fullName, location, aboutMe, userId } = props.status;
   return (
     <div className="row">
-      <div className="col-12 div-liststatus">
-        <div className="col-3 small-img-placement">
-          <img src={photoUrl} alt=".." className="small-img" />
+      <div className="col-12">
+        <div className="small-img-placement">
+          <img src={photoUrl} alt=".." className="my-profile-small-img" />
         </div>
-        <div className="col-9">
-          <p className="p-liststatus">{fullName}</p>
-          <p className="p-liststatus">{location}</p>
-          <p className="p-liststatus">{aboutMe}</p>
+        <div className="my-profile-testing">
+          <p className="my-profile-p-fullname">{fullName}</p>
+          <p className="my-profile-p-info"><i className="fas fa-location-arrow Ssend-fa-location-arrow"></i>{location}</p>
+          <p className="my-profile-p-info"><i className="fas fa-user"></i>{aboutMe}</p>
+        </div>
+        <div className="button-3">
+          <a href={`#testing?userId=${userId}`} className="my-profile-edit">edit</a>
         </div>
       </div>
     </div>

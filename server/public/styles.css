@@ -44,7 +44,7 @@ h2 {
 }
 
 .margin-top {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 
 .lds-ring {
@@ -253,7 +253,6 @@ h2 {
   border-radius: 20px;
   width: 65px;
   display: block;
-  height: 23px;
   text-decoration: none;
   color: #fef7dc;
   background: #5f7a61;
@@ -267,7 +266,6 @@ h2 {
   border-radius: 20px;
   width: 65px;
   display: block;
-  height: 23px;
   border-style: none;
   color: #fef7dc;
   background: #5f7a61;
@@ -437,9 +435,7 @@ h2 {
   padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
-  width: 90px;
-  display: block;
-  height: 26px;
+  width: 75px;
   text-decoration: none;
   color: #fef7dc;
   background: #5f7a61;
@@ -452,6 +448,70 @@ h2 {
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+}
+
+/*  MY PROFILE  */
+
+.my-profile-small-img {
+  width: 75%;
+}
+
+.my-profile-p-info {
+  padding-left: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 0.625rem;
+}
+
+.my-profile-p-fullname {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Encode Sans", sans-serif;
+  margin-bottom: 0.625rem;
+}
+
+.my-profile-testing {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-profile-edit {
+  font-size: 0.7rem;
+  padding: 0.125rem 0;
+  text-align: center;
+  border-radius: 20px;
+  width: 65px;
+  display: block;
+  text-decoration: none;
+  border-style: none;
+  color: #fef7dc;
+  background: #5f7a61;
+  cursor: pointer;
+}
+
+.button-3 {
+  padding-left: 5px;
+}
+
+/*  MY PROFILE UPDATE  */
+
+.button-1-update {
+  position: fixed;
+  bottom: 100px;
+  margin-left: 1.25rem;
+}
+
+.button-2-update {
+  bottom: 50px;
+  position: fixed;
+  margin-left: 1.25rem;
+}
+
+.send-fa-user-icon {
+  padding-top: 0.313rem;
+  padding-right: 0.688rem;
+  font-size: 1.2rem;
+  padding-left: 0.188rem;
 }
 
 /*  MEDIA Q  */
@@ -491,6 +551,18 @@ h2 {
     top: 280px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -528,6 +600,18 @@ h2 {
     top: 280px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -564,6 +648,18 @@ h2 {
   .button-2-send-req {
     top: 280px;
     bottom: unset;
+  }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
   }
 }
 
@@ -687,6 +783,18 @@ h2 {
     top: 200px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -809,4 +917,17 @@ h2 {
     top: 200px;
     bottom: unset;
   }
+
+  .button-1-update {
+    top: 385px;
+    bottom: unset;
+    margin-left: 0;
+  }
+
+  .button-2-update {
+    top: 435px;
+    bottom: unset;
+    margin-left: 0;
+  }
+}
 }

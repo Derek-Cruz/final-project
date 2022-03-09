@@ -10,6 +10,7 @@ import Notification from './pages/notification';
 import UpdatePlan from './pages/update-plan';
 import Profile from './pages/profile';
 import { parseRoute } from './lib';
+import Testing from './pages/testing';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -48,6 +49,10 @@ export default class App extends React.Component {
     }
     if (route.path === 'profile') {
       return <Profile />;
+    }
+    if (route.path === 'testing') {
+      const userId = route.params.get('userId');
+      return <Testing userId={userId} />;
     }
     return <NotFound />;
   }

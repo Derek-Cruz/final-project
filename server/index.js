@@ -123,6 +123,37 @@ app.get('/api/updatePlans/:planId', (req, res) => {
     });
 });
 
+app.get('/api/updateProfile/:userId', (req, res) => {
+  const userId = parseInt(req.params.userId, 10);
+  if (!userId) {
+    res.status(400).json({
+      error: 'testing'
+    });
+    return;
+  }
+  const sql = `
+      SELECT
+             "userId",
+             "location",
+             "fullName",
+             "aboutMe",
+             "photoUrl"
+        FROM "users"
+       WHERE "userId" = $1
+ `;
+  const params = [userId];
+  db.query(sql, params)
+    .then(result => {
+      res.json(result.rows[0]);
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'an unexpected error occurred'
+      });
+    });
+});
+
 app.get('/api/pendingPlans', (req, res) => {
   const sql = `
       SELECT
@@ -208,8 +239,6 @@ app.get('/api/notifications', (req, res) => {
     });
 });
 
-// working on this
-
 app.get('/api/profile', (req, res) => {
   const userId = 1;
   const sql = `
@@ -220,6 +249,7 @@ app.get('/api/profile', (req, res) => {
              "userId",
              "aboutMe"
         FROM "users"
+        WHERE "userId" = $1
   `;
   const params = [userId];
   db.query(sql, params)
@@ -350,6 +380,48 @@ app.put('/api/approvedPlans/:planId', (req, res) => {
       }
 
       res.json(updatePlan);
+    })
+    .catch(err => {
+      // eslint-disable-next-line no-console
+      console.error('Insert plan error:', err);
+      res.status(500).json({ error: 'An unexpected error occurred.' });
+    });
+});
+
+app.put('/api/profile/:userId', (req, res) => {
+  const { aboutMe, location } = req.body;
+  const userId = parseInt(req.params.userId);
+
+  if (!Number.isInteger(userId) || userId <= 0) {
+    res.status(400).json({ error: '"userId" must be a positive integer' });
+    return;
+  }
+  if (!aboutMe) {
+    res.status(400).json({ error: 'Must have a title' });
+    return;
+  } else if (!location) {
+    res.status(400).json({ error: 'Must have a location' });
+    return;
+  }
+
+  const sql = `
+    UPDATE "users"
+       SET "aboutMe" = $1,
+           "location" = $2
+     WHERE "userId" = $3
+ RETURNING *;
+  `;
+
+  const params = [aboutMe, location, userId];
+
+  db.query(sql, params)
+    .then(data => {
+      const [updateProfile] = data.rows;
+      if (!updateProfile) {
+        res.status(404).json({ error: `Cannot find plan with "userId" ${userId}` });
+      }
+
+      res.json(updateProfile);
     })
     .catch(err => {
       // eslint-disable-next-line no-console

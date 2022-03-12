@@ -11,7 +11,7 @@ import UpdatePlan from './pages/update-plan';
 import Profile from './pages/profile';
 import { parseRoute } from './lib';
 import Testing from './pages/testing';
-
+import SearchPeople from './pages/search';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -53,6 +53,9 @@ export default class App extends React.Component {
     if (route.path === 'testing') {
       const userId = route.params.get('userId');
       return <Testing userId={userId} />;
+    }
+    if (route.path === 'search-people') {
+      return <SearchPeople />;
     }
     return <NotFound />;
   }

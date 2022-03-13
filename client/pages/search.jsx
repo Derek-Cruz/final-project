@@ -1,18 +1,18 @@
 import React from 'react';
 
-export default function SearchPeople(props) {
-  return (
-    <div>
-      <div>
-        <div>
-          <h3 className="margin-top">
-            Uh oh, we could not find the page you were looking for!
-          </h3>
-          <p>
-            <a href="#">Go back Home!</a>
-          </p>
-        </div>
+export default class SearchPeople extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true
+    };
+  }
+
+  render() {
+    return (
+      <div className="container container-status-jsx">
+        <p>test</p>
       </div>
-    </div>
-  );
+    );
+  }
 }

@@ -150,6 +150,7 @@ h2 {
 .my-plans-position {
   margin-top: 1.25rem;
   display: flex;
+  justify-content: center;
 }
 
 .h2-plans-jsx {

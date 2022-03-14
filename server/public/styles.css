@@ -155,16 +155,14 @@ h2 {
 .h2-plans-jsx {
   width: 375px;
   background-color: white;
-  padding-left: 0.125rem;
+  padding-left: 1.3rem;
   font-weight: 400;
-  border-bottom: solid 1px #fef7dc;
   color: #5f7a61;
 }
 
 .h2-avail-jsx {
-  padding-left: 0.125rem;
+  padding-left: 1.3rem;
   font-weight: 400;
-  border-bottom: solid 1px #fef7dc;
   top: 429px;
   width: 375px;
   background-color: white;
@@ -172,9 +170,8 @@ h2 {
 }
 
 .h2-pending-jsx {
-  padding-left: 0.125rem;
+  padding-left: 1.3rem;
   font-weight: 400;
-  border-bottom: solid 1px #fef7dc;
   top: 235px;
   width: 375px;
   background-color: white;

@@ -231,12 +231,13 @@ h2 {
 .div-liststatus {
   display: flex;
   color: black;
+  justify-content: center;
 }
 
 .homepage-button-position {
   display: flex;
   justify-content: flex-end;
-  padding-right: 1.25rem;
+  padding-right: 1.8rem;
 }
 
 .p-liststatus {

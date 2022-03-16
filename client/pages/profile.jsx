@@ -21,7 +21,6 @@ export default class Profile extends React.Component {
   }
 
   render() {
-    // console.log('state', this.state);
     return (
       <div className="container container-home-jsx">
         <div className="row noti-row-style">
@@ -59,8 +58,8 @@ function TestingProfile(props) {
         </div>
         <div className="my-profile-testing">
           <p className="my-profile-p-fullname">{fullName}</p>
-          <p className="my-profile-p-info"><i className="fas fa-location-arrow Ssend-fa-location-arrow"></i>{location}</p>
-          <p className="my-profile-p-info"><i className="fas fa-user"></i>{aboutMe}</p>
+          <p className="my-profile-p-info"><i className="fas fa-location-arrow style-fa-location-arrow"></i>{location}</p>
+          <p className="my-profile-p-info"><i className="fas fa-user profile-user-icon"></i>{aboutMe}</p>
         </div>
         <div className="button-3">
           <a href={`#testing?userId=${userId}`} className="my-profile-edit">edit</a>

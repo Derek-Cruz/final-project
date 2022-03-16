@@ -57,7 +57,7 @@ export default class SendRequest extends React.Component {
                 onChange={this.handleChange} />
             </div>
             <div>
-              <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
+              <label htmlFor="send-location"><i className="fas fa-location-arrow style-fa-location-arrow"></i></label>
               <input
                 className="send-input-style"
                 name="location"

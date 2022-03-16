@@ -34,6 +34,12 @@ h2 {
   padding-right: 5px;
 }
 
+.style-fa-location-arrow {
+  padding-right: 0.688rem;
+  font-size: 1.2rem;
+  padding-left: 0.188rem;
+}
+
 .small-img-placement {
   display: flex;
   justify-content: center;
@@ -117,7 +123,6 @@ h2 {
   color: black;
   font-size: xx-large;
   height: 45px;
-  border-top: solid 1px #fef7dc;
   background-color: #fff;
   cursor: pointer;
 }
@@ -388,12 +393,6 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.send-fa-location-arrow {
-  padding-right: 0.688rem;
-  font-size: 1.2rem;
-  padding-left: 0.188rem;
-}
-
 .button-2-send-req {
   bottom: 50px;
   position: fixed;
@@ -407,8 +406,7 @@ h2 {
 }
 
 .noti-h2-style {
-  padding-left: 0.125rem;
-  border-bottom: solid 1px #fef7dc;
+  padding-left: 1.3rem;
   position: fixed;
   top: 50px;
   width: 375px;
@@ -456,7 +454,7 @@ h2 {
 }
 
 .my-profile-p-info {
-  padding-left: 5px;
+  padding-left: 1.3rem;
   font-size: 0.9rem;
   margin-bottom: 0.625rem;
 }
@@ -489,7 +487,13 @@ h2 {
 }
 
 .button-3 {
-  padding-left: 5px;
+  padding-left: 1.3rem;
+}
+
+.profile-user-icon {
+  padding-right: 0.688rem;
+  font-size: 1.2rem;
+  padding-left: 0.188rem;
 }
 
 /*  MY PROFILE UPDATE  */

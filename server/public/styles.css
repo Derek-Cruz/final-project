@@ -29,6 +29,10 @@ h2 {
   border-radius: 50%;
 }
 
+.just-content {
+  justify-content: center;
+}
+
 .small-icon {
   color: black;
   padding-right: 5px;

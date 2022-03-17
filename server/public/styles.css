@@ -570,6 +570,10 @@ h2 {
     bottom: unset;
     margin-left: 0;
   }
+
+  .col-7 {
+    width: 75%;
+  }
 }
 
 @media (min-width: 767.98px) {
@@ -619,6 +623,10 @@ h2 {
     bottom: unset;
     margin-left: 0;
   }
+
+  .col-7 {
+    width: 75%;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -667,6 +675,10 @@ h2 {
     top: 435px;
     bottom: unset;
     margin-left: 0;
+  }
+
+  .col-7 {
+    width: 75%;
   }
 }
 
@@ -802,6 +814,10 @@ h2 {
     bottom: unset;
     margin-left: 0;
   }
+
+  .col-7 {
+    width: 75%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -936,5 +952,8 @@ h2 {
     bottom: unset;
     margin-left: 0;
   }
-}
+
+  .col-7 {
+    width: 75%;
+  }
 }

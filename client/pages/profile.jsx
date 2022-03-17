@@ -34,7 +34,7 @@ export default class Profile extends React.Component {
                     : this.state.myProfile.length > 0
                       ? this.state.myProfile.map(status => (
                         <div key={status.userId} className="col-12">
-                          <TestingProfile status={status} />
+                          <RenderProfile status={status} />
                         </div>
                       ))
                       : (<div className="margin-top">Not loading proper</div>)
@@ -48,7 +48,7 @@ export default class Profile extends React.Component {
   }
 }
 
-function TestingProfile(props) {
+function RenderProfile(props) {
   const { photoUrl, fullName, location, aboutMe, userId } = props.status;
   return (
     <div className="row">
@@ -62,7 +62,7 @@ function TestingProfile(props) {
           <p className="my-profile-p-info"><i className="fas fa-user profile-user-icon"></i>{aboutMe}</p>
         </div>
         <div className="button-3">
-          <a href={`#testing?userId=${userId}`} className="my-profile-edit">edit</a>
+          <a href={`#edit-profile?userId=${userId}`} className="my-profile-edit">Edit</a>
         </div>
       </div>
     </div>

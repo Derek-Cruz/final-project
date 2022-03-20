@@ -43,10 +43,10 @@ export default class SendRequest extends React.Component {
 
   render() {
     return (
-      <div className="container container-req-jsx">
+    <div className="container-req-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
-            <div>
+            <div className='testing-div-space'>
               <label htmlFor="send-title">Title:</label>
               <input
                 className="send-input-style"
@@ -56,7 +56,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.title}
                 onChange={this.handleChange} />
             </div>
-            <div>
+            <div className='testing-div-space'>
               <label htmlFor="send-location"><i className="fas fa-location-arrow style-fa-location-arrow"></i></label>
               <input
                 className="send-input-style"
@@ -66,7 +66,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.location}
                 onChange={this.handleChange} />
             </div>
-            <div>
+            <div className='testing-div-space'>
               <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
               <input
                 className="send-input-style"
@@ -76,7 +76,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.time}
                 onChange={this.handleChange} />
             </div>
-            <div>
+            <div className='testing-div-space'>
               <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
               <input
                 className="send-input-style"

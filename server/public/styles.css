@@ -23,33 +23,47 @@ h2 {
   overflow: auto;
 }
 
+.container-req-jsx {
+  padding: 0;
+}
+
 .testing-placement {
-  margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  bottom: 60px;
+  position: fixed;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .testing-button-style {
-  font-size: 1.4rem;
+  font-size: 0.7rem;
+  padding: 0.125rem 0;
+  text-align: center;
+  border-radius: 20px;
+  width: 65px;
+  display: block;
   border-style: none;
-  height: 45px;
   color: #fef7dc;
   background: #5f7a61;
-  border-radius: 20px;
   cursor: pointer;
 }
 
 .testing-a-style {
-  font-size: 1.4rem;
-  padding: 0.375rem 0;
+  font-size: 0.7rem;
+  padding: 0.125rem 0;
   text-align: center;
   border-radius: 20px;
+  width: 65px;
   display: block;
-  height: 45px;
   text-decoration: none;
   color: #fef7dc;
   background: #5f7a61;
   cursor: pointer;
+}
+
+.testing-div-space {
+  padding-left: 10px;
 }
 
 .small-img {
@@ -735,6 +749,8 @@ h2 {
   }
 
   .container-req-jsx {
+    color: aquamarine;
+    padding: 0;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }

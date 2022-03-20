@@ -43,7 +43,7 @@ export default class SendRequest extends React.Component {
 
   render() {
     return (
-    <div className="container-req-jsx">
+      <div className="container container-req-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
             <div className='testing-div-space'>

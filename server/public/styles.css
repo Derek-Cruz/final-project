@@ -57,8 +57,7 @@ h2 {
   width: 65px;
   display: block;
   text-decoration: none;
-  color: #fef7dc;
-  background: #5f7a61;
+  color: black;
   cursor: pointer;
 }
 
@@ -749,10 +748,13 @@ h2 {
   }
 
   .container-req-jsx {
-    color: aquamarine;
-    padding: 0;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
+  }
+
+  .testing-placement {
+    width: 250px;
+    padding: 0;
   }
 
   .button-home-jsx {
@@ -891,6 +893,11 @@ h2 {
   .container-req-jsx {
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
+  }
+
+  .testing-placement {
+    width: 250px;
+    padding: 0;
   }
 
   .button-home-jsx {

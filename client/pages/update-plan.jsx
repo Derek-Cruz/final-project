@@ -76,7 +76,7 @@ export default class UpdatePlan extends React.Component {
               </div>
             </div>
             <form onSubmit={this.handleSubmit}>
-              <div className='testing-div-space'>
+              <div className='testing-div-space title-update-req'>
                 <label htmlFor="send-title">Title:</label>
                 <input
                   className="send-input-style"

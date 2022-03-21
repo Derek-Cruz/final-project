@@ -167,6 +167,10 @@ h2 {
   padding: 0;
 }
 
+.title-update-req {
+  font-size: 0.9rem;
+}
+
 /*  ICON.JSX  */
 
 .icon-style {
@@ -447,6 +451,12 @@ h2 {
   bottom: 50px;
   position: fixed;
   margin-left: 1.25rem;
+}
+
+.send-fa-location-arrow {
+  padding-right: 0.688rem;
+  font-size: 1.2rem;
+  padding-left: 0.188rem;
 }
 
 /*  NOTIFICATION.JSX  */

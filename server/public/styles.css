@@ -163,6 +163,10 @@ h2 {
   margin-bottom: 0;
 }
 
+.container-update-jsx {
+  padding: 0;
+}
+
 /*  ICON.JSX  */
 
 .icon-style {

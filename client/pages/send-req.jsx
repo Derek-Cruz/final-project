@@ -46,7 +46,7 @@ export default class SendRequest extends React.Component {
       <div className="container container-req-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
-            <div className='testing-div-space'>
+            <div className='testing-div-space title-update-req'>
               <label htmlFor="send-title">Title:</label>
               <input
                 className="send-input-style"
@@ -93,12 +93,6 @@ export default class SendRequest extends React.Component {
                 <button className="testing-button-style">Submit</button>
               </div>
             </div>
-            {/* <div className="button-1">
-              <button className="button-style">Submit</button>
-            </div>
-            <div className="button-2-send-req">
-              <a href="#" className="a-style">Cancel</a>
-            </div> */}
           </form>
         </div>
       </div>

@@ -119,9 +119,9 @@ export default class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className="post-status-placement">
+        {/* <div className="post-status-placement">
           <a href="#post-status" className="button-home-jsx"><i className="fas fa-plus fa-plus-styling"></i></a>
-        </div>
+        </div> */}
       </div>
     );
   }

@@ -117,12 +117,6 @@ export default class UpdatePlan extends React.Component {
                   value={ this.state.description }
                   onChange={this.handleChange} />
               </div>
-              {/* <div className="button-1">
-                <button className="button-style">Update</button>
-              </div>
-              <div className="button-2">
-                <a href="#" className="a-style">Cancel</a>
-              </div> */}
               <div className="buttons">
                 <div className="testing-placement">
                   <a href="#" className="testing-a-style">Cancel</a>

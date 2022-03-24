@@ -88,12 +88,6 @@ export default class EditProfile extends React.Component {
                 value={ this.state.location }
                 onChange={ this.handleChange } />
             </div>
-            {/* <div className="button-1-update">
-              <button className="button-style">Update</button>
-            </div>
-            <div className="button-2-update">
-              <a href="#profile" className="a-style">Cancel</a>
-            </div> */}
             <div className="buttons">
               <div className="testing-placement">
                 <a href="#profile" className="testing-a-style">Cancel</a>

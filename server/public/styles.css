@@ -44,7 +44,7 @@ h2 {
   width: 65px;
   display: block;
   border-style: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
 }
@@ -275,7 +275,7 @@ h2 {
 }
 
 .fa-plus-styling {
-  color: #fef7dc;
+  color: #fff;
   font-size: 1.2rem;
   margin: 1.25rem 0 0 1.313rem;
 }
@@ -313,7 +313,7 @@ h2 {
   width: 65px;
   display: block;
   text-decoration: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
 }
@@ -326,7 +326,7 @@ h2 {
   width: 65px;
   display: block;
   border-style: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
 }
@@ -372,7 +372,7 @@ h2 {
   border-style: none;
   width: 345px;
   height: 45px;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   border-radius: 20px;
   cursor: pointer;
@@ -387,13 +387,13 @@ h2 {
   display: block;
   height: 45px;
   text-decoration: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
 }
 
 .a-style:hover {
-  color: #fef7dc;
+  color: #fff;
 }
 
 .label-padding {
@@ -499,7 +499,7 @@ h2 {
   border-radius: 20px;
   width: 75px;
   text-decoration: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
   border-style: none;
@@ -546,7 +546,7 @@ h2 {
   display: block;
   text-decoration: none;
   border-style: none;
-  color: #fef7dc;
+  color: #fff;
   background: #5f7a61;
   cursor: pointer;
 }

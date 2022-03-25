@@ -135,7 +135,7 @@ function ListStatus(props) {
           <div className="col-3 small-img-placement">
             <img src={photoUrl} alt=".." className="small-img"/>
           </div>
-          <div className="col-9">
+          <div className="col-7">
             <p className="p-liststatus">{ fullName }</p>
             <p className="p-liststatus"><i className="fas fa-clock small-icon"></i>{ time }</p>
             <p className="p-liststatus"><i className="fas fa-comment-alt small-icon"></i>{ description }</p>
@@ -156,7 +156,7 @@ function ApprovedPlan(props) {
         <div className="col-3 small-img-placement">
           <img src={photoUrl} alt="profile picture" className="small-img" />
         </div>
-        <div className="col-9">
+        <div className="col-7">
           <p className="p-noti-jsx">{fullName}</p>
           <p className="p-noti-jsx">{title}</p>
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>
@@ -178,7 +178,7 @@ function DeniedPlan(props) {
         <div className="col-3 small-img-placement">
           <img src={photoUrl} alt="profile picture" className="small-img" />
         </div>
-        <div className="col-9">
+        <div className="col-7">
           <p className="p-noti-jsx">{fullName}</p>
           <p className="p-noti-jsx">{title}</p>
           <p className="p-noti-jsx"><i className="fas fa-clock small-icon"></i>{time} <i className="fas fa-location-arrow small-icon"></i>{location}</p>

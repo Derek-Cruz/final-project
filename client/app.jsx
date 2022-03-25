@@ -10,8 +10,8 @@ import Notification from './pages/notification';
 import UpdatePlan from './pages/update-plan';
 import Profile from './pages/profile';
 import { parseRoute } from './lib';
-import Testing from './pages/testing';
-
+import EditProfile from './pages/edit-profile';
+import SearchPeople from './pages/search';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -50,9 +50,12 @@ export default class App extends React.Component {
     if (route.path === 'profile') {
       return <Profile />;
     }
-    if (route.path === 'testing') {
+    if (route.path === 'edit-profile') {
       const userId = route.params.get('userId');
-      return <Testing userId={userId} />;
+      return <EditProfile userId={userId} />;
+    }
+    if (route.path === 'search-people') {
+      return <SearchPeople />;
     }
     return <NotFound />;
   }

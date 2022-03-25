@@ -1,5 +1,5 @@
 import React from 'react';
-export default class Testing extends React.Component {
+export default class EditProfile extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -60,15 +60,15 @@ export default class Testing extends React.Component {
       <div className="container container-update-jsx">
         <div className="update-plan-position">
           <div>
-            <div>
+            <div className='testing-div-space'>
               <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
             </div>
-            <div className="update-plan-fullname-position">
+            <div className="update-plan-fullname-position testing-div-space">
               <p className="update-plan-fullname">{ this.state.fullName }</p>
             </div>
           </div>
           <form onSubmit={ this.handleSubmit }>
-            <div className='d-flex'>
+            <div className='d-flex testing-div-space'>
               <label htmlFor="send-aboutMe"><i className="fas fa-user send-fa-user-icon"></i></label>
               <input
                 className="send-input-style"
@@ -78,7 +78,7 @@ export default class Testing extends React.Component {
                 value={ this.state.aboutMe }
                 onChange={ this.handleChange } />
             </div>
-            <div>
+            <div className='testing-div-space'>
               <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
               <input
                 className="send-input-style"
@@ -88,11 +88,11 @@ export default class Testing extends React.Component {
                 value={ this.state.location }
                 onChange={ this.handleChange } />
             </div>
-            <div className="button-1-update">
-              <button className="button-style">Update</button>
-            </div>
-            <div className="button-2-update">
-              <a href="#profile" className="a-style">Cancel</a>
+            <div className="buttons">
+              <div className="testing-placement">
+                <a href="#profile" className="testing-a-style">Cancel</a>
+                <button className="testing-button-style">Update</button>
+              </div>
             </div>
           </form>
         </div>

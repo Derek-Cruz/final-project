@@ -66,8 +66,10 @@ h2 {
   cursor: pointer;
 }
 
-.testing-div-space {
-  padding-left: 10px;
+.no-results-style {
+  margin-top: 4rem;
+  font-size: 0.7rem;
+  padding-left: 1.3rem;
 }
 
 .small-img {
@@ -98,10 +100,6 @@ h2 {
 
 .red {
   color: red;
-}
-
-.margin-top {
-  margin-top: 4rem;
 }
 
 .lds-ring {
@@ -489,7 +487,7 @@ h2 {
   top: 50px;
   width: 375px;
   background-color: white;
-  color: #5f7a61;
+  color: black;
 }
 
 .noti-jsx-margin {

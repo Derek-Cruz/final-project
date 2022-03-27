@@ -11,7 +11,16 @@ export default class SearchPeople extends React.Component {
   render() {
     return (
       <div className="container container-status-jsx">
-        <p>testing</p>
+        <div>
+          <div>
+            <h3 className="margin-top">
+              Under Construction
+            </h3>
+            <p>
+              <a href="#">Go back Home!</a>
+            </p>
+          </div>
+        </div>
       </div>
     );
   }

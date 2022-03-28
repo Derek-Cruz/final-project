@@ -366,18 +366,6 @@ h2 {
   margin-top: 3.563rem;
 }
 
-.button-1 {
-  position: fixed;
-  bottom: 100px;
-  margin-left: 1.25rem;
-}
-
-.button-2 {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 .button-style {
   font-size: 1.4rem;
   border-style: none;
@@ -433,12 +421,6 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.button-2-post {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 /*  SEND-REQ.JSX  */
 
 .send-input-style {
@@ -461,12 +443,6 @@ h2 {
   padding-right: 0.688rem;
   font-size: 1.2rem;
   padding-left: 0.188rem;
-}
-
-.button-2-send-req {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
 }
 
 .send-fa-location-arrow {
@@ -574,18 +550,6 @@ h2 {
 
 /*  MY PROFILE UPDATE  */
 
-.button-1-update {
-  position: fixed;
-  bottom: 100px;
-  margin-left: 1.25rem;
-}
-
-.button-2-update {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 .send-fa-user-icon {
   padding-top: 0.313rem;
   padding-right: 0.9rem;
@@ -608,39 +572,6 @@ h2 {
   .h2-avail-jsx {
     width: 500px;
     top: 669px;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {
@@ -667,39 +598,6 @@ h2 {
     top: 665px;
   }
 
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
   .col-7 {
     width: 75%;
   }
@@ -722,39 +620,6 @@ h2 {
   .h2-avail-jsx {
     width: 500px;
     top: 669px;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {
@@ -872,39 +737,6 @@ h2 {
     margin-top: unset;
   }
 
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-send-req {
-    top: 285px;
-    bottom: unset;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
   .col-7 {
     width: 75%;
   }
@@ -912,10 +744,6 @@ h2 {
   .post-status-placement {
     display: flex;
   }
-
-  /* .circle-display {
-    display: none;
-  } */
 }
 
 @media (min-width: 1200px) {
@@ -968,18 +796,18 @@ h2 {
     background-color: transparent;
   }
 
-  .icon-style {
+  /* .icon-style {
     border-top: none;
     font-size: xx-large;
-  }
+  } */
 
-  /* .icon-style {
-  color: black;
-  font-size: 1.6rem;
-  height: 45px;
-  background-color: #fff;
-  cursor: pointer;
-} */
+  .icon-style {
+    color: black;
+    font-size: 1.6rem;
+    height: 45px;
+    background-color: #fff;
+    cursor: pointer;
+  }
 
   .icon-fas {
     margin: 0 10px;
@@ -1030,39 +858,6 @@ h2 {
     flex-direction: column;
     padding-top: 3.75rem;
     margin-top: unset;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-send-req {
-    top: 285px;
-    bottom: unset;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {

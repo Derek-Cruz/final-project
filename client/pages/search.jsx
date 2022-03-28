@@ -12,8 +12,8 @@ export default class SearchPeople extends React.Component {
     return (
       <div className="container container-status-jsx">
         <div>
-          <div>
-            <h3 className="margin-top">
+          <div className="no-results-style">
+            <h3>
               Under Construction
             </h3>
             <p>

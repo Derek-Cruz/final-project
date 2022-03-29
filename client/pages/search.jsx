@@ -13,12 +13,15 @@ export default class SearchPeople extends React.Component {
       <div className="container container-status-jsx">
         <div>
           <div className="no-results-style">
-            <h3>
-              Under Construction
-            </h3>
-            <p>
-              <a href="#">Go back Home!</a>
-            </p>
+            <form className="d-flex">
+              <input
+                type="search"
+                placeholder="Search"
+                className="me-2"
+                aria-label="Search"
+              />
+              <button>Search</button>
+            </form>
           </div>
         </div>
       </div>

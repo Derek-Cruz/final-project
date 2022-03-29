@@ -664,31 +664,15 @@ h2 {
     padding: 0;
   }
 
+  .testing-div-space {
+    margin-left: 15px;
+  }
+
   .button-home-jsx {
     width: 100px;
     right: unset;
     height: 35px;
   }
-
-  /* .fa-plus-styling {
-    margin: 0.5rem 0 0 2.625rem;
-  } */
-
-  /* .icon-position {
-    height: 40px;
-    left: 402px;
-    top: 8px;
-    background-color: transparent;
-  }
-
-  .icon-style {
-    border-top: none;
-    font-size: xx-large;
-  }
-
-  .icon-fas {
-    margin: 0 0.625rem;
-  } */
 
   .fa-plus-styling {
     margin: 0.5rem 0 0 2.625rem;
@@ -808,6 +792,10 @@ h2 {
   .testing-placement {
     width: 250px;
     padding: 0;
+  }
+
+  .testing-div-space {
+    margin-left: 15px;
   }
 
   .button-home-jsx {

@@ -76,7 +76,7 @@ export default class Home extends React.Component {
                         <ApprovedPlan status={status} />
                       </div>
                     ))
-                    : (<div className="margin-top">You have no plans!</div>)
+                    : (<div className="no-results-style">You have no plans!</div>)
               }
             </div>
           </div>
@@ -94,7 +94,7 @@ export default class Home extends React.Component {
                         <DeniedPlan status={status} onClick={this.deleteRequest} />
                       </div>
                     ))
-                    : (<div className="margin-top">There are no pending plans.</div>)
+                    : (<div className="no-results-style">There are no pending plans.</div>)
               }
             </div>
           </div>
@@ -113,7 +113,7 @@ export default class Home extends React.Component {
                           <ListStatus status={status} />
                         </div>
                       ))
-                      : (<div className="margin-top">There are no available friends.</div>)
+                      : (<div className="no-results-style">There are no available friends.</div>)
                 }
               </div>
             </div>

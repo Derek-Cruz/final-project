@@ -66,8 +66,10 @@ h2 {
   cursor: pointer;
 }
 
-.testing-div-space {
-  padding-left: 10px;
+.no-results-style {
+  margin-top: 4rem;
+  font-size: 0.7rem;
+  padding-left: 1.3rem;
 }
 
 .small-img {
@@ -98,10 +100,6 @@ h2 {
 
 .red {
   color: red;
-}
-
-.margin-top {
-  margin-top: 4rem;
 }
 
 .lds-ring {
@@ -368,18 +366,6 @@ h2 {
   margin-top: 3.563rem;
 }
 
-.button-1 {
-  position: fixed;
-  bottom: 100px;
-  margin-left: 1.25rem;
-}
-
-.button-2 {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 .button-style {
   font-size: 1.4rem;
   border-style: none;
@@ -435,12 +421,6 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.button-2-post {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 /*  SEND-REQ.JSX  */
 
 .send-input-style {
@@ -465,12 +445,6 @@ h2 {
   padding-left: 0.188rem;
 }
 
-.button-2-send-req {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 .send-fa-location-arrow {
   padding-right: 0.688rem;
   font-size: 1.2rem;
@@ -478,6 +452,12 @@ h2 {
 }
 
 /*  NOTIFICATION.JSX  */
+
+.notification-no-results-style {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  padding-left: 1.3rem;
+}
 
 .noti-row-style {
   overflow: auto;
@@ -489,7 +469,7 @@ h2 {
   top: 50px;
   width: 375px;
   background-color: white;
-  color: #5f7a61;
+  color: black;
 }
 
 .noti-jsx-margin {
@@ -576,18 +556,6 @@ h2 {
 
 /*  MY PROFILE UPDATE  */
 
-.button-1-update {
-  position: fixed;
-  bottom: 100px;
-  margin-left: 1.25rem;
-}
-
-.button-2-update {
-  bottom: 50px;
-  position: fixed;
-  margin-left: 1.25rem;
-}
-
 .send-fa-user-icon {
   padding-top: 0.313rem;
   padding-right: 0.9rem;
@@ -610,39 +578,6 @@ h2 {
   .h2-avail-jsx {
     width: 500px;
     top: 669px;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {
@@ -669,39 +604,6 @@ h2 {
     top: 665px;
   }
 
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
   .col-7 {
     width: 75%;
   }
@@ -724,39 +626,6 @@ h2 {
   .h2-avail-jsx {
     width: 500px;
     top: 669px;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-2-send-req {
-    top: 280px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {
@@ -801,6 +670,10 @@ h2 {
     padding: 0;
   }
 
+  .testing-div-space {
+    margin-left: 15px;
+  }
+
   .button-home-jsx {
     width: 100px;
     right: unset;
@@ -813,14 +686,21 @@ h2 {
 
   .icon-position {
     height: 40px;
-    left: 402px;
+    left: 403px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
-    border-top: none;
-    font-size: xx-large;
+    color: black;
+    font-size: 1.6rem;
+    height: 42px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    line-height: unset;
   }
 
   .icon-fas {
@@ -874,39 +754,6 @@ h2 {
     margin-top: unset;
   }
 
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-send-req {
-    top: 285px;
-    bottom: unset;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
   .col-7 {
     width: 75%;
   }
@@ -915,9 +762,9 @@ h2 {
     display: flex;
   }
 
-  /* .circle-display {
+  .circle-display {
     display: none;
-  } */
+  }
 }
 
 @media (min-width: 1200px) {
@@ -953,6 +800,10 @@ h2 {
     padding: 0;
   }
 
+  .testing-div-space {
+    margin-left: 15px;
+  }
+
   .button-home-jsx {
     width: 100px;
     right: unset;
@@ -960,31 +811,30 @@ h2 {
   }
 
   .fa-plus-styling {
-    margin: 8px 0 0 42px;
+    margin: 0.5rem 0 0 2.625rem;
   }
 
   .icon-position {
     height: 40px;
-    left: 402px;
+    left: 403px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
-    border-top: none;
-    font-size: xx-large;
+    color: black;
+    font-size: 1.6rem;
+    height: 42px;
+    background-color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    line-height: unset;
   }
 
-  /* .icon-style {
-  color: black;
-  font-size: 1.6rem;
-  height: 45px;
-  background-color: #fff;
-  cursor: pointer;
-} */
-
   .icon-fas {
-    margin: 0 10px;
+    margin: 0 0.625rem;
   }
 
   .header-jsx-style {
@@ -1032,39 +882,6 @@ h2 {
     flex-direction: column;
     padding-top: 3.75rem;
     margin-top: unset;
-  }
-
-  .button-1 {
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2 {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-send-req {
-    top: 285px;
-    bottom: unset;
-  }
-
-  .button-2-post {
-    top: 200px;
-    bottom: unset;
-  }
-
-  .button-1-update {
-    top: 385px;
-    bottom: unset;
-    margin-left: 0;
-  }
-
-  .button-2-update {
-    top: 435px;
-    bottom: unset;
-    margin-left: 0;
   }
 
   .col-7 {

@@ -5,11 +5,11 @@ export default function NotFound(props) {
     <div>
       <div>
         <div>
-          <h3 className="margin-top">
+          <h3 className="no-results-style">
             Uh oh, we could not find the page you were looking for!
           </h3>
           <p>
-            <a href="#">Go back Home!</a>
+            <a className="no-results-style" href="#">Go back Home!</a>
           </p>
         </div>
       </div>

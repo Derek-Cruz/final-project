@@ -453,6 +453,12 @@ h2 {
 
 /*  NOTIFICATION.JSX  */
 
+.notification-no-results-style {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  padding-left: 1.3rem;
+}
+
 .noti-row-style {
   overflow: auto;
 }

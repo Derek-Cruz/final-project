@@ -75,7 +75,7 @@ export default class Notification extends React.Component {
                           deny={() => this.denyMyStatus(notification.requestId)} />
                         </div>
                       ))
-                      : (<div className="no-results-style" >You have no notification.</div>)
+                      : (<div className="notification-no-results-style" >You have no notification.</div>)
                 }
               </div>
               </div>

@@ -102,7 +102,7 @@ export default class Home extends React.Component {
         <h2 className="h2-avail-jsx">AVAILABLE</h2>
         <div className="row avail-home-jsx">
           <div className="col p-0 testing-new-header">
-            <div>
+            <div className='testing-height'>
               <div className="row margin-test">
                 {
                   this.state.isLoading

@@ -18,6 +18,10 @@ h2 {
   color: black;
 }
 
+.testing-height {
+  height: 94%;
+}
+
 .row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
@@ -255,8 +259,9 @@ h2 {
   overflow: auto;
 }
 
+/* testing this height, original 42%  */
 .avail-home-jsx {
-  height: 42%;
+  height: 56%;
   overflow: auto;
 }
 
@@ -686,13 +691,14 @@ h2 {
 
   .icon-position {
     height: 40px;
-    left: 403px;
+    left: 418px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
     color: black;
+    margin: 0 5px;
     font-size: 1.6rem;
     height: 42px;
     background-color: #fff;
@@ -816,13 +822,14 @@ h2 {
 
   .icon-position {
     height: 40px;
-    left: 403px;
+    left: 418px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
     color: black;
+    margin: 0 5px;
     font-size: 1.6rem;
     height: 42px;
     background-color: #fff;

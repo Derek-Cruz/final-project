@@ -60,15 +60,15 @@ export default class EditProfile extends React.Component {
       <div className="container container-update-jsx">
         <div className="update-plan-position">
           <div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
             </div>
-            <div className="update-plan-fullname-position testing-div-space">
+            <div className="update-plan-fullname-position left-spacing">
               <p className="update-plan-fullname">{ this.state.fullName }</p>
             </div>
           </div>
           <form onSubmit={ this.handleSubmit }>
-            <div className='d-flex testing-div-space'>
+            <div className="d-flex left-spacing">
               <label htmlFor="send-aboutMe"><i className="fas fa-user send-fa-user-icon"></i></label>
               <input
                 className="send-input-style"
@@ -78,7 +78,7 @@ export default class EditProfile extends React.Component {
                 value={ this.state.aboutMe }
                 onChange={ this.handleChange } />
             </div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
               <input
                 className="send-input-style"
@@ -89,7 +89,7 @@ export default class EditProfile extends React.Component {
                 onChange={ this.handleChange } />
             </div>
             <div className="buttons">
-              <div className="testing-placement">
+              <div className="div-button-placement">
                 <a href="#profile" className="testing-a-style">Cancel</a>
                 <button className="testing-button-style">Update</button>
               </div>

@@ -43,7 +43,7 @@ export default class PostStatus extends React.Component {
       <div className="container container-status-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="post-time" className="label-padding"><i className="fas fa-clock post-fa-clock"></i></label>
               <input
                 className="post-input-style"
@@ -53,7 +53,7 @@ export default class PostStatus extends React.Component {
                 value={this.state.time}
                 onChange={this.handleChange} />
             </div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="post-description" className="label-padding"><i className="fas fa-comment-alt post-fa-comment-alt"></i></label>
               <input
                 className="post-input-style"
@@ -65,7 +65,7 @@ export default class PostStatus extends React.Component {
                 onChange={this.handleChange} />
             </div>
             <div className="buttons">
-              <div className="testing-placement">
+              <div className="div-button-placement">
                 <a href="#" className="testing-a-style">Cancel</a>
                 <button className="testing-button-style">Post</button>
               </div>

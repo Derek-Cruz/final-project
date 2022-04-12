@@ -46,7 +46,7 @@ export default class SendRequest extends React.Component {
       <div className="container container-req-jsx">
         <div className="post-status-test">
           <form onSubmit={this.handleSubmit}>
-            <div className='testing-div-space title-update-req'>
+            <div className="left-spacing title-update-req">
               <label htmlFor="send-title">Title:</label>
               <input
                 className="send-input-style"
@@ -56,7 +56,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.title}
                 onChange={this.handleChange} />
             </div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="send-location"><i className="fas fa-location-arrow style-fa-location-arrow"></i></label>
               <input
                 className="send-input-style"
@@ -66,7 +66,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.location}
                 onChange={this.handleChange} />
             </div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
               <input
                 className="send-input-style"
@@ -76,7 +76,7 @@ export default class SendRequest extends React.Component {
                 value={this.state.time}
                 onChange={this.handleChange} />
             </div>
-            <div className='testing-div-space'>
+            <div className="left-spacing">
               <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
               <input
                 className="send-input-style"
@@ -88,7 +88,7 @@ export default class SendRequest extends React.Component {
                 onChange={this.handleChange} />
             </div>
             <div className="buttons">
-              <div className="testing-placement">
+              <div className="div-button-placement">
                 <a href="#" className="testing-a-style">Cancel</a>
                 <button className="testing-button-style">Submit</button>
               </div>

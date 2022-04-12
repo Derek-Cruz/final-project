@@ -13,7 +13,7 @@ h2 {
   margin: 0;
 }
 
-.test-span {
+.icon-span {
   font-size: 0.7rem;
   color: black;
 }
@@ -22,12 +22,16 @@ h2 {
   height: 94%;
 }
 
+.left-spacing {
+  margin-left: 15px;
+}
+
 .row {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
 }
 
-.testing-new-header {
+.section-placements {
   height: 100%;
   overflow: auto;
 }
@@ -36,7 +40,7 @@ h2 {
   padding: 0;
 }
 
-.testing-placement {
+.div-button-placement {
   display: flex;
   justify-content: space-between;
   bottom: 60px;
@@ -670,12 +674,12 @@ h2 {
     border-right: solid 1px #fef7dc;
   }
 
-  .testing-placement {
+  .div-button-placement {
     width: 250px;
     padding: 0;
   }
 
-  .testing-div-space {
+  .left-spacing {
     margin-left: 15px;
   }
 
@@ -801,12 +805,12 @@ h2 {
     border-right: solid 1px #fef7dc;
   }
 
-  .testing-placement {
+  .div-button-placement {
     width: 250px;
     padding: 0;
   }
 
-  .testing-div-space {
+  .left-spacing {
     margin-left: 15px;
   }
 

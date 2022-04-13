@@ -119,8 +119,8 @@ export default class UpdatePlan extends React.Component {
               </div>
               <div className="buttons">
                 <div className="div-button-placement">
-                  <a href="#" className="testing-a-style">Cancel</a>
-                  <button className="testing-button-style">Update</button>
+                  <a href="#" className="a-style">Cancel</a>
+                  <button className="button-style">Update</button>
                 </div>
               </div>
             </form>

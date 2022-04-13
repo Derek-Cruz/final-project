@@ -89,8 +89,8 @@ export default class SendRequest extends React.Component {
             </div>
             <div className="buttons">
               <div className="div-button-placement">
-                <a href="#" className="testing-a-style">Cancel</a>
-                <button className="testing-button-style">Submit</button>
+                <a href="#" className="a-style">Cancel</a>
+                <button className="button-style">Submit</button>
               </div>
             </div>
           </form>

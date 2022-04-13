@@ -66,8 +66,8 @@ export default class PostStatus extends React.Component {
             </div>
             <div className="buttons">
               <div className="div-button-placement">
-                <a href="#" className="testing-a-style">Cancel</a>
-                <button className="testing-button-style">Post</button>
+                <a href="#" className="a-style">Cancel</a>
+                <button className="button-style">Post</button>
               </div>
             </div>
           </form>

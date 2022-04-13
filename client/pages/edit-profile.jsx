@@ -90,8 +90,8 @@ export default class EditProfile extends React.Component {
             </div>
             <div className="buttons">
               <div className="div-button-placement">
-                <a href="#profile" className="testing-a-style">Cancel</a>
-                <button className="testing-button-style">Update</button>
+                <a href="#profile" className="a-style">Cancel</a>
+                <button className="button-style">Update</button>
               </div>
             </div>
           </form>

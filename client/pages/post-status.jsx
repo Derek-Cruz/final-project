@@ -41,7 +41,7 @@ export default class PostStatus extends React.Component {
   render() {
     return (
       <div className="container container-status-jsx">
-        <div className="post-status-test">
+        <div>
           <form onSubmit={this.handleSubmit}>
             <div className="left-spacing">
               <label htmlFor="post-time" className="label-padding"><i className="fas fa-clock post-fa-clock"></i></label>

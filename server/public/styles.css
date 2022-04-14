@@ -41,6 +41,7 @@ a:hover {
 }
 
 .container-req-jsx {
+  margin-top: 3.98rem;
   padding: 0;
 }
 
@@ -180,6 +181,7 @@ a:hover {
 }
 
 .container-update-jsx {
+  margin-top: 3.98rem;
   padding: 0;
 }
 
@@ -371,12 +373,8 @@ a:hover {
 /*  POST-STATUS.JSX  */
 
 .container-status-jsx {
+  margin-top: 3.98rem;
   padding: 0;
-}
-
-.post-status-test {
-  height: 710px;
-  margin-top: 3.563rem;
 }
 
 .label-padding {
@@ -391,6 +389,7 @@ a:hover {
   background: transparent;
   border-bottom: 1px solid #5f7a61;
   width: 200px;
+  font-size: 0.9rem;
 }
 
 .post-fa-clock {
@@ -415,6 +414,7 @@ a:hover {
   background: transparent;
   border-bottom: 1px solid #5f7a61;
   width: 200px;
+  font-size: 0.9rem;
 }
 
 .send-fa-clock {
@@ -449,8 +449,6 @@ a:hover {
 
 .noti-h2-style {
   padding-left: 1.3rem;
-  position: fixed;
-  top: 50px;
   width: 375px;
   background-color: white;
   color: black;
@@ -595,6 +593,10 @@ a:hover {
   .post-status-placement {
     display: none;
   }
+
+  .avail-home-jsx {
+    height: unset;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -618,6 +620,10 @@ a:hover {
 
   .post-status-placement {
     display: none;
+  }
+
+  .avail-home-jsx {
+    height: unset;
   }
 }
 
@@ -724,14 +730,6 @@ a:hover {
     width: 15%;
   }
 
-  .post-status-test {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: unset;
-    padding: 3.75rem;
-  }
-
   .update-plan-position {
     display: flex;
     flex-direction: column;
@@ -749,6 +747,10 @@ a:hover {
 
   .circle-display {
     display: none;
+  }
+
+  .avail-home-jsx {
+    height: unset;
   }
 }
 
@@ -855,14 +857,6 @@ a:hover {
     width: 15%;
   }
 
-  .post-status-test {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: unset;
-    padding: 3.75rem;
-  }
-
   .update-plan-position {
     display: flex;
     flex-direction: column;
@@ -876,5 +870,9 @@ a:hover {
 
   .circle-display {
     display: none;
+  }
+
+  .avail-home-jsx {
+    height: unset;
   }
 }

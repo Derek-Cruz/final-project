@@ -103,7 +103,7 @@ export default class Home extends React.Component {
         <div className="row avail-home-jsx">
           <div className="col p-0 section-placements">
             <div className='testing-height'>
-              <div className="row margin-test">
+              <div className="row avail-top">
                 {
                   this.state.isLoading
                     ? <Spinner />

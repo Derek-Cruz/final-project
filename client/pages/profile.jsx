@@ -56,7 +56,7 @@ function RenderProfile(props) {
         <div className="small-img-placement">
           <img src={photoUrl} alt=".." className="my-profile-small-img" />
         </div>
-        <div className="my-profile-testing">
+        <div className="my-profile-style">
           <p className="my-profile-p-fullname">{fullName}</p>
           <p className="my-profile-p-info"><i className="fas fa-location-arrow style-fa-location-arrow"></i>{location}</p>
           <p className="my-profile-p-info"><i className="fas fa-user profile-user-icon"></i>{aboutMe}</p>

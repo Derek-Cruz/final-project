@@ -641,16 +641,19 @@ a:hover {
   }
 
   .container-status-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-update-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-req-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
@@ -733,7 +736,6 @@ a:hover {
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 3.75rem;
     margin-top: unset;
   }
 
@@ -768,16 +770,19 @@ a:hover {
   }
 
   .container-status-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-update-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-req-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
@@ -860,7 +865,6 @@ a:hover {
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 3.75rem;
     margin-top: unset;
   }
 

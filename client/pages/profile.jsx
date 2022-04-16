@@ -61,7 +61,7 @@ function RenderProfile(props) {
           <p className="my-profile-p-info"><i className="fas fa-location-arrow style-fa-location-arrow"></i>{location}</p>
           <p className="my-profile-p-info"><i className="fas fa-user profile-user-icon"></i>{aboutMe}</p>
         </div>
-        <div className="button-3">
+        <div className="profile-edit-button">
           <a href={`#edit-profile?userId=${userId}`} className="my-profile-edit">Edit</a>
         </div>
       </div>

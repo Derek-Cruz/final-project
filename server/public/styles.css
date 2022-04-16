@@ -532,6 +532,10 @@ a:hover {
   padding-left: 0.188rem;
 }
 
+.profile-edit-button {
+  padding-left: 1.3rem;
+}
+
 /*  MY PROFILE UPDATE  */
 
 .send-fa-user-icon {
@@ -620,6 +624,16 @@ a:hover {
 
   .avail-home-jsx {
     height: unset;
+  }
+
+  ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
   }
 }
 
@@ -750,6 +764,16 @@ a:hover {
   .avail-home-jsx {
     height: unset;
   }
+
+  ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -874,5 +898,15 @@ a:hover {
 
   .avail-home-jsx {
     height: unset;
+  }
+
+  ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
   }
 }

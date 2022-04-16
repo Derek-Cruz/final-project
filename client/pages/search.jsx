@@ -10,7 +10,7 @@ export default class SearchPeople extends React.Component {
 
   render() {
     return (
-      <div className="container container-status-jsx">
+      <div className="container container-home-jsx">
         <div>
           <div className="no-results-style">
             <form className="d-flex">
@@ -20,7 +20,7 @@ export default class SearchPeople extends React.Component {
                 className="me-2"
                 aria-label="Search"
               />
-              <button>Search</button>
+              <button className="button-style">Search</button>
             </form>
           </div>
         </div>

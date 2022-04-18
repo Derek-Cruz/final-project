@@ -545,6 +545,44 @@ a:hover {
   padding-left: 0.188rem;
 }
 
+/* SEARCH-JSX */
+
+.browsing-page-search-bar::placeholder {
+  color: #fff;
+}
+
+.search-bar-placement {
+  margin-top: 4rem;
+  font-size: 0.7rem;
+  padding: 0 1.3rem;
+}
+
+.browsing-page-search-bar {
+  background-color: #5f7a61;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-right: none;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
+  border-radius: 8px 0 0 8px;
+  color: white;
+  font-size: 0.7rem;
+  outline: none;
+}
+
+.search-button {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: #5f7a61;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
 /*  MEDIA Q  */
 
 @media (min-width: 500px) {
@@ -774,6 +812,14 @@ a:hover {
     border-radius: 15px;
     background-color: #f4f5f6;
   }
+
+  .search-bar-placement {
+    margin-top: 1rem;
+  }
+
+  .browsing-page-search-bar {
+    padding-top: 0.5rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -908,5 +954,13 @@ a:hover {
   ::-webkit-scrollbar-thumb {
     border-radius: 15px;
     background-color: #f4f5f6;
+  }
+
+  .search-bar-placement {
+    margin-top: 1rem;
+  }
+
+  .browsing-page-search-bar {
+    padding-top: 0.5rem;
   }
 }

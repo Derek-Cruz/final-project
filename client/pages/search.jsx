@@ -27,6 +27,9 @@ export default class SearchPeople extends React.Component {
             </form>
           </div>
         </div>
+        <div className="row">
+          <p>test</p>
+        </div>
       </div>
     );
   }

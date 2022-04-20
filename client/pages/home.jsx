@@ -65,7 +65,7 @@ export default class Home extends React.Component {
       <div className="container container-home-jsx">
         <h2 className="h2-plans-jsx">MY PLANS</h2>
         <div className="row plans-home-jsx">
-          <div className="col p-0 testing-new-header">
+          <div className="col p-0 section-placements">
             <div>
               {
                 this.state.isLoading
@@ -83,7 +83,7 @@ export default class Home extends React.Component {
         </div>
         <h2 className="h2-pending-jsx">PENDING</h2>
         <div className="row pending-home-jsx">
-          <div className="col p-0 testing-new-header">
+          <div className="col p-0 section-placements">
             <div>
               {
                 this.state.isLoading
@@ -101,9 +101,9 @@ export default class Home extends React.Component {
         </div>
         <h2 className="h2-avail-jsx">AVAILABLE</h2>
         <div className="row avail-home-jsx">
-          <div className="col p-0 testing-new-header">
-            <div>
-              <div className="row margin-test">
+          <div className="col p-0 section-placements">
+            <div className='testing-height'>
+              <div className="row avail-top">
                 {
                   this.state.isLoading
                     ? <Spinner />

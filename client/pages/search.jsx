@@ -10,17 +10,20 @@ export default class SearchPeople extends React.Component {
 
   render() {
     return (
-      <div className="container container-status-jsx">
+      <div className="container container-home-jsx">
         <div>
-          <div className="no-results-style">
+          <div className="search-bar-placement">
             <form className="d-flex">
               <input
-                type="search"
+                type="text"
+                inputMode="search"
                 placeholder="Search"
-                className="me-2"
+                className="browsing-page-search-bar"
                 aria-label="Search"
               />
-              <button>Search</button>
+              <button type="submit" className="search-button">
+                <i className="fas fa-search"></i>
+              </button>
             </form>
           </div>
         </div>

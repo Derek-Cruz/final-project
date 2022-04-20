@@ -13,9 +13,16 @@ h2 {
   margin: 0;
 }
 
-.test-span {
-  font-size: 0.7rem;
+a:hover {
   color: black;
+}
+
+.testing-height {
+  height: 94%;
+}
+
+.left-spacing {
+  margin-left: 0.938rem;
 }
 
 .row {
@@ -23,25 +30,26 @@ h2 {
   --bs-gutter-y: 0;
 }
 
-.testing-new-header {
+.section-placements {
   height: 100%;
   overflow: auto;
 }
 
 .container-req-jsx {
+  margin-top: 3.98rem;
   padding: 0;
 }
 
-.testing-placement {
+.div-button-placement {
   display: flex;
   justify-content: space-between;
   bottom: 60px;
   position: fixed;
   width: 100%;
-  padding: 0 10px;
+  padding: 0 0.625rem;
 }
 
-.testing-button-style {
+.button-style {
   font-size: 0.7rem;
   padding: 0.125rem 0;
   text-align: center;
@@ -54,7 +62,7 @@ h2 {
   cursor: pointer;
 }
 
-.testing-a-style {
+.a-style {
   font-size: 0.7rem;
   padding: 0.125rem 0;
   text-align: center;
@@ -84,7 +92,7 @@ h2 {
 
 .small-icon {
   color: black;
-  padding-right: 5px;
+  padding-right: 0.313rem;
 }
 
 .style-fa-location-arrow {
@@ -168,6 +176,7 @@ h2 {
 }
 
 .container-update-jsx {
+  margin-top: 3.98rem;
   padding: 0;
 }
 
@@ -205,7 +214,12 @@ h2 {
 }
 
 .add-padding {
-  padding: 10px 0;
+  padding: 0.625rem 0;
+}
+
+.icon-span {
+  font-size: 0.7rem;
+  color: black;
 }
 
 /*  HOME.JSX  */
@@ -214,7 +228,7 @@ h2 {
   display: none;
 }
 
-.margin-test {
+.avail-top {
   margin-top: 1.4rem;
 }
 
@@ -255,8 +269,9 @@ h2 {
   overflow: auto;
 }
 
+/* testing this height, original 42%  */
 .avail-home-jsx {
-  height: 42%;
+  height: 56%;
   overflow: auto;
 }
 
@@ -266,6 +281,11 @@ h2 {
 }
 
 .container-home-jsx {
+  margin-top: 3.98rem;
+  padding: 0;
+}
+
+.container-all {
   margin-top: 3.98rem;
   padding: 0;
 }
@@ -358,41 +378,8 @@ h2 {
 /*  POST-STATUS.JSX  */
 
 .container-status-jsx {
+  margin-top: 3.98rem;
   padding: 0;
-}
-
-.post-status-test {
-  height: 710px;
-  margin-top: 3.563rem;
-}
-
-.button-style {
-  font-size: 1.4rem;
-  border-style: none;
-  width: 345px;
-  height: 45px;
-  color: #fff;
-  background: #5f7a61;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.a-style {
-  font-size: 1.4rem;
-  padding: 0.375rem 0;
-  text-align: center;
-  border-radius: 20px;
-  width: 345px;
-  display: block;
-  height: 45px;
-  text-decoration: none;
-  color: #fff;
-  background: #5f7a61;
-  cursor: pointer;
-}
-
-.a-style:hover {
-  color: #fff;
 }
 
 .label-padding {
@@ -407,6 +394,7 @@ h2 {
   background: transparent;
   border-bottom: 1px solid #5f7a61;
   width: 200px;
+  font-size: 0.9rem;
 }
 
 .post-fa-clock {
@@ -431,6 +419,7 @@ h2 {
   background: transparent;
   border-bottom: 1px solid #5f7a61;
   width: 200px;
+  font-size: 0.9rem;
 }
 
 .send-fa-clock {
@@ -465,8 +454,6 @@ h2 {
 
 .noti-h2-style {
   padding-left: 1.3rem;
-  position: fixed;
-  top: 50px;
   width: 375px;
   background-color: white;
   color: black;
@@ -525,7 +512,7 @@ h2 {
   margin-bottom: 0.625rem;
 }
 
-.my-profile-testing {
+.my-profile-style {
   display: flex;
   flex-direction: column;
 }
@@ -544,14 +531,14 @@ h2 {
   cursor: pointer;
 }
 
-.button-3 {
-  padding-left: 1.3rem;
-}
-
 .profile-user-icon {
   padding-right: 0.688rem;
   font-size: 1.2rem;
   padding-left: 0.188rem;
+}
+
+.profile-edit-button {
+  padding-left: 1.3rem;
 }
 
 /*  MY PROFILE UPDATE  */
@@ -561,6 +548,44 @@ h2 {
   padding-right: 0.9rem;
   font-size: 1.2rem;
   padding-left: 0.188rem;
+}
+
+/* SEARCH-JSX */
+
+.browsing-page-search-bar::placeholder {
+  color: #fff;
+}
+
+.search-bar-placement {
+  margin-top: 4rem;
+  font-size: 0.7rem;
+  padding: 0 1.3rem;
+}
+
+.browsing-page-search-bar {
+  background-color: #5f7a61;
+  height: 30px;
+  width: 100%;
+  border: none;
+  border-right: none;
+  padding-left: 0.625rem;
+  padding-top: 0.625rem;
+  border-radius: 8px 0 0 8px;
+  color: white;
+  font-size: 0.7rem;
+  outline: none;
+}
+
+.search-button {
+  width: 40px;
+  height: 30px;
+  border: none;
+  background: #5f7a61;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
 
 /*  MEDIA Q  */
@@ -611,6 +636,10 @@ h2 {
   .post-status-placement {
     display: none;
   }
+
+  .avail-home-jsx {
+    height: unset;
+  }
 }
 
 @media (min-width: 991.98px) {
@@ -635,6 +664,20 @@ h2 {
   .post-status-placement {
     display: none;
   }
+
+  .avail-home-jsx {
+    height: unset;
+  }
+
+  /* ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
+  } */
 }
 
 @media (min-width: 992px) {
@@ -650,28 +693,38 @@ h2 {
     border-right: solid 1px #fef7dc;
   }
 
+  .container-all {
+    margin-top: unset;
+    padding: 1.25rem 0 0;
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
   .container-status-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-update-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-req-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
-  .testing-placement {
+  .div-button-placement {
     width: 250px;
     padding: 0;
   }
 
-  .testing-div-space {
-    margin-left: 15px;
+  .left-spacing {
+    margin-left: 0.938rem;
   }
 
   .button-home-jsx {
@@ -686,13 +739,14 @@ h2 {
 
   .icon-position {
     height: 40px;
-    left: 403px;
+    left: 418px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
     color: black;
+    margin: 0 5px;
     font-size: 1.6rem;
     height: 42px;
     background-color: #fff;
@@ -739,18 +793,9 @@ h2 {
     width: 15%;
   }
 
-  .post-status-test {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: unset;
-    padding: 3.75rem;
-  }
-
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 3.75rem;
     margin-top: unset;
   }
 
@@ -764,6 +809,28 @@ h2 {
 
   .circle-display {
     display: none;
+  }
+
+  .avail-home-jsx {
+    height: unset;
+  }
+
+  /* ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
+  } */
+
+  .search-bar-placement {
+    margin-top: 1rem;
+  }
+
+  .browsing-page-search-bar {
+    padding-top: 0.5rem;
   }
 }
 
@@ -780,28 +847,38 @@ h2 {
     border-right: solid 1px #fef7dc;
   }
 
+  .container-all {
+    margin-top: unset;
+    padding: 1.25rem 0 0;
+    border-left: solid 1px #fef7dc;
+    border-right: solid 1px #fef7dc;
+  }
+
   .container-status-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-update-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
   .container-req-jsx {
+    height: unset;
     border-left: solid 1px #fef7dc;
     border-right: solid 1px #fef7dc;
   }
 
-  .testing-placement {
+  .div-button-placement {
     width: 250px;
     padding: 0;
   }
 
-  .testing-div-space {
-    margin-left: 15px;
+  .left-spacing {
+    margin-left: 0.938;
   }
 
   .button-home-jsx {
@@ -816,13 +893,14 @@ h2 {
 
   .icon-position {
     height: 40px;
-    left: 403px;
+    left: 418px;
     top: 8px;
     background-color: transparent;
   }
 
   .icon-style {
     color: black;
+    margin: 0 0.313rem;
     font-size: 1.6rem;
     height: 42px;
     background-color: #fff;
@@ -869,18 +947,9 @@ h2 {
     width: 15%;
   }
 
-  .post-status-test {
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    margin: unset;
-    padding: 3.75rem;
-  }
-
   .update-plan-position {
     display: flex;
     flex-direction: column;
-    padding-top: 3.75rem;
     margin-top: unset;
   }
 
@@ -890,5 +959,27 @@ h2 {
 
   .circle-display {
     display: none;
+  }
+
+  .avail-home-jsx {
+    height: unset;
+  }
+
+  /* ::-webkit-scrollbar {
+    display: unset;
+    width: 7px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    background-color: #f4f5f6;
+  } */
+
+  .search-bar-placement {
+    margin-top: 1rem;
+  }
+
+  .browsing-page-search-bar {
+    padding-top: 0.5rem;
   }
 }

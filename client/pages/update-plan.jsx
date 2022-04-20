@@ -68,15 +68,15 @@ export default class UpdatePlan extends React.Component {
         : <div className="container container-update-jsx">
           <div className="update-plan-position">
             <div>
-              <div className='testing-div-space'>
+              <div className="left-spacing">
                 <img src={ this.state.photoUrl } alt="Profile picture" className="update-plan-img" />
               </div>
               <div className="update-plan-fullname-position">
-                <p className="update-plan-fullname testing-div-space">{ this.state.fullName }</p>
+                <p className="update-plan-fullname left-spacing">{ this.state.fullName }</p>
               </div>
             </div>
             <form onSubmit={this.handleSubmit}>
-              <div className='testing-div-space title-update-req'>
+              <div className="left-spacing title-update-req">
                 <label htmlFor="send-title">Title:</label>
                 <input
                   className="send-input-style"
@@ -86,7 +86,7 @@ export default class UpdatePlan extends React.Component {
                   value={ this.state.title }
                   onChange={this.handleChange} />
               </div>
-              <div className='testing-div-space'>
+              <div className="left-spacing">
                 <label htmlFor="send-location"><i className="fas fa-location-arrow send-fa-location-arrow"></i></label>
                 <input
                   className="send-input-style"
@@ -96,7 +96,7 @@ export default class UpdatePlan extends React.Component {
                   value={ this.state.location }
                   onChange={this.handleChange} />
               </div>
-              <div className='testing-div-space'>
+              <div className="left-spacing">
                 <label htmlFor="send-time"><i className="fas fa-clock send-fa-clock"></i></label>
                 <input
                   className="send-input-style"
@@ -106,7 +106,7 @@ export default class UpdatePlan extends React.Component {
                   value={ this.state.time }
                   onChange={this.handleChange} />
               </div>
-              <div className='testing-div-space'>
+              <div className="left-spacing">
                 <label htmlFor="send-description"><i className="fas fa-comment-alt send-fa-comment-alt"></i></label>
                 <input
                   className="send-input-style"
@@ -118,9 +118,9 @@ export default class UpdatePlan extends React.Component {
                   onChange={this.handleChange} />
               </div>
               <div className="buttons">
-                <div className="testing-placement">
-                  <a href="#" className="testing-a-style">Cancel</a>
-                  <button className="testing-button-style">Update</button>
+                <div className="div-button-placement">
+                  <a href="#" className="a-style">Cancel</a>
+                  <button className="button-style">Update</button>
                 </div>
               </div>
             </form>

@@ -373,6 +373,7 @@ a:hover {
   left: 0;
   position: fixed;
   font-size: 2.4rem;
+  text-shadow: 4px 1px #dfdfdf;
 }
 
 /*  POST-STATUS.JSX  */

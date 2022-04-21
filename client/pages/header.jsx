@@ -5,7 +5,7 @@ export default function Header(props) {
     <header>
       <div className="row">
         <div className="header-jsx-style d-flex justify-content-center">
-            LINK
+            L I N K
         </div>
       </div>
     </header>
